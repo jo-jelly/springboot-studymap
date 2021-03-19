@@ -10,14 +10,17 @@ public class HelloController {
 
     @GetMapping("/hello")//Http Method인 get의 요청을 받을 수 있는 API을 만들어준다.
     public String hello(){
+
         return "hello";
     }
 
     @GetMapping("/hello/dto")
-    public HelloResponseDto helloDto(@RequestParam("name")String name, @RequestParam("amount") int amount) {
+    public HelloResponseDto helloDto(
+            @RequestParam("name")String name, @RequestParam("amount") int amount) {
         return new HelloResponseDto(name, amount);
 
         //@RequestParam = 외부에서 Api로 넘긴 파라미터를 가져오는 어노테이션이다.
+        //?name=bb&amount=3 를 URL뒤에 입력하면{"name":"bb","amount":3}로 웹 화면에 나타난다.
     }
 }
 
