@@ -1,8 +1,8 @@
 com/studymap/web/dto/HelloResponseDtoTest.java
  com.studymap.web.dto.HelloResponseDtoTest
-com/studymap/domain/posts/PostsRepositoryTest.java
- com.studymap.domain.posts.PostsRepositoryTest
 com/studymap/web/HelloControllerTest.java
  com.studymap.web.HelloControllerTest
+com/studymap/domain/posts/PostsRepositoryTest.java
+ com.studymap.domain.posts.PostsRepositoryTest
 com/studymap/web/PostsApiControllerTest.java
  com.studymap.web.PostsApiControllerTest
