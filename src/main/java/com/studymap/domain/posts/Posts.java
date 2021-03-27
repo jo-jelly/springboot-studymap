@@ -1,6 +1,7 @@
 package com.studymap.domain.posts;
 
 
+import com.studymap.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @Getter //getter메소드를 자동생성
 @NoArgsConstructor //기본생성자 자동생성
 @Entity //테이블에 링크될 클래스를 명
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
