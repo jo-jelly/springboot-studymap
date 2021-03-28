@@ -23,3 +23,5 @@ com/studymap/Application.java
  com.studymap.Application
 com/studymap/web/dto/PostsResponseDto.java
  com.studymap.web.dto.PostsResponseDto
+com/studymap/web/IndexController.java
+ com.studymap.web.IndexController

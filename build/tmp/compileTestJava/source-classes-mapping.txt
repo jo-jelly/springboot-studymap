@@ -6,3 +6,5 @@ com/studymap/domain/posts/PostsRepositoryTest.java
  com.studymap.domain.posts.PostsRepositoryTest
 com/studymap/web/PostsApiControllerTest.java
  com.studymap.web.PostsApiControllerTest
+com/studymap/web/IndexControllerTest.java
+ com.studymap.web.IndexControllerTest
