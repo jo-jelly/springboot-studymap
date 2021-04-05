@@ -5,8 +5,8 @@ com/studymap/web/dto/PostsListResponseDto.java
 com/studymap/web/dto/PostsUpdateRequestDto.java
  com.studymap.web.dto.PostsUpdateRequestDto
  com.studymap.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
-com/studymap/web/IndexController.java
- com.studymap.web.IndexController
+com/studymap/web/dto/PostsResponseDto.java
+ com.studymap.web.dto.PostsResponseDto
 com/studymap/config/auth/CustomOAuth2UserService.java
  com.studymap.config.auth.CustomOAuth2UserService
 com/studymap/web/HelloController.java
@@ -41,5 +41,11 @@ com/studymap/domain/BaseTimeEntity.java
 com/studymap/domain/posts/Posts.java
  com.studymap.domain.posts.Posts
  com.studymap.domain.posts.Posts$PostsBuilder
-com/studymap/web/dto/PostsResponseDto.java
- com.studymap.web.dto.PostsResponseDto
+com/studymap/config/auth/LoginUser.java
+ com.studymap.config.auth.LoginUser
+com/studymap/web/IndexController.java
+ com.studymap.web.IndexController
+com/studymap/config/auth/LoginUserArgumentResolver.java
+ com.studymap.config.auth.LoginUserArgumentResolver
+com/studymap/config/WebConfig.java
+ com.studymap.config.WebConfig
