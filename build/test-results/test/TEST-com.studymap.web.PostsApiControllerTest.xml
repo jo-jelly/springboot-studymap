@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.studymap.web.PostsApiControllerTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2021-04-05T23:07:04" hostname="LAPTOP-0H2LH4CP" time="1.969">
+<testsuite name="com.studymap.web.PostsApiControllerTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2021-04-06T16:05:52" hostname="LAPTOP-0H2LH4CP" time="1.93">
   <properties/>
   <testcase name="Posts_등록된다()" classname="com.studymap.web.PostsApiControllerTest" time="0.0">
     <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -295,12 +295,12 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 	... 114 more
 </failure>
   </testcase>
-  <system-out><![CDATA[2021-04-06 08:07:02.952  INFO 1228 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.studymap.web.PostsApiControllerTest], using SpringBootContextLoader
-2021-04-06 08:07:02.952  INFO 1228 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.studymap.web.PostsApiControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2021-04-06 08:07:02.952  INFO 1228 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.studymap.web.PostsApiControllerTest]: PostsApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2021-04-06 08:07:02.952  INFO 1228 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.studymap.Application for test class com.studymap.web.PostsApiControllerTest
-2021-04-06 08:07:02.952  INFO 1228 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2021-04-06 08:07:02.952  INFO 1228 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@252c09eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4e7d77b9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10424267, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@214a535b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@64ec75c8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@41090653, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@43da256f, org.springframework.test.context.event.EventPublishingTestExecutionListener@30f966c4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37bc1726, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3e8eb41c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2c6d1fff, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@575993f0, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@8bab1a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4beed143]
+  <system-out><![CDATA[2021-04-07 01:05:50.808  INFO 8124 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.studymap.web.PostsApiControllerTest], using SpringBootContextLoader
+2021-04-07 01:05:50.808  INFO 8124 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.studymap.web.PostsApiControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-04-07 01:05:50.808  INFO 8124 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.studymap.web.PostsApiControllerTest]: PostsApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-04-07 01:05:50.824  INFO 8124 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.studymap.Application for test class com.studymap.web.PostsApiControllerTest
+2021-04-07 01:05:50.824  INFO 8124 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-04-07 01:05:50.824  INFO 8124 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@33bd30b1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e0fd7fc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1edbcf2a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5f3c5f74, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55ed49a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@751e53fa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@357c70ec, org.springframework.test.context.event.EventPublishingTestExecutionListener@8064ec8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7b0fa156, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7c89ac4e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2aa44823, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@106e23b1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@166d35fb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@27b700a4]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -310,43 +310,43 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.4.1)
 
-2021-04-06 08:07:02.998  INFO 1228 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : Starting PostsApiControllerTest using Java 1.8.0_271 on LAPTOP-0H2LH4CP with PID 1228 (started by user in C:\Users\user\Desktop\ITC\개인 프로젝트\인텔리제이smap)
-2021-04-06 08:07:02.998  INFO 1228 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : No active profile set, falling back to default profiles: default
-2021-04-06 08:07:03.234  INFO 1228 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-06 08:07:03.283  INFO 1228 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
-2021-04-06 08:07:03.470  INFO 1228 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2021-04-06 08:07:03.470  INFO 1228 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-06 08:07:03.470  INFO 1228 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-06 08:07:03.486  INFO 1228 --- [    Test worker] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2021-04-06 08:07:03.486  INFO 1228 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 488 ms
-2021-04-06 08:07:03.533  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2021-04-06 08:07:03.533  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2021-04-06 08:07:03.533  INFO 1228 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-04-06 08:07:03.673  INFO 1228 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-06 08:07:03.674  INFO 1228 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-04-07 01:05:50.855  INFO 8124 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : Starting PostsApiControllerTest using Java 1.8.0_271 on LAPTOP-0H2LH4CP with PID 8124 (started by user in C:\Users\user\Desktop\ITC\개인 프로젝트\인텔리제이smap)
+2021-04-07 01:05:50.855  INFO 8124 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : No active profile set, falling back to default profiles: default
+2021-04-07 01:05:51.113  INFO 8124 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-07 01:05:51.160  INFO 8124 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2021-04-07 01:05:51.353  INFO 8124 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-07 01:05:51.353  INFO 8124 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-07 01:05:51.353  INFO 8124 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-07 01:05:51.369  INFO 8124 --- [    Test worker] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-04-07 01:05:51.369  INFO 8124 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 498 ms
+2021-04-07 01:05:51.416  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2021-04-07 01:05:51.416  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2021-04-07 01:05:51.416  INFO 8124 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-07 01:05:51.565  INFO 8124 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-07 01:05:51.565  INFO 8124 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
 Hibernate: drop table if exists posts
 Hibernate: drop table if exists user
 Hibernate: create table posts (id bigint not null auto_increment, created_date datetime(6), modified_date datetime(6), author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB
 Hibernate: create table user (id bigint not null auto_increment, created_date datetime(6), modified_date datetime(6), email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB
-2021-04-06 08:07:03.721  INFO 1228 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-06 08:07:03.721  INFO 1228 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-06 08:07:03.862  WARN 1228 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-06 08:07:03.940  INFO 1228 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2021-04-07 01:05:51.612  INFO 8124 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-07 01:05:51.612  INFO 8124 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-07 01:05:51.737  WARN 8124 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-07 01:05:51.817  INFO 8124 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 61856099-e56f-421a-8b9a-9086fec13859
+Using generated security password: 2aa8a52a-3203-4644-a2d9-767bb2bf0a74
 
-2021-04-06 08:07:03.956  WARN 1228 --- [    Test worker] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
-2021-04-06 08:07:03.956  INFO 1228 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-06 08:07:03.956  INFO 1228 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-04-07 01:05:51.848  WARN 8124 --- [    Test worker] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
+2021-04-07 01:05:51.848  INFO 8124 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-07 01:05:51.848  INFO 8124 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 Hibernate: drop table if exists posts
 Hibernate: drop table if exists user
-2021-04-06 08:07:03.956  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2021-04-06 08:07:03.956  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
-2021-04-06 08:07:03.971  INFO 1228 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-04-06 08:07:03.971  INFO 1228 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2021-04-07 01:05:51.848  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2021-04-07 01:05:51.848  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2021-04-07 01:05:51.848  INFO 8124 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-07 01:05:51.848  INFO 8124 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-04-06 08:07:03.971 ERROR 1228 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2021-04-07 01:05:51.848 ERROR 8124 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -370,43 +370,43 @@ Consider defining a bean of type 'org.springframework.security.oauth2.client.reg
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.4.1)
 
-2021-04-06 08:07:03.987  INFO 1228 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : Starting PostsApiControllerTest using Java 1.8.0_271 on LAPTOP-0H2LH4CP with PID 1228 (started by user in C:\Users\user\Desktop\ITC\개인 프로젝트\인텔리제이smap)
-2021-04-06 08:07:03.987  INFO 1228 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : No active profile set, falling back to default profiles: default
-2021-04-06 08:07:04.214  INFO 1228 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-06 08:07:04.254  INFO 1228 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
-2021-04-06 08:07:04.410  INFO 1228 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2021-04-06 08:07:04.410  INFO 1228 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-06 08:07:04.410  INFO 1228 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-06 08:07:04.426  INFO 1228 --- [    Test worker] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2021-04-06 08:07:04.426  INFO 1228 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 424 ms
-2021-04-06 08:07:04.457  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2021-04-06 08:07:04.457  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2021-04-06 08:07:04.457  INFO 1228 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-04-06 08:07:04.598  INFO 1228 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-06 08:07:04.614  INFO 1228 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-04-07 01:05:51.879  INFO 8124 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : Starting PostsApiControllerTest using Java 1.8.0_271 on LAPTOP-0H2LH4CP with PID 8124 (started by user in C:\Users\user\Desktop\ITC\개인 프로젝트\인텔리제이smap)
+2021-04-07 01:05:51.879  INFO 8124 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : No active profile set, falling back to default profiles: default
+2021-04-07 01:05:52.113  INFO 8124 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-07 01:05:52.160  INFO 8124 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2021-04-07 01:05:52.324  INFO 8124 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-07 01:05:52.324  INFO 8124 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-07 01:05:52.324  INFO 8124 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-07 01:05:52.355  INFO 8124 --- [    Test worker] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-04-07 01:05:52.355  INFO 8124 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 460 ms
+2021-04-07 01:05:52.387  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2021-04-07 01:05:52.387  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2021-04-07 01:05:52.387  INFO 8124 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-07 01:05:52.528  INFO 8124 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-07 01:05:52.544  INFO 8124 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
 Hibernate: drop table if exists posts
 Hibernate: drop table if exists user
 Hibernate: create table posts (id bigint not null auto_increment, created_date datetime(6), modified_date datetime(6), author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB
 Hibernate: create table user (id bigint not null auto_increment, created_date datetime(6), modified_date datetime(6), email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB
-2021-04-06 08:07:04.661  INFO 1228 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-06 08:07:04.661  INFO 1228 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-06 08:07:04.778  WARN 1228 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-06 08:07:04.857  INFO 1228 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2021-04-07 01:05:52.591  INFO 8124 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-07 01:05:52.591  INFO 8124 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-07 01:05:52.716  WARN 8124 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-07 01:05:52.794  INFO 8124 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 73fe4989-05aa-4f6f-a3bb-af2a0ce3d903
+Using generated security password: 70855498-5bf0-4174-a81c-7adc36b27fbb
 
-2021-04-06 08:07:04.872  WARN 1228 --- [    Test worker] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
-2021-04-06 08:07:04.872  INFO 1228 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-06 08:07:04.872  INFO 1228 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-04-07 01:05:52.810  WARN 8124 --- [    Test worker] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
+2021-04-07 01:05:52.810  INFO 8124 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-07 01:05:52.810  INFO 8124 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 Hibernate: drop table if exists posts
 Hibernate: drop table if exists user
-2021-04-06 08:07:04.872  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
-2021-04-06 08:07:04.872  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
-2021-04-06 08:07:04.872  INFO 1228 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-04-06 08:07:04.872  INFO 1228 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2021-04-07 01:05:52.810  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2021-04-07 01:05:52.810  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2021-04-07 01:05:52.810  INFO 8124 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-07 01:05:52.825  INFO 8124 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-04-06 08:07:04.888 ERROR 1228 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2021-04-07 01:05:52.825 ERROR 8124 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -421,7 +421,7 @@ Action:
 
 Consider defining a bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' in your configuration.
 
-2021-04-06 08:07:04.888 ERROR 1228 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@214a535b] to prepare test instance [com.studymap.web.PostsApiControllerTest@3437fa76]
+2021-04-07 01:05:52.825 ERROR 8124 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5f3c5f74] to prepare test instance [com.studymap.web.PostsApiControllerTest@45ee4f7d]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.2.jar:5.3.2]
@@ -577,43 +577,43 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.4.1)
 
-2021-04-06 08:07:04.936  INFO 1228 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : Starting PostsApiControllerTest using Java 1.8.0_271 on LAPTOP-0H2LH4CP with PID 1228 (started by user in C:\Users\user\Desktop\ITC\개인 프로젝트\인텔리제이smap)
-2021-04-06 08:07:04.936  INFO 1228 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : No active profile set, falling back to default profiles: default
-2021-04-06 08:07:05.183  INFO 1228 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-06 08:07:05.229  INFO 1228 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
-2021-04-06 08:07:05.438  INFO 1228 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2021-04-06 08:07:05.438  INFO 1228 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-06 08:07:05.438  INFO 1228 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-06 08:07:05.453  INFO 1228 --- [    Test worker] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2021-04-06 08:07:05.453  INFO 1228 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 517 ms
-2021-04-06 08:07:05.485  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
-2021-04-06 08:07:05.485  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
-2021-04-06 08:07:05.485  INFO 1228 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-04-06 08:07:05.642  INFO 1228 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-06 08:07:05.642  INFO 1228 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-04-07 01:05:52.872  INFO 8124 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : Starting PostsApiControllerTest using Java 1.8.0_271 on LAPTOP-0H2LH4CP with PID 8124 (started by user in C:\Users\user\Desktop\ITC\개인 프로젝트\인텔리제이smap)
+2021-04-07 01:05:52.872  INFO 8124 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : No active profile set, falling back to default profiles: default
+2021-04-07 01:05:53.101  INFO 8124 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-07 01:05:53.148  INFO 8124 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2021-04-07 01:05:53.353  INFO 8124 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-07 01:05:53.353  INFO 8124 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-07 01:05:53.353  INFO 8124 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-07 01:05:53.384  INFO 8124 --- [    Test worker] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-04-07 01:05:53.384  INFO 8124 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 512 ms
+2021-04-07 01:05:53.415  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2021-04-07 01:05:53.415  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2021-04-07 01:05:53.415  INFO 8124 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-07 01:05:53.556  INFO 8124 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-07 01:05:53.556  INFO 8124 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
 Hibernate: drop table if exists posts
 Hibernate: drop table if exists user
 Hibernate: create table posts (id bigint not null auto_increment, created_date datetime(6), modified_date datetime(6), author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB
 Hibernate: create table user (id bigint not null auto_increment, created_date datetime(6), modified_date datetime(6), email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB
-2021-04-06 08:07:05.689  INFO 1228 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-06 08:07:05.689  INFO 1228 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-06 08:07:05.822  WARN 1228 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-06 08:07:05.900  INFO 1228 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2021-04-07 01:05:53.602  INFO 8124 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-07 01:05:53.602  INFO 8124 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-07 01:05:53.720  WARN 8124 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-07 01:05:53.798  INFO 8124 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: e98897f4-6508-4079-baa2-00520761011c
+Using generated security password: 2562ab47-6bbb-4fa3-9646-c7535e3990a3
 
-2021-04-06 08:07:05.915  WARN 1228 --- [    Test worker] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
-2021-04-06 08:07:05.915  INFO 1228 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-06 08:07:05.915  INFO 1228 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-04-07 01:05:53.813  WARN 8124 --- [    Test worker] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
+2021-04-07 01:05:53.813  INFO 8124 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-07 01:05:53.813  INFO 8124 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 Hibernate: drop table if exists posts
 Hibernate: drop table if exists user
-2021-04-06 08:07:05.915  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
-2021-04-06 08:07:05.915  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
-2021-04-06 08:07:05.915  INFO 1228 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-04-06 08:07:05.931  INFO 1228 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2021-04-07 01:05:53.829  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2021-04-07 01:05:53.829  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2021-04-07 01:05:53.829  INFO 8124 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-07 01:05:53.829  INFO 8124 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-04-06 08:07:05.931 ERROR 1228 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2021-04-07 01:05:53.829 ERROR 8124 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -637,43 +637,43 @@ Consider defining a bean of type 'org.springframework.security.oauth2.client.reg
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.4.1)
 
-2021-04-06 08:07:05.947  INFO 1228 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : Starting PostsApiControllerTest using Java 1.8.0_271 on LAPTOP-0H2LH4CP with PID 1228 (started by user in C:\Users\user\Desktop\ITC\개인 프로젝트\인텔리제이smap)
-2021-04-06 08:07:05.947  INFO 1228 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : No active profile set, falling back to default profiles: default
-2021-04-06 08:07:06.175  INFO 1228 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-06 08:07:06.206  INFO 1228 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
-2021-04-06 08:07:06.379  INFO 1228 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2021-04-06 08:07:06.394  INFO 1228 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-06 08:07:06.394  INFO 1228 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-06 08:07:06.406  INFO 1228 --- [    Test worker] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2021-04-06 08:07:06.406  INFO 1228 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 459 ms
-2021-04-06 08:07:06.453  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
-2021-04-06 08:07:06.453  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
-2021-04-06 08:07:06.453  INFO 1228 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-04-06 08:07:06.578  INFO 1228 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-06 08:07:06.578  INFO 1228 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-04-07 01:05:53.860  INFO 8124 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : Starting PostsApiControllerTest using Java 1.8.0_271 on LAPTOP-0H2LH4CP with PID 8124 (started by user in C:\Users\user\Desktop\ITC\개인 프로젝트\인텔리제이smap)
+2021-04-07 01:05:53.860  INFO 8124 --- [    Test worker] com.studymap.web.PostsApiControllerTest  : No active profile set, falling back to default profiles: default
+2021-04-07 01:05:54.049  INFO 8124 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-07 01:05:54.111  INFO 8124 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2021-04-07 01:05:54.283  INFO 8124 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-07 01:05:54.283  INFO 8124 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-07 01:05:54.283  INFO 8124 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-07 01:05:54.299  INFO 8124 --- [    Test worker] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-04-07 01:05:54.299  INFO 8124 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 439 ms
+2021-04-07 01:05:54.346  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2021-04-07 01:05:54.346  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2021-04-07 01:05:54.346  INFO 8124 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-07 01:05:54.486  INFO 8124 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-07 01:05:54.486  INFO 8124 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
 Hibernate: drop table if exists posts
 Hibernate: drop table if exists user
 Hibernate: create table posts (id bigint not null auto_increment, created_date datetime(6), modified_date datetime(6), author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB
 Hibernate: create table user (id bigint not null auto_increment, created_date datetime(6), modified_date datetime(6), email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB
-2021-04-06 08:07:06.626  INFO 1228 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-06 08:07:06.626  INFO 1228 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-06 08:07:06.735  WARN 1228 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-06 08:07:06.813  INFO 1228 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2021-04-07 01:05:54.533  INFO 8124 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-07 01:05:54.533  INFO 8124 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-07 01:05:54.634  WARN 8124 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-07 01:05:54.713  INFO 8124 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: c2b0dbb3-2d29-428f-9b8a-89e99b8b4d47
+Using generated security password: 3417dd32-25e8-43ee-80da-f98818726972
 
-2021-04-06 08:07:06.829  WARN 1228 --- [    Test worker] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
-2021-04-06 08:07:06.829  INFO 1228 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-06 08:07:06.829  INFO 1228 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-04-07 01:05:54.728  WARN 8124 --- [    Test worker] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' available
+2021-04-07 01:05:54.728  INFO 8124 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-07 01:05:54.728  INFO 8124 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 Hibernate: drop table if exists posts
 Hibernate: drop table if exists user
-2021-04-06 08:07:06.829  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
-2021-04-06 08:07:06.845  INFO 1228 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
-2021-04-06 08:07:06.845  INFO 1228 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-04-06 08:07:06.845  INFO 1228 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2021-04-07 01:05:54.744  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2021-04-07 01:05:54.744  INFO 8124 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2021-04-07 01:05:54.744  INFO 8124 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-07 01:05:54.744  INFO 8124 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-04-06 08:07:06.845 ERROR 1228 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2021-04-07 01:05:54.744 ERROR 8124 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -688,7 +688,7 @@ Action:
 
 Consider defining a bean of type 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository' in your configuration.
 
-2021-04-06 08:07:06.860 ERROR 1228 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@214a535b] to prepare test instance [com.studymap.web.PostsApiControllerTest@5de83516]
+2021-04-07 01:05:54.759 ERROR 8124 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5f3c5f74] to prepare test instance [com.studymap.web.PostsApiControllerTest@35a117e1]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.2.jar:5.3.2]
