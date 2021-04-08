@@ -17,8 +17,9 @@ com/studymap/web/PostsApiController.java
  com.studymap.web.PostsApiController
 com/studymap/domain/user/Role.java
  com.studymap.domain.user.Role
-com/studymap/Application.java
- com.studymap.Application
+com/studymap/config/auth/dto/OAuthAttributes.java
+ com.studymap.config.auth.dto.OAuthAttributes
+ com.studymap.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
 com/studymap/domain/user/UserRepository.java
  com.studymap.domain.user.UserRepository
 com/studymap/config/auth/LoginUser.java
@@ -46,6 +47,7 @@ com/studymap/domain/BaseTimeEntity.java
  com.studymap.domain.BaseTimeEntity
 com/studymap/config/auth/CustomOAuth2UserService.java
  com.studymap.config.auth.CustomOAuth2UserService
-com/studymap/config/auth/dto/OAuthAttributes.java
- com.studymap.config.auth.dto.OAuthAttributes
- com.studymap.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
+com/studymap/Application.java
+ com.studymap.Application
+com/studymap/config/JpaConfig.java
+ com.studymap.config.JpaConfig
