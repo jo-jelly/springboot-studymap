@@ -5,7 +5,7 @@
          <div class="row">
              <div class="col-md-6">
                  <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
-                 {{#userName}} <!--유저명이 들어왔을 경우에-->
+                 {{#userName}} <!--유저명이 들어왔을 경우에 사용 mustache는 if()문을 사용할수 없다.-->
                      Logged in as: <span id="user">{{userName}}</span>
                      <a href="/logout" class="btn btn-info active" role="button">Logout</a>
                  {{/userName}}
