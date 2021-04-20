@@ -51,3 +51,5 @@ com/studymap/domain/posts/Posts.java
  com.studymap.domain.posts.Posts$PostsBuilder
 com/studymap/web/dto/PostsResponseDto.java
  com.studymap.web.dto.PostsResponseDto
+com/studymap/web/studyGroupController.java
+ com.studymap.web.studyGroupController
