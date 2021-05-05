@@ -37,4 +37,4 @@ deploy:
 notifications:
   email:
     recipients:
-      - dear.jojelly@gmail.com
+     - dear.jojelly@gmail.com
