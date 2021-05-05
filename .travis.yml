@@ -18,9 +18,9 @@ before_install:
   - chmod +x gradlew
 
 before_deploy:
-  - zip -r freelec-springboot2-webservice *
+  - zip -r speingboot-studymap *  #이 이름으로 현재 위치의 모든 파일을 압축한다
   - mkdir -p deploy
-  - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
+  - mv speingboot-studymap.zip deploy/speingboot-studymap.zip
 
 deploy:
   - provider: s3
