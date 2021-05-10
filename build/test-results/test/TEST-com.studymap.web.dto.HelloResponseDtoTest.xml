@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.studymap.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-04T20:17:10" hostname="DESKTOP-LGJ8J91" time="0.013">
+<testsuite name="com.studymap.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T16:53:40" hostname="DESKTOP-LGJ8J91" time="0.007">
   <properties/>
-  <testcase name="룸북_기능_테스트()" classname="com.studymap.web.dto.HelloResponseDtoTest" time="0.013"/>
+  <testcase name="룸북_기능_테스트()" classname="com.studymap.web.dto.HelloResponseDtoTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
