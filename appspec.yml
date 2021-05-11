@@ -8,7 +8,7 @@ files:
 permissions:
   - object: /
     pattern: "**"
-    owner: ec2-user
+    owner: dbjelly
     group: ec2-user
 
 hooks:
