@@ -8,3 +8,7 @@ com/studymap/web/PostsApiControllerTest.java
  com.studymap.web.PostsApiControllerTest
 com/studymap/web/IndexControllerTest.java
  com.studymap.web.IndexControllerTest
+com/studymap/web/ProfileControllerUnitTest.java
+ com.studymap.web.ProfileControllerUnitTest
+com/studymap/web/ProfileControllerTest.java
+ com.studymap.web.ProfileControllerTest
