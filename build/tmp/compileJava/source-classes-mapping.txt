@@ -53,7 +53,7 @@ com/studymap/web/dto/PostsResponseDto.java
  com.studymap.web.dto.PostsResponseDto
 com/studymap/web/studyGroupController.java
  com.studymap.web.studyGroupController
-com/studymap/web/dto/StudyGroupResponseDto.java
- com.studymap.web.dto.StudyGroupResponseDto
 com/studymap/web/ProfileController.java
  com.studymap.web.ProfileController
+com/studymap/web/dto/StudyGroupResponseDto.java
+ com.studymap.web.dto.StudyGroupResponseDto
