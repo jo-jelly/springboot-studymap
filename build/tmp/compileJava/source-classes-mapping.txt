@@ -1,20 +1,21 @@
-com/studymap/service/posts/PostsService.java
- com.studymap.service.posts.PostsService
+com/studymap/web/ProfileController.java
+ com.studymap.web.ProfileController
 com/studymap/web/dto/PostsListResponseDto.java
  com.studymap.web.dto.PostsListResponseDto
 com/studymap/web/dto/PostsUpdateRequestDto.java
  com.studymap.web.dto.PostsUpdateRequestDto
  com.studymap.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
-com/studymap/web/IndexController.java
- com.studymap.web.IndexController
+com/studymap/web/PostsApiController.java
+ com.studymap.web.PostsApiController
 com/studymap/config/auth/CustomOAuth2UserService.java
  com.studymap.config.auth.CustomOAuth2UserService
 com/studymap/config/WebConfig.java
  com.studymap.config.WebConfig
 com/studymap/web/HelloController.java
  com.studymap.web.HelloController
-com/studymap/web/PostsApiController.java
- com.studymap.web.PostsApiController
+com/studymap/domain/posts/Posts.java
+ com.studymap.domain.posts.Posts
+ com.studymap.domain.posts.Posts$PostsBuilder
 com/studymap/domain/user/Role.java
  com.studymap.domain.user.Role
 com/studymap/Application.java
@@ -32,8 +33,8 @@ com/studymap/web/dto/HelloResponseDto.java
 com/studymap/domain/user/User.java
  com.studymap.domain.user.User
  com.studymap.domain.user.User$UserBuilder
-com/studymap/domain/posts/PostsRepository.java
- com.studymap.domain.posts.PostsRepository
+com/studymap/web/dto/PostsResponseDto.java
+ com.studymap.web.dto.PostsResponseDto
 com/studymap/config/auth/dto/OAuthAttributes.java
  com.studymap.config.auth.dto.OAuthAttributes
  com.studymap.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
@@ -46,14 +47,26 @@ com/studymap/config/auth/SecurityConfig.java
  com.studymap.config.auth.SecurityConfig
 com/studymap/domain/BaseTimeEntity.java
  com.studymap.domain.BaseTimeEntity
-com/studymap/domain/posts/Posts.java
- com.studymap.domain.posts.Posts
- com.studymap.domain.posts.Posts$PostsBuilder
-com/studymap/web/dto/PostsResponseDto.java
- com.studymap.web.dto.PostsResponseDto
+com/studymap/service/posts/PostsService.java
+ com.studymap.service.posts.PostsService
+com/studymap/domain/posts/PostsRepository.java
+ com.studymap.domain.posts.PostsRepository
+com/studymap/web/IndexController.java
+ com.studymap.web.IndexController
+com/studymap/web/dto/StudyGroupDto.java
+ com.studymap.web.dto.StudyGroupDto
+ com.studymap.web.dto.StudyGroupDto$StudyGroupListResponseDto
+ com.studymap.web.dto.StudyGroupDto$StudyGroupResponseDto
+ com.studymap.web.dto.StudyGroupDto$StudyGroupSaveRequestDto
+ com.studymap.web.dto.StudyGroupDto$StudyGroupSaveRequestDto$StudyGroupSaveRequestDtoBuilder
+ com.studymap.web.dto.StudyGroupDto$StudyGroupUpdateRequestDto
+ com.studymap.web.dto.StudyGroupDto$StudyGroupUpdateRequestDto$StudyGroupUpdateRequestDtoBuilder
 com/studymap/web/studyGroupController.java
  com.studymap.web.studyGroupController
-com/studymap/web/ProfileController.java
- com.studymap.web.ProfileController
-com/studymap/web/dto/StudyGroupResponseDto.java
- com.studymap.web.dto.StudyGroupResponseDto
+com/studymap/domain/studyGroup/StudyGroup.java
+ com.studymap.domain.studyGroup.StudyGroup
+ com.studymap.domain.studyGroup.StudyGroup$StudyGroupBuilder
+com/studymap/domain/studyGroup/StudyGroupRepository.java
+ com.studymap.domain.studyGroup.StudyGroupRepository
+com/studymap/service/studyGroup/StudyGroupService.java
+ com.studymap.service.studyGroup.StudyGroupService

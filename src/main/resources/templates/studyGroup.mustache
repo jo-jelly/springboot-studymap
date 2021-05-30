@@ -1,15 +1,16 @@
 {{>layout/header}}
 <h1>멤버 구하기</h1>
+<h1><a href="/studyGroup/save" role="button">글추가</a></h1>
 
-
+{{#StudyGroup}}
 <div class="card border-primary mb-12" style="max-width: 60rem;"> <!-- 파란색 테두리-->
-    <div class="card-header"><a href="">분야</a> </div>
+    <div class="card-header"><a href="/studyGroup/update{{id}}">{{author}}</a> </div>
     <div class="card-body">
-        <h4 class="card-title">모집합니다</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h4 class="card-title">{{title}}</h4>
+        <p class="card-text">{{modifiedDate}}</p>
     </div>
 </div>
-
+{{/StudyGroup}}
 <div class="card border-light mb-3" style="max-width: 20rem;"><!-- 아무것도 없는 테두리-->
     <div class="card-header">Header</div>
     <div class="card-body">
