@@ -2,20 +2,28 @@
 <h1>멤버 구하기</h1>
 <h1><a href="/studyGroup/save" role="button">글추가</a></h1>
 
+<table class="table table-horiaontal table-bordered">
+    <thead class="thead-strong">
+    <tr>
+        <th>게시글 번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>최종 수정일</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    {{#studyGroup}} <!--studyGroup라는 List를 순회 -->
+    <tr>
+        <td>{{id}}</td> <!--List에서 뽑아낸 객체의 필드를 사용한다. -->
+        <td><a href="/studyGroup/update/{{id}}">{{title}}</a></td>
+        <td>{{author}}</td>
+        <td>{{modifiedDate}}</td>
+    </tr>
+    {{/studyGroup}}
+    </tbody>
+</table>
 
-<tbody id="tbody">
-{{#StudyGroup}} <!--posts라는 List를 순회 -->
-<tr>
-    <td>{{id}}</td> <!--List에서 뽑아낸 객체의 필드를 사용한다. -->
-    <td><a href="/studyGroup/update/{{id}}">{{title}}</a></td>
-    <td>{{author}}</td>
-    <td>{{modifiedDate}}</td>
-</tr>
-{{/StudyGroup}}
-</tbody>
-
-
-{{#StudyGroup}}
+{{#studyGroup}}
 <div class="card border-primary mb-12" style="max-width: 60rem;"> <!-- 파란색 테두리-->
     <div class="card-header"><a href="/studyGroup/update{{id}}">{{author}}</a> </div>
     <div class="card-body">
@@ -23,7 +31,7 @@
         <p class="card-text">{{modifiedDate}}</p>
     </div>
 </div>
-{{/StudyGroup}}
+{{/studyGroup}}
 <div class="card border-light mb-3" style="max-width: 20rem;"><!-- 아무것도 없는 테두리-->
     <div class="card-header">Header</div>
     <div class="card-body">
