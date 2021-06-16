@@ -63,12 +63,12 @@ com/studymap/web/dto/StudyGroupDto.java
  com.studymap.web.dto.StudyGroupDto$StudyGroupUpdateRequestDto$StudyGroupUpdateRequestDtoBuilder
 com/studymap/service/studyGroup/StudyGroupService.java
  com.studymap.service.studyGroup.StudyGroupService
-com/studymap/web/studyGroupController.java
- com.studymap.web.studyGroupController
+com/studymap/web/studyGroupApiController.java
+ com.studymap.web.studyGroupApiController
 com/studymap/config/auth/CustomOAuth2UserService.java
  com.studymap.config.auth.CustomOAuth2UserService
 com/studymap/config/auth/dto/OAuthAttributes.java
  com.studymap.config.auth.dto.OAuthAttributes
  com.studymap.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
-com/studymap/web/studyGroupApiController.java
- com.studymap.web.studyGroupApiController
+com/studymap/web/studyGroupController.java
+ com.studymap.web.studyGroupController

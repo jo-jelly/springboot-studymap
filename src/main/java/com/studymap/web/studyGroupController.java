@@ -4,10 +4,13 @@ package com.studymap.web;
 import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
 import com.studymap.service.studyGroup.StudyGroupService;
+import com.studymap.web.dto.PostsResponseDto;
+import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RequiredArgsConstructor
@@ -30,4 +33,12 @@ public class studyGroupController {
 
     @GetMapping("/studyGroup/save")
     public String studyGroupSave() { return "studyGroup-save";}
+
+    @GetMapping("/studyGroup/update/{id}")
+    public String studyGroupUpdate(@PathVariable Long id, Model model) {
+        StudyGroupDto.StudyGroupResponseDto dto = studyGroupService.findById(id);
+        model.addAttribute("studyGroup", dto);
+
+        return "studyGroup-update";
+    }
 }
