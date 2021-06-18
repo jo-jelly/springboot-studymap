@@ -48,8 +48,7 @@ public class IndexController {
 
     @GetMapping("/posts/view/{id}")
     public String postsview(@PathVariable Long id, Model model) {
-        PostsListResponseDto dto = (PostsListResponseDto) postsService.findAllDesc();
-
+        model.addAttribute("postsView", postsService.findAllDesc());
         return "posts-view";
     }
 
