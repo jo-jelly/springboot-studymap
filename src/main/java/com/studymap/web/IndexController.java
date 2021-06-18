@@ -5,6 +5,7 @@ import com.studymap.config.auth.dto.SessionUser;
 import com.studymap.service.posts.PostsService;
 import com.studymap.web.dto.PostsListResponseDto;
 import com.studymap.web.dto.PostsResponseDto;
+import com.studymap.web.dto.PostsViewResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,7 +49,8 @@ public class IndexController {
 
     @GetMapping("/posts/view/{id}")
     public String postsview(@PathVariable Long id, Model model) {
-        model.addAttribute("postsView", postsService.findAllDesc());
+        PostsViewResponseDto dto = postsService.findByIdView(id);
+        model.addAttribute("postsView", dto);
         return "posts-view";
     }
 

@@ -3,10 +3,7 @@ package com.studymap.service.posts;
 
 import com.studymap.domain.posts.Posts;
 import com.studymap.domain.posts.PostsRepository;
-import com.studymap.web.dto.PostsListResponseDto;
-import com.studymap.web.dto.PostsResponseDto;
-import com.studymap.web.dto.PostsSaveRequestDto;
-import com.studymap.web.dto.PostsUpdateRequestDto;
+import com.studymap.web.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -56,6 +53,14 @@ public class PostsService {
                 .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
 
         postsRepository.delete(posts);
+    }
+
+    @Transactional(readOnly = true)
+    public PostsViewResponseDto findByIdView(Long id) {
+        Posts entity = postsRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
+
+        return new PostsViewResponseDto(entity);
     }
 
 }

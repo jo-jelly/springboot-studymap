@@ -68,7 +68,9 @@ com/studymap/web/studyGroupApiController.java
  com.studymap.web.studyGroupApiController
 com/studymap/service/posts/PostsService.java
  com.studymap.service.posts.PostsService
-com/studymap/web/PostsApiController.java
- com.studymap.web.PostsApiController
 com/studymap/web/IndexController.java
  com.studymap.web.IndexController
+com/studymap/web/PostsApiController.java
+ com.studymap.web.PostsApiController
+com/studymap/web/dto/PostsViewResponseDto.java
+ com.studymap.web.dto.PostsViewResponseDto

@@ -11,12 +11,11 @@
                 </span>
             </span>
         </span>
-        {{#postsView}}
-        <span class="user-nickname">{{author}}</span>
+        <span class="user-nickname">{{postsView.author}}</span>
     </div>
     <div class="post-desc">
         <div class="post-header-summary">
-        <span class="create-date-time">{{modifiedDate}}</span>
+        <span class="create-date-time">{{postsView.modifiedDate}}</span>
         <span class="create-time">16:55:03</span>
         <span role="img" aria-label="eye" class="anticon anticon-eye">
             <svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
@@ -25,7 +24,6 @@
                 </path>
             </svg>
         </span>
-        {{/postsView}}
         <span class="post-views">7</span>
         <span role="img" aria-label="message" class="anticon anticon-message">
             <svg viewBox="64 64 896 896" focusable="false" data-icon="message" width="1em" height="1em" fill="currentColor" aria-hidden="true">
