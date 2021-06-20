@@ -26,7 +26,7 @@ public class Posts extends BaseTimeEntity {
 
     private String author;
 
-    private int views;
+    private Integer views;
 
 
     @Builder
