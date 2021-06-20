@@ -9,4 +9,7 @@ public interface PostsRepository extends JpaRepository<Posts, Long> {
 
     @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
     List<Posts> findAllDesc();
+
+/*    @Query("update Posts set views = views + 1 where id = ?1 ")
+    Posts findByIdView(long id);*/
 }

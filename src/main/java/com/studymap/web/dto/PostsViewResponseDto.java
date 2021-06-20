@@ -12,6 +12,7 @@ public class PostsViewResponseDto {
     private String author;
     private String content;
     private LocalDateTime modifiedDate;
+    private int views;
 
     public PostsViewResponseDto(Posts entity) {
         this.id = entity.getId();
@@ -19,6 +20,7 @@ public class PostsViewResponseDto {
         this.author = entity.getAuthor();
         this.content = entity.getContent();
         this.modifiedDate = entity.getModifiedDate();
+        this.views = entity.getViews();
 
     }
 

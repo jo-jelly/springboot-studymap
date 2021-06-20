@@ -54,7 +54,7 @@ public class PostsService {
 
         postsRepository.delete(posts);
     }
-
+    //상세 글 페이지
     @Transactional(readOnly = true)
     public PostsViewResponseDto findByIdView(Long id) {
         Posts entity = postsRepository.findById(id)
@@ -62,5 +62,11 @@ public class PostsService {
 
         return new PostsViewResponseDto(entity);
     }
+    //조회수
+//    @Transactional(readOnly = true)
+//    public PostsViewResponseDto findByIdViews(Long id) {
+//        Posts entity = postsRepository.findByIdView(id);
+//        return new PostsViewResponseDto(entity);
+//    }
 
 }
