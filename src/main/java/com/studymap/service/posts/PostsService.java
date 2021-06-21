@@ -64,7 +64,8 @@ public class PostsService {
     public PostsViewResponseDto findByIdView(Long id) {
         Posts entity = postsRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
-        Posts views = postsRepository.findByIdView(id);
+        Integer views = postsRepository.findByIdView(id);
+        System.out.println(views);
         return new PostsViewResponseDto(entity);
     }
 

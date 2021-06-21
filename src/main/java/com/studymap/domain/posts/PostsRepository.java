@@ -12,8 +12,8 @@ public interface PostsRepository extends JpaRepository<Posts, Long> {
     @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
     List<Posts> findAllDesc();
 
-//    @Modifying
-//    @Transactional
+    @Modifying
+    @Transactional
     @Query("UPDATE Posts SET views = views + 1 WHERE id = ?1 ")
-    Posts findByIdView(long id);
+     Integer findByIdView(long id);
 }
