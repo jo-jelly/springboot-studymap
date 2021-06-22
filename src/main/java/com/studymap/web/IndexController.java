@@ -3,6 +3,7 @@ package com.studymap.web;
 import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
 import com.studymap.service.posts.PostsService;
+import com.studymap.service.studyGroup.StudyGroupService;
 import com.studymap.web.dto.PostsListResponseDto;
 import com.studymap.web.dto.PostsResponseDto;
 import com.studymap.web.dto.PostsViewResponseDto;
@@ -19,12 +20,14 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
+    private final StudyGroupService studyGroupService;
   /*  private final HttpSession httpSession;*/
 
     @GetMapping("/")
     public String index(Model model , @LoginUser SessionUser user) {
         //httpSession.getAttribute("user")에서 기존에 가져오던 세션 정보값을 @LoginUeser만 사용하면 세션 정보를 가져올수 있도록 변경
         model.addAttribute("posts", postsService.findAllDesc());
+        model.addAttribute("studyGroup", studyGroupService.findAllDesc());
 
        /* SessionUser user = (SessionUser) httpSession.getAttribute("user");*/
 
