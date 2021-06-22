@@ -74,4 +74,24 @@ public class StudyGroupDto {
             this.content = content;
         }
     }
+
+    @Getter
+    public static class StudyGroupViewResponseDto {
+        private Long id;
+        private String title;
+        private String author;
+        private String content;
+        private LocalDateTime modifiedDate;
+        private int views;
+
+        public StudyGroupViewResponseDto(StudyGroup entity) {
+            this.id = entity.getId();
+            this.title = entity.getTitle();
+            this.author = entity.getAuthor();
+            this.content = entity.getContent();
+            this.modifiedDate = entity.getModifiedDate();
+            this.views = entity.getViews();
+
+        }
+    }
 }
