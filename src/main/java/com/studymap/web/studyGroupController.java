@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequiredArgsConstructor
 @Controller
 public class studyGroupController {
+
     private final StudyGroupService studyGroupService;
 
     @GetMapping("/studyGroup")

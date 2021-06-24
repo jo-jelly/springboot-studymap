@@ -27,10 +27,10 @@ public class studyGroupApiController {
         return studyGroupService.findById(id);
     }
 
-/*    @DeleteMapping("/api/v1/studyGroup/{id}")
+   @DeleteMapping("/api/v1/studyGroup/{id}")
     public Long delete(@PathVariable Long id) {
         studyGroupService.delete(id);
         return id;
-    }*/
+    }
 
 }
