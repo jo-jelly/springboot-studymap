@@ -5,6 +5,7 @@ import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
 import com.studymap.service.studyGroup.StudyGroupService;
 import com.studymap.web.dto.PostsResponseDto;
+import com.studymap.web.dto.PostsViewResponseDto;
 import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -41,5 +42,14 @@ public class studyGroupController {
         model.addAttribute("studyGroup", dto);
 
         return "studyGroup-update";
+    }
+
+    @GetMapping("/studyGroup/view/{id}")
+
+    public String studyGroupView(@PathVariable Long id, Model model) {
+        StudyGroupDto.StudyGroupViewResponseDto dto = studyGroupService.findByIdView(id);
+        model.addAttribute("studyGroupView", dto);
+
+        return "studyGroup-view";
     }
 }
