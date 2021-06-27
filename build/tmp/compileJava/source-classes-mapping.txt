@@ -66,12 +66,12 @@ com/studymap/web/dto/StudyGroupDto.java
  com.studymap.web.dto.StudyGroupDto$StudyGroupViewResponseDto
 com/studymap/web/studyGroupApiController.java
  com.studymap.web.studyGroupApiController
-com/studymap/web/IndexController.java
- com.studymap.web.IndexController
+com/studymap/service/studyGroup/StudyGroupService.java
+ com.studymap.service.studyGroup.StudyGroupService
 com/studymap/web/studyGroupController.java
  com.studymap.web.studyGroupController
 com/studymap/domain/studyGroup/StudyGroup.java
  com.studymap.domain.studyGroup.StudyGroup
  com.studymap.domain.studyGroup.StudyGroup$StudyGroupBuilder
-com/studymap/service/studyGroup/StudyGroupService.java
- com.studymap.service.studyGroup.StudyGroupService
+com/studymap/web/IndexController.java
+ com.studymap.web.IndexController
