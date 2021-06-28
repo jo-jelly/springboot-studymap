@@ -37,7 +37,7 @@ public class StudyGroupDto {
         private Long id;
         private String title;
         private String author;
-        private LocalDateTime modifiedDate;
+        private String modifiedDate;
 
         public StudyGroupListResponseDto(StudyGroup entity){
             this.id = entity.getId();
@@ -81,7 +81,7 @@ public class StudyGroupDto {
         private String title;
         private String author;
         private String content;
-        private LocalDateTime modifiedDate;
+        private String modifiedDate;
         private int views;
 
         public StudyGroupViewResponseDto(StudyGroup entity) {
