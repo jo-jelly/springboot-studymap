@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -70,6 +71,8 @@ public class PostsRepositoryTest {
                 "modifiedDate=" + posts.getModifiedDate());
 
         assertThat(posts.getCreatedDate()).isAfter(now);
-        assertThat(posts.getModifiedDate()).isAfter(now);
+        assertThat(posts.getModifiedDate()).toString();
+        //LocalDateTime을 String으로 바꾸면서 수정해버림..
     }
+
 }

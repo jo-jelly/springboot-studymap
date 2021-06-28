@@ -10,9 +10,12 @@
 	{
 		height: 100%;
 	}
+/*********************************************************************************/
+/* main page                                                                          */
+/*********************************************************************************/
 
     div#main_body{
-    margin-left: 15%;
+    margin-left: 20%;
     }
 
     div#main_aside{
@@ -26,7 +29,30 @@
     div#main_row th{
     padding: 20px 50px 20px 50px;
     }
-<!--
+
+/*********************************************************************************/
+/* study page                                                                          */
+/*********************************************************************************/
+
+    div#card-header{
+        height: 50px;
+    }
+
+    div#card-header a{
+      	position: absolute;
+		right: 20%;
+    }
+
+    div#card-header p{
+        position: absolute;
+      	right: 3%
+
+    }
+
+/*********************************************************************************/
+/* basic                                                                       */
+/*********************************************************************************/
+
 	body
 	{
 		padding: 0px;
@@ -78,7 +104,7 @@
 		margin: 0px auto;
 	}
 
--->
+
 /*********************************************************************************/
 /* login                                                                          */
 /*********************************************************************************/
@@ -121,13 +147,10 @@
 		text-decoration: underline;
 	}
 
-	#login .current_page_item a
-	{
-	}
+    #login li#login_blue{
+        color: #2A70E8;
 
-	#login .icon
-	{
-	}
+    }
 
 
 /*********************************************************************************/
@@ -218,9 +241,6 @@
 		color: #FFF;
 	}
 
-	.button:before
-	{
-	}
 
 /*********************************************************************************/
 /* Header                                                                        */
@@ -321,10 +341,15 @@
     <div id="login">
         <ul>
             <li><a href="/posts/save" role="button" >글 등록</a></li>
-            <li><a href="../main/main" accesskey="1" title="">로그인</a></li>
-            <li><a href="/oauth2/authorization/google"  role="button">Google Login</a></li>
-            <li><a href="/oauth2/authorization/naver"  role="button">Naver Login</a></li>
-            <li><a href="../main/main" accesskey="2" title="">회원가입</a></li>
+            {{#userName}} <!--유저명이 들어왔을 경우에 사용 mustache는 if()문을 사용할수 없다.-->
+                <li id="login_blue">Logged in as: "{{userName}}"</li>
+                <li><a href="/logout"  role="button">Logout</a></li>
+            {{/userName}}
+            {{^userName}} <!-- 유저명이 없을경우-->
+                <li><a href="/oauth2/authorization/google"  role="button">Google Login</a></li>
+                <li><a href="/oauth2/authorization/naver"  role="button">Naver Login</a></li>
+                <li><a href="../main/main" accesskey="2" title="">회원가입</a></li>
+            {{/userName}}
         </ul>
     </div>
 </div>
