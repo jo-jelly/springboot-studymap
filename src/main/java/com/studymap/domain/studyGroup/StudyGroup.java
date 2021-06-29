@@ -25,13 +25,16 @@ public class StudyGroup extends BaseTimeEntity {
 
     private String author;
 
+    private String area;
+
     private Integer views;
 
     @Builder
-    public StudyGroup(String title, String content, String author, int views)  {
+    public StudyGroup(String title, String content, String author,String area, int views)  {
         this.title = title;
         this.content = content;
         this.author = author;
+        this.area = area;
         this.views = views;
 
     }

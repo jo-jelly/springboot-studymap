@@ -13,12 +13,14 @@ public class StudyGroupDto {
     @Getter
     @NoArgsConstructor
     public static class StudyGroupSaveRequestDto {
+        private String area;
         private String title;
         private String content;
         private String author;
 
         @Builder
-        public StudyGroupSaveRequestDto(String title, String content, String author){
+        public StudyGroupSaveRequestDto(String area, String title, String content, String author){
+            this.area = area;
             this.title = title;
             this.content = content;
             this.author = author;
@@ -26,6 +28,7 @@ public class StudyGroupDto {
 
         public StudyGroup toEntity() {
             return StudyGroup.builder()
+                    .area(area)
                     .title(title)
                     .content(content)
                     .author(author)
