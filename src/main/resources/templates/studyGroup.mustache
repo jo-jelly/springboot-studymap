@@ -1,16 +1,16 @@
 {{>layout/header}}
 
-<div id="main_body">
+<div id="study_body">
     <a href="/studyGroup/save" role="button" class="btn btn-primary">글 등록</a>
 
 {{#studyGroup}}
-<div class="card border-primary mb-12" style="max-width: 60rem;"> <!-- 파란색 테두리-->
+<div class="card border-primary mb-12" id="card_list" style="max-width: 55rem;"> <!-- 파란색 테두리-->
     <div class="card-header" id="card-header">
         <a href="/studyGroup/update/{{id}}">{{author}}</a>
-        <p class="card-text">{{modifiedDate}}</p>
     </div>
     <div class="card-body">
         <h4 class="card-title"><a href="/studyGroup/view/{{id}}">{{title}}</a></h4>
+        <p class="card-text">{{modifiedDate}}</p>
     </div>
 </div>
 {{/studyGroup}}
