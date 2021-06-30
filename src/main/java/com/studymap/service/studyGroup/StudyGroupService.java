@@ -33,7 +33,7 @@ public class StudyGroupService {
     @Transactional
     public Long update(Long id, StudyGroupDto.StudyGroupUpdateRequestDto requestDto) {
         StudyGroup studyGroup = studyGroupRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
+                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다.aa id=" + id));
 
         studyGroup.update(requestDto.getTitle(), requestDto.getContent());
 
@@ -44,7 +44,7 @@ public class StudyGroupService {
     @Transactional(readOnly = true)
     public StudyGroupDto.StudyGroupResponseDto findById(Long id) {
         StudyGroup entity = studyGroupRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
+                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다.bb id=" + id));
 
         return new StudyGroupDto.StudyGroupResponseDto(entity);
     }
@@ -58,7 +58,7 @@ public class StudyGroupService {
     @Transactional
     public void delete (Long id) {
         StudyGroup studyGroup = studyGroupRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
+                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다.cc id=" + id));
 
         studyGroupRepository.delete(studyGroup);
     }
@@ -66,10 +66,10 @@ public class StudyGroupService {
     @Transactional(readOnly = true)
     public StudyGroupDto.StudyGroupViewResponseDto findByIdView(Long id) {
         StudyGroup entity = studyGroupRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
+                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다.dd id=" + id));
         //Integer형태로 받는다 조회수
         Integer views = studyGroupRepository.findByIdView(id);
-        System.out.println(views);
+        System.out.println("이거예요"+views);
         return new StudyGroupDto.StudyGroupViewResponseDto(entity);
     }
 
