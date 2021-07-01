@@ -34,7 +34,9 @@ public class studyGroupController {
     }
 
     @GetMapping("/studyGroup/save")
-    public String studyGroupSave() { return "studyGroup-save";}
+    public String studyGroupSave(Model model, @LoginUser SessionUser user) {
+        model.addAttribute("userId", user.getId());
+        return "studyGroup-save";}
 
     @GetMapping("/studyGroup/update/{id}")
     public String studyGroupUpdate(@PathVariable Long id, Model model) {

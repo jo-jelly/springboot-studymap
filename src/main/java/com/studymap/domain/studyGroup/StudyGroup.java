@@ -16,6 +16,7 @@ public class StudyGroup extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    private long userId;
     //@colume = 선언하지 않아도 이 클래스는 모두 컬럼이 되지만 변경하고자하는 옵션이 있을경우 사용한다.
     @Column(length = 500, nullable = false)
     private String title;
@@ -34,7 +35,7 @@ public class StudyGroup extends BaseTimeEntity {
     private String state;
 
     @Builder
-    public StudyGroup(String title, String content, String author,String area, int views, int member, String state)  {
+    public StudyGroup(String title, String content, String author,String area, int views, int member, String state, long userId)  {
         this.title = title;
         this.content = content;
         this.author = author;
@@ -42,6 +43,7 @@ public class StudyGroup extends BaseTimeEntity {
         this.views = views;
         this.member = member;
         this.state = state;
+        this.userId = userId;
 
     }
 

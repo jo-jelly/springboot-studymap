@@ -19,15 +19,17 @@ public class StudyGroupDto {
         private String author;
         private Integer member;
         private String state;
+        private long userId;
 
         @Builder
-        public StudyGroupSaveRequestDto(String area, String title, String content, String author, Integer member, String state){
+        public StudyGroupSaveRequestDto(String area, String title, String content, String author, Integer member, String state, long userId){
             this.area = area;
             this.title = title;
             this.content = content;
             this.author = author;
             this.member = member;
             this.state = state;
+            this.userId = userId;
         }
 
         public StudyGroup toEntity() {
@@ -38,6 +40,7 @@ public class StudyGroupDto {
                     .author(author)
                     .member(member)
                     .state(state)
+                    .userId(userId)
                     .build();
         }
     }
@@ -100,6 +103,7 @@ public class StudyGroupDto {
         private int views;
         private String area;
         private String state;
+        private long userId;
 
         public StudyGroupViewResponseDto(StudyGroup entity) {
             this.id = entity.getId();
@@ -110,7 +114,7 @@ public class StudyGroupDto {
             this.views = entity.getViews();
             this.area = entity.getArea();
             this.state = entity.getState();
-
+            this.userId = entity.getUserId();
         }
     }
 }

@@ -21,7 +21,8 @@ var main = {
             state: $('#state').val(),
             title: $('#title').val(),
             author: $('#author').val(),
-            content: $('#content').val()
+            content: $('#content').val(),
+            userId: $('#userId').val()
         };
 
         $.ajax({

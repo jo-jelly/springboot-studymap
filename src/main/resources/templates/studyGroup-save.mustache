@@ -31,6 +31,9 @@
                 <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
             </div>
             <input type="hidden" id="state" value="모집중">
+            <div><input type="hidden" id="userId" value="{{userId}}"></div>
+            <p>{{userId}}</p>
+<!--            로그인 회원의 ID저장.(수정시 작성자만 지울 수 있게 사용)-->
         </form>
         <a href="/" role="button" class="btn btn-secondary">취소</a>
         <button type="button" class="btn btn-primary" id="btn-study_save">등록</button>
