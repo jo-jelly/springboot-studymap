@@ -17,6 +17,8 @@ var main = {
     save : function () {
         var data = {
             area: $(':radio[name="area"]:checked').val(),
+            member: $('select#member').val(),
+            state: $('#state').val(),
             title: $('#title').val(),
             author: $('#author').val(),
             content: $('#content').val()

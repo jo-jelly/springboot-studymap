@@ -17,13 +17,17 @@ public class StudyGroupDto {
         private String title;
         private String content;
         private String author;
+        private Integer member;
+        private String state;
 
         @Builder
-        public StudyGroupSaveRequestDto(String area, String title, String content, String author){
+        public StudyGroupSaveRequestDto(String area, String title, String content, String author, Integer member, String state){
             this.area = area;
             this.title = title;
             this.content = content;
             this.author = author;
+            this.member = member;
+            this.state = state;
         }
 
         public StudyGroup toEntity() {
@@ -32,6 +36,8 @@ public class StudyGroupDto {
                     .title(title)
                     .content(content)
                     .author(author)
+                    .member(member)
+                    .state(state)
                     .build();
         }
     }
@@ -41,12 +47,18 @@ public class StudyGroupDto {
         private String title;
         private String author;
         private String modifiedDate;
+        private Integer views;
+        private String state;
+        private String area;
 
         public StudyGroupListResponseDto(StudyGroup entity){
             this.id = entity.getId();
             this.title = entity.getTitle();
             this.author = entity.getAuthor();
             this.modifiedDate = entity.getModifiedDate();
+            this.views = entity.getViews();
+            this.state = entity.getState();
+            this.area = entity.getArea();
         }
     }
 
@@ -86,6 +98,8 @@ public class StudyGroupDto {
         private String content;
         private String modifiedDate;
         private int views;
+        private String area;
+        private String state;
 
         public StudyGroupViewResponseDto(StudyGroup entity) {
             this.id = entity.getId();
@@ -94,6 +108,8 @@ public class StudyGroupDto {
             this.content = entity.getContent();
             this.modifiedDate = entity.getModifiedDate();
             this.views = entity.getViews();
+            this.area = entity.getArea();
+            this.state = entity.getState();
 
         }
     }

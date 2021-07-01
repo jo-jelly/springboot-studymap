@@ -3,9 +3,9 @@
 <div id="insert_body">
 <h1>studyGroup-save 게시글 등록</h1>
 <div class="col-md=12">
+    <br>
     <div class="col-md-4">
         <form action="">
-
             <div class="form-group">
                 <label for="area">지역
                 </label>
@@ -30,6 +30,7 @@
                 <label for="content">내용</label>
                 <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
             </div>
+            <input type="hidden" id="state" value="모집중">
         </form>
         <a href="/" role="button" class="btn btn-secondary">취소</a>
         <button type="button" class="btn btn-primary" id="btn-study_save">등록</button>

@@ -31,14 +31,17 @@ public class StudyGroup extends BaseTimeEntity {
 
     private Integer member;
 
+    private String state;
+
     @Builder
-    public StudyGroup(String title, String content, String author,String area, int views, int member)  {
+    public StudyGroup(String title, String content, String author,String area, int views, int member, String state)  {
         this.title = title;
         this.content = content;
         this.author = author;
         this.area = area;
         this.views = views;
         this.member = member;
+        this.state = state;
 
     }
 
