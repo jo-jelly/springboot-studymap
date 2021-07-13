@@ -1,215 +1,8 @@
 {{>layout/header}}
 <div id="view_body">
-<div class="PostViewerHeader__PostViewerHeaderWrapper-sc-1jcf24q-0 kzWeuc">
-    <div class="user-profile">
-        <span>
-            <span class="ant-avatar ant-avatar-circle ant-avatar-icon" style="width: 32px; height: 32px; line-height: 32px; font-size: 16px; cursor: pointer;">
-                <span role="img" aria-label="user" class="anticon anticon-user">
-                    <svg viewBox="64 64 896 896" focusable="false" data-icon="user" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-                        <path d="M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z">
-
-                        </path>
-                    </svg>
-                </span>
-            </span>
-        </span>
-        <span class="user-nickname">{{studyGroupView.author}}</span>
-    </div>
-    <div class="post-desc">
-        <div class="post-header-summary">
-            <span class="create-date-time">{{studyGroupView.modifiedDate}}</span>
-            <!--        <span class="create-time">16:55:03</span>-->
-            <span role="img" aria-label="eye" class="anticon anticon-eye">
-            <svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-               <path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">-->
-
-               </path>
-            </svg>
-        </span>
-            <span class="post-views">{{studyGroupView.views}}</span>
-            <span role="img" aria-label="message" class="anticon anticon-message">
-            <svg viewBox="64 64 896 896" focusable="false" data-icon="message" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-                <path d="M464 512a48 48 0 1096 0 48 48 0 10-96 0zm200 0a48 48 0 1096 0 48 48 0 10-96 0zm-400 0a48 48 0 1096 0 48 48 0 10-96 0zm661.2-173.6c-22.6-53.7-55-101.9-96.3-143.3a444.35 444.35 0 00-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9a445.35 445.35 0 00-142 96.5c-40.9 41.3-73 89.3-95.2 142.8-23 55.4-34.6 114.3-34.3 174.9A449.4 449.4 0 00112 714v152a46 46 0 0046 46h152.1A449.4 449.4 0 00510 960h2.1c59.9 0 118-11.6 172.7-34.3a444.48 444.48 0 00142.8-95.2c41.3-40.9 73.8-88.7 96.5-142 23.6-55.2 35.6-113.9 35.9-174.5.3-60.9-11.5-120-34.8-175.6zm-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8 69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9 44.6 18.7 84.6 45.6 119 80 34.3 34.3 61.3 74.4 80 119 19.4 46.2 29.1 95.2 28.9 145.8-.6 99.6-39.7 192.9-110.1 262.7z">
-
-                </path>
-            </svg>
-        </span>
-            <span class="post-comments">0</span>
-            <span role="img" aria-label="tags" class="anticon anticon-tags">
-            <svg viewBox="64 64 896 896" focusable="false" data-icon="tags" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-                <path d="M483.2 790.3L861.4 412c1.7-1.7 2.5-4 2.3-6.3l-25.5-301.4c-.7-7.8-6.8-13.9-14.6-14.6L522.2 64.3c-2.3-.2-4.7.6-6.3 2.3L137.7 444.8a8.03 8.03 0 000 11.3l334.2 334.2c3.1 3.2 8.2 3.2 11.3 0zm62.6-651.7l224.6 19 19 224.6L477.5 694 233.9 450.5l311.9-311.9zm60.16 186.23a48 48 0 1067.88-67.89 48 48 0 10-67.88 67.89zM889.7 539.8l-39.6-39.5a8.03 8.03 0 00-11.3 0l-362 361.3-237.6-237a8.03 8.03 0 00-11.3 0l-39.6 39.5a8.03 8.03 0 000 11.3l243.2 242.8 39.6 39.5c3.1 3.1 8.2 3.1 11.3 0l407.3-406.6c3.1-3.1 3.1-8.2 0-11.3z">
-
-                </path>
-            </svg>
-        </span>
-            <span class="post-forum-scraps">0</span>
-        </div>
-        <div class="post-btns">
-
-        </div>
-    </div>
-</div>
-
-
-
-
-<div class="PostViewerContent__PostViewerContentWrapper-um5spt-0 fjtUSS">
-    <div class="post-title">
-        <h2>{{studyGroupView.title}}</h2>
-    </div><div class="post-summary">
-    <div class="summary-row">
-        <div class="label">
-            <span>활용 기술</span>
-        </div>
-        <div class="content">
-            <span class="ant-tag ant-tag-magenta">Docker</span>
-            <span class="ant-tag ant-tag-magenta">Kubernetes</span>
-        </div>
-    </div>
-    <div class="summary-row">
-        <div class="label">
-            <span>지역</span>
-        </div>
-        <div class="content">
-            <span class="ant-tag ant-tag-geekblue">전체</span>
-        </div>
-    </div>
-    <div class="summary-row">
-        <div class="label">
-            <span>모집 인원</span>
-        </div>
-        <div class="content">
-            <span class="ant-tag ant-tag-gold">2</span>
-        </div>
-    </div>
-    <div class="summary-row">
-        <div class="label">
-            <span>진행 여부</span>
-        </div>
-        <div class="content">
-            <span class="ant-tag ant-tag-volcano">모집중</span>
-        </div>
-    </div>
-</div>
-    {{#studyGroupView.userId}}
-    <div>
-    <a href="/studyGroup/update/{{id}}">수정
-    </a>
-    </div>
-    {{/studyGroupView.userId}}
-
-        <div class="post-content">
-        <div>
-            <h2>
-                <span style="color: rgb(230, 0, 0);">{{studyGroupView.content}}</span>
-            </h2>
-        </div>
-    </div>
-    <div>
-        <div>
-
-        </div>
-    </div>
-    <div class="comment-list-wrapper">
-        <div class="ant-list ant-list-split comment-list">
-            <div class="ant-list-header">0개의 댓글이 있습니다.</div>
-            <div class="ant-spin-nested-loading">
-                <div class="ant-spin-container">
-                    <div class="ant-list-empty-text">
-                        <div class="ant-empty ant-empty-normal">
-                            <div class="ant-empty-image">
-                                <svg class="ant-empty-img-simple" width="64" height="41" viewBox="0 0 64 41" xmlns="http://www.w3.org/2000/svg">
-                                    <g transform="translate(0 1)" fill="none" fill-rule="evenodd">
-                                        <ellipse class="ant-empty-img-simple-ellipse" cx="32" cy="33" rx="32" ry="7">
-                                        </ellipse>
-                                        <g class="ant-empty-img-simple-g" fill-rule="nonzero">
-                                            <path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z">
-
-                                            </path>
-                                            <path d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z" class="ant-empty-img-simple-path">
-
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="ant-empty-description">No Data
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="comment-form">
-            <div class="ant-divider ant-divider-horizontal" role="separator">
-
-            </div>
-
-                <div class="ant-comment-inner">
-                    <div class="ant-comment-avatar">
-                    <span>
-                        <span class="ant-avatar ant-avatar-circle ant-avatar-icon" style="width: 32px; height: 32px; line-height: 32px; font-size: 16px; cursor: pointer;">
-                            <span role="img" aria-label="user" class="anticon anticon-user">
-                                <svg viewBox="64 64 896 896" focusable="false" data-icon="user" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-                                    <path d="M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z">
-
-                                    </path>
-                                </svg>
-                            </span>
-                        </span>
-                    </span>
-                    </div>
-                    <div class="ant-comment-content">
-                        <div class="ant-comment-content-detail">
-                            <div class="CommentForm__CommentFormWrapper-sc-1mffdup-0 isdbAo">
-                                <form class="ant-form ant-form-horizontal">
-                                    <div class="ant-row ant-form-item" style="row-gap: 0px;">
-                                        <div class="ant-col ant-form-item-control">
-                                            <div class="ant-form-item-control-input">
-                                                <div class="ant-form-item-control-input-content">
-                                                <textarea rows="3" placeholder="로그인이 필요한 서비스입니다." class="ant-input CommentForm__TextAreaWrapper-sc-1mffdup-1 oaUlm comment-input">
-
-                                                </textarea>
-                                                    <label class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled" style="margin-top: 5px; color: rgb(153, 153, 153);">
-                                                    <span class="ant-checkbox ant-checkbox-disabled"><input type="checkbox" disabled="" class="ant-checkbox-input" value="">
-                                                        <span class="ant-checkbox-inner">
-
-                                                        </span>
-                                                    </span>
-                                                        <span>비밀 댓글
-                                                    </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ant-row ant-form-item" style="row-gap: 0px;">
-                                        <div class="ant-col ant-form-item-control">
-                                            <div class="ant-form-item-control-input">
-                                                <div class="ant-form-item-control-input-content">
-                                                    <button disabled="" type="submit" class="ant-btn ant-btn-primary comment-btn">
-                                                    <span>등록
-                                                    </span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-        </div>
-    </div>
-</div>
-
-
-
 
     <div class="card mb-3">
-        <h3 class="card-header">{{studyGroupView.author}} &nbsp;&nbsp;
+        <div class="card-header"><h4>{{studyGroupView.author}}</h4>
             <span role="img" aria-label="eye" class="anticon anticon-eye">
             <svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
                <path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">-->
@@ -218,33 +11,25 @@
             </svg>
         </span>
             <span class="post-views">{{studyGroupView.views}}</span>
-        </h3>
-        <div class="card-body">
-            <h5 class="card-title">{{studyGroupView.title}}</h5>
-            <h6 class="card-subtitle text-muted"><p>지역 &nbsp; 전체</p>
-            <p>모집인원: 3</p>
-            </h6>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-            <rect width="100%" height="100%" fill="#868e96"></rect>
-            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-        </svg>
+
         <div class="card-body">
-            <p class="card-text">{{studyGroupView.content}}</p>
+            <h3 class="card-title">{{studyGroupView.title}}</h3>
+        </div>
+        <div class="card-body" id="study_view_content">
+            <h3 class="card-text" style="color: rgb(230, 0, 0);" >{{studyGroupView.content}}</h3>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">지역: <span class="btn btn-outline-info btn-sm">{{studyGroupView.area}}</span></li>
+            <li class="list-group-item">모집인원: <span class="btn btn-outline-danger btn-sm">{{studyGroupView.member}}</span></li>
+            <li class="list-group-item">상태: <span class="btn btn-outline-warning btn-sm">{{studyGroupView.state}}</span></li>
         </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
+
         <div class="card-footer text-muted">
-            2 days ago
+            {{studyGroupView.modifiedDate}}
         </div>
     </div>
+
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">Card title</h4>
@@ -255,9 +40,6 @@
         </div>
     </div>
 
-
-
 </div>
-
 
 {{>layout/footer}}

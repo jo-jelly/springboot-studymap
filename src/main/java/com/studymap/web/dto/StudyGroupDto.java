@@ -100,7 +100,8 @@ public class StudyGroupDto {
         private String author;
         private String content;
         private String modifiedDate;
-        private int views;
+        private Integer views;
+        private Integer member;
         private String area;
         private String state;
         private long userId;
@@ -115,6 +116,7 @@ public class StudyGroupDto {
             this.area = entity.getArea();
             this.state = entity.getState();
             this.userId = entity.getUserId();
+            this.member = entity.getMember();
         }
     }
 }
