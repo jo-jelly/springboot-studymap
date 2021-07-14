@@ -36,6 +36,7 @@ public class studyGroupController {
     @GetMapping("/studyGroup/save")
     public String studyGroupSave(Model model, @LoginUser SessionUser user) {
         model.addAttribute("userId", user.getId());
+        model.addAttribute("userName", user.getName());
         return "studyGroup-save";}
 
     @GetMapping("/studyGroup/update/{id}")

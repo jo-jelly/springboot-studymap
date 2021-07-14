@@ -1,12 +1,10 @@
 package com.studymap.web.dto;
 
-import com.studymap.domain.posts.Posts;
 import com.studymap.domain.studyGroup.StudyGroup;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 
 public class StudyGroupDto {
 
@@ -19,10 +17,11 @@ public class StudyGroupDto {
         private String author;
         private Integer member;
         private String state;
-        private long userId;
+        private Long userId;
+        private String studyType;
 
         @Builder
-        public StudyGroupSaveRequestDto(String area, String title, String content, String author, Integer member, String state, long userId){
+        public StudyGroupSaveRequestDto(String area, String title, String content, String author, Integer member, String state, Long userId, String studyType){
             this.area = area;
             this.title = title;
             this.content = content;
@@ -30,6 +29,7 @@ public class StudyGroupDto {
             this.member = member;
             this.state = state;
             this.userId = userId;
+            this.studyType = studyType;
         }
 
         public StudyGroup toEntity() {
@@ -41,6 +41,7 @@ public class StudyGroupDto {
                     .member(member)
                     .state(state)
                     .userId(userId)
+                    .studyType(studyType)
                     .build();
         }
     }
@@ -53,6 +54,7 @@ public class StudyGroupDto {
         private Integer views;
         private String state;
         private String area;
+        private String studyType;
 
         public StudyGroupListResponseDto(StudyGroup entity){
             this.id = entity.getId();
@@ -62,6 +64,7 @@ public class StudyGroupDto {
             this.views = entity.getViews();
             this.state = entity.getState();
             this.area = entity.getArea();
+            this.studyType = entity.getStudyType();
         }
     }
 
@@ -71,12 +74,21 @@ public class StudyGroupDto {
         private String title;
         private String content;
         private String author;
+        private String studyType;
+        private Integer member;
+        private String state;
+        private String area;
 
         public StudyGroupResponseDto(StudyGroup entity) {
             this.id = entity.getId();
             this.title = entity.getTitle();
             this.content = entity.getContent();
             this.author = entity.getAuthor();
+            this.studyType = entity.getStudyType();
+            this.member = entity.getMember();
+            this.state = entity.getState();
+            this.studyType = entity.getStudyType();
+            this.area = entity.getArea();
         }
     }
 
@@ -104,7 +116,9 @@ public class StudyGroupDto {
         private Integer member;
         private String area;
         private String state;
-        private long userId;
+        private String studyType;
+        private Long userId;
+
 
         public StudyGroupViewResponseDto(StudyGroup entity) {
             this.id = entity.getId();
@@ -117,6 +131,7 @@ public class StudyGroupDto {
             this.state = entity.getState();
             this.userId = entity.getUserId();
             this.member = entity.getMember();
+            this.studyType = entity.getStudyType();
         }
     }
 }

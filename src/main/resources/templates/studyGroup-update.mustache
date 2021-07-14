@@ -6,12 +6,20 @@
     <div class="col-md-4">
         <form>
             <div class="form-group">
-                <label for="title">글 번호</label>
-                <input type="text" class="form-control" id="id" value="{{studyGroup.id}}" readonly>
-            </div>
-            <div class="form-group">
+
+                <div class="form-group">
+                    <label for="title">글 번호</label>
+                    <input type="text" class="form-control" id="id" value="{{studyGroup.id}}" readonly>
+                </div>
                 <label for="title">제목</label>
                 <input type="text" class="form-control" id="title" value="{{studyGroup.title}}">
+            </div>
+            <div class="form-group">
+                <p>지역: {{studyGroup.area}}</p>
+                <p>스터디 타입: {{studyGroup.area}}</p>
+                <p>모집인원: {{studyGroup.area}}</p>
+                <p>상태: "{{studyGroup.area}}"</p>
+
             </div>
             <div class="form-group">
                 <label for="author"> 작성자 </label>
