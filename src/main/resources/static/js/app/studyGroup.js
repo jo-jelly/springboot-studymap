@@ -23,7 +23,8 @@ var main = {
             title: $('#title').val(),
             author: $('#author').val(),
             content: $('#content').val(),
-            userId: $('#userId').val()
+            userId: $('#userId').val(),
+            views: $('#views').val()
         };
 
         $.ajax({
