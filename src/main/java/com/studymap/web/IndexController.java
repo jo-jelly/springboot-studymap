@@ -24,7 +24,7 @@ public class IndexController {
     public String index(Model model , @LoginUser SessionUser user) {
         //httpSession.getAttribute("user")에서 기존에 가져오던 세션 정보값을 @LoginUeser만 사용하면 세션 정보를 가져올수 있도록 변경
         model.addAttribute("posts", postsService.findAllDesc());
-        model.addAttribute("studyGroup", studyGroupService.findAllDesc(pageNum));
+        model.addAttribute("studyGroup", studyGroupService.findAllDesc());
 
        /* SessionUser user = (SessionUser) httpSession.getAttribute("user");*/
 

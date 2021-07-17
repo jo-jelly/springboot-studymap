@@ -50,7 +50,7 @@ public class StudyGroupService {
     }
 
     @Transactional(readOnly = true)//트랜젝션 범위는 유지하되 조회기능만 남겨 속도개선
-    public List<StudyGroupDto.StudyGroupListResponseDto> findAllDesc(Integer pageNum) {
+    public List<StudyGroupDto.StudyGroupListResponseDto> findAllDesc() {
         return studyGroupRepository.findAllDesc().stream().map(StudyGroupDto.StudyGroupListResponseDto::new).collect(Collectors.toList());
     }
 
