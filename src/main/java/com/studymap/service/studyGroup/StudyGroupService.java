@@ -1,13 +1,9 @@
 package com.studymap.service.studyGroup;
 
 
-import com.studymap.domain.posts.Posts;
 import com.studymap.domain.studyGroup.StudyGroup;
 import com.studymap.domain.studyGroup.StudyGroupRepository;
 
-import com.studymap.web.dto.PostsResponseDto;
-import com.studymap.web.dto.PostsUpdateRequestDto;
-import com.studymap.web.dto.PostsViewResponseDto;
 import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,6 +18,10 @@ import java.util.stream.Collectors;
 public class StudyGroupService {
 
     private  final StudyGroupRepository studyGroupRepository;
+    private static final int BLOCK_PAGE_NUM_COUNT = 5;// 블럭에 존재하는 페이지의 수
+    private static final int PAGE_POST_COUNT = 4;// 한 페이지에 존재하는 게시글의 수
+
+
 
     @Transactional
     public Long save(StudyGroupDto.StudyGroupSaveRequestDto requestDto) {
@@ -50,7 +50,7 @@ public class StudyGroupService {
     }
 
     @Transactional(readOnly = true)//트랜젝션 범위는 유지하되 조회기능만 남겨 속도개선
-    public List<StudyGroupDto.StudyGroupListResponseDto> findAllDesc() {
+    public List<StudyGroupDto.StudyGroupListResponseDto> findAllDesc(Integer pageNum) {
         return studyGroupRepository.findAllDesc().stream().map(StudyGroupDto.StudyGroupListResponseDto::new).collect(Collectors.toList());
     }
 
