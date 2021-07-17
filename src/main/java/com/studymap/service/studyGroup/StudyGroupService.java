@@ -6,6 +6,8 @@ import com.studymap.domain.studyGroup.StudyGroupRepository;
 
 import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,18 +20,16 @@ import java.util.stream.Collectors;
 public class StudyGroupService {
 
     private  final StudyGroupRepository studyGroupRepository;
-    private static final int BLOCK_PAGE_NUM_COUNT = 5;// 블럭에 존재하는 페이지의 수
-    private static final int PAGE_POST_COUNT = 4;// 한 페이지에 존재하는 게시글의 수
 
 
-
+    //저장
     @Transactional
     public Long save(StudyGroupDto.StudyGroupSaveRequestDto requestDto) {
         return studyGroupRepository.save(requestDto.toEntity()).getId();
 
     }
 
-
+    //업데이트
     @Transactional
     public Long update(Long id, StudyGroupDto.StudyGroupUpdateRequestDto requestDto) {
         StudyGroup studyGroup = studyGroupRepository.findById(id)
@@ -40,7 +40,7 @@ public class StudyGroupService {
         return id;
     }
 
-
+    // 하나의 아이디를 찾아야할때
     @Transactional(readOnly = true)
     public StudyGroupDto.StudyGroupResponseDto findById(Long id) {
         StudyGroup entity = studyGroupRepository.findById(id)
@@ -49,12 +49,13 @@ public class StudyGroupService {
         return new StudyGroupDto.StudyGroupResponseDto(entity);
     }
 
+    //리스트
     @Transactional(readOnly = true)//트랜젝션 범위는 유지하되 조회기능만 남겨 속도개선
     public List<StudyGroupDto.StudyGroupListResponseDto> findAllDesc() {
         return studyGroupRepository.findAllDesc().stream().map(StudyGroupDto.StudyGroupListResponseDto::new).collect(Collectors.toList());
     }
 
-
+    //삭제
     @Transactional
     public void delete (Long id) {
         StudyGroup studyGroup = studyGroupRepository.findById(id)
@@ -62,7 +63,7 @@ public class StudyGroupService {
 
         studyGroupRepository.delete(studyGroup);
     }
-    //상세 글 페이지
+    //상세 글
     @Transactional(readOnly = true)
     public StudyGroupDto.StudyGroupViewResponseDto findByIdView(Long id) {
         StudyGroup entity = studyGroupRepository.findById(id)
@@ -73,7 +74,20 @@ public class StudyGroupService {
         return new StudyGroupDto.StudyGroupViewResponseDto(entity);
     }
 
+    //페이징
+    @Transactional
+    public Page<StudyGroup> getStudyGroupList(Pageable pageable) {
+        return studyGroupRepository.findAll(pageable);
+    }
 
+    //페이징 넥스트 버튼 비활성화
+    @Transactional
+    public Boolean getListCheck(Pageable pageable) {
+        Page<StudyGroup> saved = getStudyGroupList(pageable);
+        Boolean check = saved.hasNext();
+
+        return check;
+    }
 
 
 }

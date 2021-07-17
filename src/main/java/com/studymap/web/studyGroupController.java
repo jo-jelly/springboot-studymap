@@ -8,6 +8,9 @@ import com.studymap.web.dto.PostsResponseDto;
 import com.studymap.web.dto.PostsViewResponseDto;
 import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,10 +23,16 @@ public class studyGroupController {
 
     private final StudyGroupService studyGroupService;
 
+
+// @PageableDefault 어노테이션을 쓰면 정렬은 물론 페이징 처리, 페이지 사이즈까지 한 줄로 구현 가능
     @GetMapping("/studyGroup")
-    public String index(Model model, @LoginUser SessionUser user) {
+    public String index(Model model, @LoginUser SessionUser user, @PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
         //httpSession.getAttribute("user")에서 기존에 가져오던 세션 정보값을 @LoginUeser만 사용하면 세션 정보를 가져올수 있도록 변경
         model.addAttribute("studyGroup", studyGroupService.findAllDesc());
+        model.addAttribute("studyGroupList", studyGroupService.getStudyGroupList(pageable));
+        model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
+        model.addAttribute("next", pageable.next().getPageNumber());
+        model.addAttribute("check", studyGroupService.getListCheck(pageable));
 
         /* SessionUser user = (SessionUser) httpSession.getAttribute("user");*/
 
@@ -37,6 +46,7 @@ public class studyGroupController {
     public String studyGroupSave(Model model, @LoginUser SessionUser user) {
         model.addAttribute("userId", user.getId());
         model.addAttribute("userName", user.getName());
+
         return "studyGroup-save";}
 
     @GetMapping("/studyGroup/update/{id}")
