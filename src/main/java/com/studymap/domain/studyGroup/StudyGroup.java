@@ -14,6 +14,7 @@ public class StudyGroup extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "StudyGroup_id")
     private Long id;
 
     private Long userId;
@@ -54,5 +55,9 @@ public class StudyGroup extends BaseTimeEntity {
         this.title = title;
         this.content = content;
 
+    }
+
+    public void  setId(Long id) {
+        this.id = id;
     }
 }

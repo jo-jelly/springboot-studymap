@@ -3,6 +3,10 @@ package com.studymap.web;
 
 import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
+import com.studymap.domain.s_comment.SComment;
+import com.studymap.domain.studyGroup.StudyGroup;
+import com.studymap.domain.studyGroup.StudyGroupRepository;
+import com.studymap.service.comment.SCommentService;
 import com.studymap.service.studyGroup.StudyGroupService;
 import com.studymap.web.dto.PostsResponseDto;
 import com.studymap.web.dto.PostsViewResponseDto;
@@ -22,6 +26,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class studyGroupController {
 
     private final StudyGroupService studyGroupService;
+    private final SCommentService sCommentService;
 
 
 // @PageableDefault 어노테이션을 쓰면 정렬은 물론 페이징 처리, 페이지 사이즈까지 한 줄로 구현 가능
@@ -30,9 +35,9 @@ public class studyGroupController {
         //httpSession.getAttribute("user")에서 기존에 가져오던 세션 정보값을 @LoginUeser만 사용하면 세션 정보를 가져올수 있도록 변경
         model.addAttribute("studyGroup", studyGroupService.findAllDesc());
         model.addAttribute("studyGroupList", studyGroupService.getStudyGroupList(pageable));
-        model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
-        model.addAttribute("next", pageable.next().getPageNumber());
-        model.addAttribute("check", studyGroupService.getListCheck(pageable));
+        model.addAttribute("previous", pageable.previousOrFirst().getPageNumber()); //이전 페이지
+        model.addAttribute("next", pageable.next().getPageNumber());                //이후 페이지
+        model.addAttribute("check", studyGroupService.getListCheck(pageable));      //다음 페이지 있나 확인
 
         /* SessionUser user = (SessionUser) httpSession.getAttribute("user");*/
 
@@ -59,9 +64,28 @@ public class studyGroupController {
 
     @GetMapping("/studyGroup/view/{id}")
 
-    public String studyGroupView(@PathVariable Long id, Model model) {
+    public String studyGroupView(@PathVariable Long id, Model model, @LoginUser SessionUser user) {
         StudyGroupDto.StudyGroupViewResponseDto dto = studyGroupService.findByIdView(id);
         model.addAttribute("studyGroupView", dto);
+
+        //여기부터 댓글을 위해 추가중
+        System.out.println("thisis dto :"+dto);
+
+        model.addAttribute("userId", user.getId());
+        model.addAttribute("userName", user.getName());
+        model.addAttribute("sgId", id);
+        model.addAttribute("scomment", sCommentService.findAllDesc());
+
+        //id값을 넣은 스터디그룹 타입의 studyGroup를 만들어줬다.
+        StudyGroup studyGroup = new StudyGroup();
+        studyGroup.setId(id);
+        //위에 studyGroup을 댓글의 studGroup게시물의 아이디로 알려줘서 조인시킨다.
+        SComment sComment = new SComment();
+        sComment.setStudyGroup(studyGroup);
+        System.out.println("thisis studyGroup :"+studyGroup);
+
+
+        model.addAttribute("studyGroup", studyGroup);
 
         return "studyGroup-view";
     }

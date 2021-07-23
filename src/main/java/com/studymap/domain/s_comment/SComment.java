@@ -37,4 +37,8 @@ public class SComment extends BaseTimeEntity {
         this.studyGroup = studyGroup;
 
     }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

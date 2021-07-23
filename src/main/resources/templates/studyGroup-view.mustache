@@ -41,6 +41,30 @@
         </div>
     </div>
 
+
+    {{#scomment}}<!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
+        <div><tr>댓글 아이디:{{id}}</tr></div>
+        <div><tr>내용:{{content}}</tr></div>
+        <div><tr>스터디 그룹 아이디:{{studyGroup.id}}</tr></div>
+        <div><tr>유저명:{{userName}}</tr></div>
+        <div><tr>유저아이디:{{userId}}</tr></div>
+    {{/scomment}}
+    <hr>
+
+    <div>
+    <form action="">
+        <div>코멘트 입력</div>
+        <div class="form-group">
+            <label for="content">내용</label>
+            <input type="text" class="form-control" id="studyGroup"  value="{{studyGroup}}" placeholder="{{studyGroup.id}}">
+            <input type="text" class="form-control" id="content"  value="참여합니다" placeholder="내용을 입력하세요">
+        </div>
+            <a href="/" role="button" class="btn btn-secondary">취소</a>
+            <button type="button" class="btn btn-primary" id="btn-c_save">등록</button>
+    </form>
+        </div>
+
+
 </div>
 
 {{>layout/footer}}
