@@ -21,24 +21,17 @@ public class SComment extends BaseTimeEntity {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
-    @ManyToOne
-    @JoinColumn(name = "StudyGroup_id")
-    private StudyGroup studyGroup;
+
+    private Integer studyGroupId;
+
+    private Integer userId;
 
 
     @Builder
-    public SComment(String content,StudyGroup studyGroup) {
+    public SComment(String content, Integer studyGroupId, Integer userId) {
         this.content = content;
-        this.studyGroup = studyGroup;
-
+        this.studyGroupId = studyGroupId;
+        this.userId = userId;
     }
 
-    public void setStudyGroup(StudyGroup studyGroup) {
-        this.studyGroup = studyGroup;
-
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
 }

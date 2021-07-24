@@ -56,11 +56,25 @@
         <div>코멘트 입력</div>
         <div class="form-group">
             <label for="content">내용</label>
-            <input type="text" class="form-control" id="studyGroup"  value="{{studyGroup}}" placeholder="{{studyGroup.id}}">
+            <input type="text" class="form-control" id="id"  value="{{studyGroup.id}}" placeholder="{{studyGroup.id}}">
+            <input type="text" class="form-control" id="s"  value="{{studyGroup}}" placeholder="{{studyGroup}}">
             <input type="text" class="form-control" id="content"  value="참여합니다" placeholder="내용을 입력하세요">
+
+            <div>
+                {champData.map((value, index) => {
+                return <div key={studyGroup}>
+                <ul>
+                    <li>{value.name}</li>
+                    <li>{value.title}</li>
+                </ul>
+            </div>
+                })}
+            </div>
+
+
         </div>
             <a href="/" role="button" class="btn btn-secondary">취소</a>
-            <button type="button" class="btn btn-primary" id="btn-c_save">등록</button>
+            <button type="button" class="btn btn-primary" id="btn-comment">등록</button>
     </form>
         </div>
 
