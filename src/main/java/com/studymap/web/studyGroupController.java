@@ -69,23 +69,14 @@ public class studyGroupController {
         model.addAttribute("studyGroupView", dto);
 
         //여기부터 댓글을 위해 추가중
-        System.out.println("thisis dto :"+dto);
+        System.out.println("thisis dto :"+ dto);
 
         model.addAttribute("userId", user.getId());
-        model.addAttribute("userName", user.getName());
-        model.addAttribute("sgId", id);
-        model.addAttribute("scomment", sCommentService.findAllDesc());
+        model.addAttribute("writer", user.getName());
+        model.addAttribute("studyGroupId", id);
+        model.addAttribute("scomment", sCommentService.getViewListComment(id));
 
-        //id값을 넣은 스터디그룹 타입의 studyGroup를 만들어줬다.
-        StudyGroup studyGroup = new StudyGroup();
-        studyGroup.setId(id);
-        //위에 studyGroup을 댓글의 studGroup게시물의 아이디로 알려줘서 조인시킨다.
-        SComment sComment = new SComment();
-        sComment.setStudyGroup(studyGroup);
-        System.out.println("thisis studyGroup :"+studyGroup);
-
-
-        model.addAttribute("studyGroup", studyGroup);
+        System.out.println("thisis coco :"+ sCommentService.getViewListComment(id));
 
         return "studyGroup-view";
     }

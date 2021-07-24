@@ -26,12 +26,14 @@ public class SComment extends BaseTimeEntity {
 
     private Integer userId;
 
+    private String writer;
 
     @Builder
-    public SComment(String content, Integer studyGroupId, Integer userId) {
+    public SComment(String content, Integer studyGroupId, Integer userId, String writer) {
         this.content = content;
         this.studyGroupId = studyGroupId;
         this.userId = userId;
+        this.writer = writer;
     }
 
 }

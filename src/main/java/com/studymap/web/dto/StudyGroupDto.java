@@ -126,15 +126,15 @@ public class StudyGroupDto {
         public StudyGroupViewResponseDto(StudyGroup entity) {
             this.id = entity.getId();
             this.title = entity.getTitle();
-            this.author = entity.getAuthor();
             this.content = entity.getContent();
-            this.modifiedDate = entity.getModifiedDate();
-            this.views = entity.getViews();
+            this.author = entity.getAuthor();
             this.area = entity.getArea();
+            this.views = entity.getViews();
+            this.member = entity.getMember();
             this.state = entity.getState();
             this.userId = entity.getUserId();
-            this.member = entity.getMember();
             this.studyType = entity.getStudyType();
+            this.modifiedDate = entity.getModifiedDate();
         }
     }
 }

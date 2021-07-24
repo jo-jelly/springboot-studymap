@@ -6,26 +6,34 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 public class SCommentDTO {
 
     @Getter
     @NoArgsConstructor
     public static class SCommentSaveRequestDto {
         private String content;
-        private StudyGroup studyGroup;
+        private Integer studyGroupId;
+        private Integer userId;
+        private String writer;
 
         @Builder
-        public SCommentSaveRequestDto(String content, StudyGroup studyGroup){
+        public SCommentSaveRequestDto(String content, Integer studyGroupId, Integer userId, String writer){
             this.content = content;
-            this.studyGroup = studyGroup;
+            this.studyGroupId = studyGroupId;
+            this.userId = userId;
+            this.writer = writer;
         }
 
-       public SComment toEntity(){
+        public SComment toEntity(){
             return SComment.builder()
                     .content(content)
-                    .studyGroup(studyGroup)
+                    .studyGroupId(studyGroupId)
+                    .userId(userId)
+                    .writer(writer)
                     .build();
-       }
+        }
 
     }
 
@@ -33,14 +41,19 @@ public class SCommentDTO {
     public static class SCommentListResponseDto {
         private Long id;
         private String content;
-        private StudyGroup studyGroup;
+        private Integer studyGroupId;
+        private Integer userId;
+        private String writer;
 
         public SCommentListResponseDto(SComment entitny){
             this.id = entitny.getId();
             this.content = entitny.getContent();
-            this.studyGroup = entitny.getStudyGroup();
+            this.studyGroupId = entitny.getStudyGroupId();
+            this.userId = entitny.getUserId();
+            this.writer = entitny.getWriter();
         }
     }
+
 
 
 }

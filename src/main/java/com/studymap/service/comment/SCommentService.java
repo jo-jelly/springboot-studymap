@@ -1,7 +1,9 @@
 package com.studymap.service.comment;
 
+import com.studymap.domain.s_comment.SComment;
 import com.studymap.domain.s_comment.SCommentRepository;
 import com.studymap.web.dto.SCommentDTO;
+import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +26,13 @@ public class SCommentService {
 
     @Transactional
     public Long save(SCommentDTO.SCommentSaveRequestDto requestDto) {
+
         return sCommentRepository.save(requestDto.toEntity()).getId();
     }
+
+    @Transactional
+    public List<SCommentDTO.SCommentListResponseDto> getViewListComment(Long id){
+        return sCommentRepository.findComment(id).stream().map(SCommentDTO.SCommentListResponseDto::new).collect(Collectors.toList());
+    }
+
 }

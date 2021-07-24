@@ -11,6 +11,10 @@ var main = {
         $('#btn-study_delete').on('click', function () {
                     _this.delete();
                 });
+        $('#btn-comment').on('click', function(){
+                    _this.save2();
+                });
+
 
     },
 
@@ -34,6 +38,27 @@ var main = {
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
         }).done(function() {
+            alert('글이 등록되었습니다.');
+            window.location.href = '/studyGroup';
+        }).fail(function (error) {
+            alert(JSON.stringify(error));
+        });
+    },
+    save2 : function () {
+        var data = {
+            writer: $('#writer').val(),
+            userId: $('#userId').val(),
+            studyGroupId: $('#studyGroupId').val(),
+            content: $('#content').val()
+        };
+
+        $.ajax({
+            type:  'POST',
+            url: '/api/v1/comment',
+            dataType: 'json',
+            contentType:'application/json; charset=utf-8',
+            data: JSON.stringify(data)
+        }).done(function(){
             alert('글이 등록되었습니다.');
             window.location.href = '/studyGroup';
         }).fail(function (error) {
