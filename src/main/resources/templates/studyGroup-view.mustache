@@ -31,43 +31,48 @@
         </div>
     </div>
 
+<!--    <div class="card">-->
+<!--        <div class="card-body">-->
+<!--            <h4 class="card-title">Card title</h4>-->
+<!--            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+<!--            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--            <a href="#" class="card-link">Card link</a>-->
+<!--            <a href="#" class="card-link">Another link</a>-->
+<!--        </div>-->
+<!--    </div>-->
+    <br>
+    <br>
+
     <div class="card">
-        <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
+        <form action="">
+            <div class="mb-3 row" id="content_text" >
+                <label for="content" class="col-sm-2 col-form-label" > 댓글입력</label>
+                <div class="col-sm-8" rows="3">
+                    <input type="text"  rows="3" class="form-control" id="content" placeholder="내용을 입력하세요">
+                    <input type="hidden" class="form-control" id="id"  value="{{studyGroupId}}" placeholder="{{studyGroupId}}">
+                    <input type="hidden" class="form-control" id="studyGroupId"  value="{{studyGroupId}}" placeholder="{{studyGroupId}}">
+                    <input type="hidden" class="form-control" id="userId"  value="{{userId}}" placeholder="{{userId}}">
+                    <input type="hidden" class="form-control" id="writer"  value="{{writer}}" placeholder="{{writer}}">
+                </div>
+                <button type="button" class="btn btn-primary" id="btn-comment" rows="1">등록</button>
+            </div>
+        </form>
     </div>
+    <br>
+    <br>
 
 
     {{#scomment}}<!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
-        <div><tr>댓글 아이디:{{id}}</tr></div>
-        <div><tr>내용:{{content}}</tr></div>
-        <div><tr>스터디 그룹 아이디:{{studyGroupId}}</tr></div>
-        <div><tr>유저명:{{writer}}</tr></div>
+    <div class="card">
+        <div class="card-body">
+<!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
+        <h6 class="card-subtitle mb-2 text-muted">{{writer}}</h6>
+        <p class="form-control" id="exampleFormControlTextarea1" rows="2">{{content}}</p>
+        </div>
+    </div>
+        <br>
     {{/scomment}}
-    <hr>
-
-    <div>
-    <form action="">
-        <div>코멘트 입력</div>
-        <div class="form-group">
-            <label for="content">내용</label>
-            <input type="text" class="form-control" id="studyGroupId"  value="{{studyGroupId}}" placeholder="{{studyGroupId}}">
-            <input type="text" class="form-control" id="userId"  value="{{userId}}" placeholder="{{userId}}">
-            <input type="text" class="form-control" id="writer"  value="{{writer}}" placeholder="{{writer}}">
-            <input type="text" class="form-control" id="content"  value="참여합니다" placeholder="내용을 입력하세요">
-
-
-        </div>
-            <a href="/" role="button" class="btn btn-secondary">취소</a>
-            <button type="button" class="btn btn-primary" id="btn-comment">등록</button>
-    </form>
-        </div>
 
 
 </div>
-
 {{>layout/footer}}

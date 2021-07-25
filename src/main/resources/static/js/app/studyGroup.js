@@ -51,7 +51,7 @@ var main = {
             studyGroupId: $('#studyGroupId').val(),
             content: $('#content').val()
         };
-
+        var id = $('#id').val();
         $.ajax({
             type:  'POST',
             url: '/api/v1/comment',
@@ -60,7 +60,7 @@ var main = {
             data: JSON.stringify(data)
         }).done(function(){
             alert('글이 등록되었습니다.');
-            window.location.href = '/studyGroup';
+            window.location.href = '/studyGroup/view/'+id;
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });

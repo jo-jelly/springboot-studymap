@@ -64,18 +64,17 @@ public class studyGroupController {
 
     @GetMapping("/studyGroup/view/{id}")
 
-    public String studyGroupView(@PathVariable Long id, Model model, @LoginUser SessionUser user) {
+    public String studyGroupView(@PathVariable Long id, Model model, @LoginUser SessionUser user,
+                                 @PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
         StudyGroupDto.StudyGroupViewResponseDto dto = studyGroupService.findByIdView(id);
         model.addAttribute("studyGroupView", dto);
-
-        //여기부터 댓글을 위해 추가중
         System.out.println("thisis dto :"+ dto);
 
+        //여기부터 댓글을 위해 추가
         model.addAttribute("userId", user.getId());
         model.addAttribute("writer", user.getName());
         model.addAttribute("studyGroupId", id);
         model.addAttribute("scomment", sCommentService.getViewListComment(id));
-
         System.out.println("thisis coco :"+ sCommentService.getViewListComment(id));
 
         return "studyGroup-view";

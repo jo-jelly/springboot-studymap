@@ -2,9 +2,12 @@ package com.studymap.service.comment;
 
 import com.studymap.domain.s_comment.SComment;
 import com.studymap.domain.s_comment.SCommentRepository;
+import com.studymap.domain.studyGroup.StudyGroup;
 import com.studymap.web.dto.SCommentDTO;
 import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
