@@ -30,16 +30,6 @@
             {{studyGroupView.modifiedDate}}
         </div>
     </div>
-
-<!--    <div class="card">-->
-<!--        <div class="card-body">-->
-<!--            <h4 class="card-title">Card title</h4>-->
-<!--            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-<!--            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-<!--            <a href="#" class="card-link">Card link</a>-->
-<!--            <a href="#" class="card-link">Another link</a>-->
-<!--        </div>-->
-<!--    </div>-->
     <br>
     <br>
 
@@ -48,7 +38,7 @@
             <div class="mb-3 row" id="content_text" >
                 <label for="content" class="col-sm-2 col-form-label" > 댓글입력</label>
                 <div class="col-sm-8" rows="3">
-                    <input type="text"  rows="3" class="form-control" id="content" placeholder="내용을 입력하세요">
+                    <textarea type="text"  rows="3" class="form-control" id="content" placeholder="내용을 입력하세요"> </textarea>
                     <input type="hidden" class="form-control" id="id"  value="{{studyGroupId}}" placeholder="{{studyGroupId}}">
                     <input type="hidden" class="form-control" id="studyGroupId"  value="{{studyGroupId}}" placeholder="{{studyGroupId}}">
                     <input type="hidden" class="form-control" id="userId"  value="{{userId}}" placeholder="{{userId}}">
