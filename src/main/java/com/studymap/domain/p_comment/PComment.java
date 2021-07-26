@@ -21,11 +21,19 @@ public class PComment extends BaseTimeEntity {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String comment;
 
+    private String writer;
+
+    private Integer postsId;
+
+    private Integer userId;
 
 
     @Builder
-    public PComment(String comment) {
+    public PComment(String comment, String writer, Integer postsId, Integer userId) {
         this.comment = comment;
+        this.writer = writer;
+        this.postsId = postsId;
+        this.userId = userId;
 
     }
 }
