@@ -56,8 +56,4 @@ public class StudyGroup extends BaseTimeEntity {
         this.content = content;
 
     }
-
-    public void  setId(Long id) {
-        this.id = id;
-    }
 }
