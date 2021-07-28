@@ -1,10 +1,10 @@
 package com.studymap.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.studymap.domain.posts.Posts;
-import com.studymap.domain.posts.PostsRepository;
-import com.studymap.web.dto.PostsSaveRequestDto;
-import com.studymap.web.dto.PostsUpdateRequestDto;
+import com.studymap.domain.project.Project;
+import com.studymap.domain.project.ProjectRepository;
+import com.studymap.web.dto.ProjectSaveRequestDto;
+import com.studymap.web.dto.ProjectUpdateRequestDto;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -41,7 +41,7 @@ public class PostsApiControllerTest {
     private TestRestTemplate restTemplate;
 
     @Autowired
-    private PostsRepository postsRepository;
+    private ProjectRepository postsRepository;
 
     @Autowired
     private WebApplicationContext context;
@@ -67,7 +67,7 @@ public class PostsApiControllerTest {
         //given
         String title = "title";
         String content = "content";
-        PostsSaveRequestDto requestDto = PostsSaveRequestDto.builder()
+        ProjectSaveRequestDto requestDto = ProjectSaveRequestDto.builder()
                 .title(title)
                 .content(content)
                 .author("author")
@@ -82,7 +82,7 @@ public class PostsApiControllerTest {
                 .andExpect(status().isOk());
 
         //then
-        List<Posts> all = postsRepository.findAll();
+        List<Project> all = postsRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
@@ -92,7 +92,7 @@ public class PostsApiControllerTest {
     public void Posts_수정되다() throws Exception{
         //given
 
-        Posts savedPosts = postsRepository.save(Posts.builder()
+        Project savedPosts = postsRepository.save(Project.builder()
         .title("title")
         .content("content")
         .author("author")
@@ -102,14 +102,14 @@ public class PostsApiControllerTest {
         String expectedTitle = "title2";
         String expectedContnet = "content2";
 
-        PostsUpdateRequestDto requestDto = PostsUpdateRequestDto.builder()
+        ProjectUpdateRequestDto requestDto = ProjectUpdateRequestDto.builder()
                 .title(expectedTitle)
                 .content(expectedContnet)
                 .build();
 
                 String url = "http://localhost:" + port + "/api/v1/posts/" + updataId;
 
-        HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
+        HttpEntity<ProjectUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
 
         //when
         mvc.perform(put(url)
@@ -118,7 +118,7 @@ public class PostsApiControllerTest {
                 .andExpect(status().isOk());
 
         //then
-        List<Posts> all = postsRepository.findAll();
+        List<Project> all = postsRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
         assertThat(all.get(0).getContent()).isEqualTo(expectedContnet);
     }

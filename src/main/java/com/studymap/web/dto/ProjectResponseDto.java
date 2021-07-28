@@ -1,17 +1,17 @@
 package com.studymap.web.dto;
 
-import com.studymap.domain.posts.Posts;
+import com.studymap.domain.project.Project;
 import lombok.Getter;
 
 @Getter
-public class PostsResponseDto {
+public class ProjectResponseDto {
 
     private Long id;
     private String title;
     private String content;
     private String author;
 
-    public PostsResponseDto(Posts entity) {
+    public ProjectResponseDto(Project entity) {
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.content = entity.getContent();

@@ -1,4 +1,4 @@
-package com.studymap.domain.posts;
+package com.studymap.domain.project;
 
 
 import com.studymap.domain.BaseTimeEntity;
@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter //getter메소드를 자동생성
 @NoArgsConstructor //기본생성자 자동생성
 @Entity //테이블에 링크될 클래스를 명
-public class Posts extends BaseTimeEntity {
+public class Project extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +30,7 @@ public class Posts extends BaseTimeEntity {
 
 
     @Builder
-    public Posts(String title, String content, String author, int views) {
+    public Project(String title, String content, String author, int views) {
         this.title = title;
         this.content = content;
         this.author = author;

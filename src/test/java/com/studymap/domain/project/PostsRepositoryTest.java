@@ -1,4 +1,4 @@
-package com.studymap.domain.posts;
+package com.studymap.domain.project;
 
 
 import org.junit.jupiter.api.AfterEach;
@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -21,7 +20,7 @@ public class PostsRepositoryTest {
 
 
     @Autowired
-    PostsRepository postsRepository;
+    ProjectRepository postsRepository;
 
     @AfterEach //단위 테스트가 끝날때 수행되는 메소드를 지정한다. 아래는 현재 청소개념
     public void cleanup(){
@@ -34,17 +33,17 @@ public class PostsRepositoryTest {
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
-        postsRepository.save(Posts.builder()
+        postsRepository.save(Project.builder()
                 .title(title)
                 .content(content)
                 .author("dear.jojelly@gmail.com")
                 .build());
 
         //when
-        List<Posts> postsList = postsRepository.findAll();
+        List<Project> postsList = postsRepository.findAll();
 
         //then
-        Posts posts = postsList.get(0);
+        Project posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
 
@@ -55,17 +54,17 @@ public class PostsRepositoryTest {
 
         //given
         LocalDateTime now = LocalDateTime.of(2020,5,4,0,0,0);
-        postsRepository.save(Posts.builder()
+        postsRepository.save(Project.builder()
         .title("title")
         .content("content")
         .author("author")
         .build());
 
         //when
-        List<Posts> postsList = postsRepository.findAll();
+        List<Project> postsList = postsRepository.findAll();
 
         //then
-        Posts posts = postsList.get(0);
+        Project posts = postsList.get(0);
 
         System.out.println(">>>>>>>>>>>>>>>>>>> createDate = " + posts.getCreatedDate()+ "," +
                 "modifiedDate=" + posts.getModifiedDate());

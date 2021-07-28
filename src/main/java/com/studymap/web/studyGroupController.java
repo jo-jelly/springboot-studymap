@@ -3,13 +3,8 @@ package com.studymap.web;
 
 import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
-import com.studymap.domain.s_comment.SComment;
-import com.studymap.domain.studyGroup.StudyGroup;
-import com.studymap.domain.studyGroup.StudyGroupRepository;
 import com.studymap.service.comment.SCommentService;
 import com.studymap.service.studyGroup.StudyGroupService;
-import com.studymap.web.dto.PostsResponseDto;
-import com.studymap.web.dto.PostsViewResponseDto;
 import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
