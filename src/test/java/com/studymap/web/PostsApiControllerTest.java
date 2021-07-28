@@ -73,7 +73,7 @@ public class PostsApiControllerTest {
                 .author("author")
                 .build();
 
-        String url = "http://localhost:" + port + "/api/v1/posts";
+        String url = "http://localhost:" + port + "/api/v1/project";
 
         //when
         mvc.perform(post(url)
@@ -107,7 +107,7 @@ public class PostsApiControllerTest {
                 .content(expectedContnet)
                 .build();
 
-                String url = "http://localhost:" + port + "/api/v1/posts/" + updataId;
+                String url = "http://localhost:" + port + "/api/v1/project/" + updataId;
 
         HttpEntity<ProjectUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
 
