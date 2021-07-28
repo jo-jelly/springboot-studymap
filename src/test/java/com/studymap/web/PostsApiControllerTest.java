@@ -41,7 +41,7 @@ public class PostsApiControllerTest {
     private TestRestTemplate restTemplate;
 
     @Autowired
-    private ProjectRepository postsRepository;
+    private ProjectRepository projectRepository;
 
     @Autowired
     private WebApplicationContext context;
@@ -50,7 +50,7 @@ public class PostsApiControllerTest {
 
     @AfterEach // junit 5
     public void tearDown() throws Exception {
-        postsRepository.deleteAll();
+        projectRepository.deleteAll();
     }
 
     @BeforeEach
@@ -82,7 +82,7 @@ public class PostsApiControllerTest {
                 .andExpect(status().isOk());
 
         //then
-        List<Project> all = postsRepository.findAll();
+        List<Project> all = projectRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
@@ -92,7 +92,7 @@ public class PostsApiControllerTest {
     public void Posts_수정되다() throws Exception{
         //given
 
-        Project savedPosts = postsRepository.save(Project.builder()
+        Project savedPosts = projectRepository.save(Project.builder()
         .title("title")
         .content("content")
         .author("author")
@@ -118,7 +118,7 @@ public class PostsApiControllerTest {
                 .andExpect(status().isOk());
 
         //then
-        List<Project> all = postsRepository.findAll();
+        List<Project> all = projectRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
         assertThat(all.get(0).getContent()).isEqualTo(expectedContnet);
     }

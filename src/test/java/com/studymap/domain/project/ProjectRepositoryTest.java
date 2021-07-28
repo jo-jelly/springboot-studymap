@@ -16,15 +16,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-public class PostsRepositoryTest {
+public class ProjectRepositoryTest {
 
 
     @Autowired
-    ProjectRepository postsRepository;
+    ProjectRepository projectRepository;
 
     @AfterEach //단위 테스트가 끝날때 수행되는 메소드를 지정한다. 아래는 현재 청소개념
     public void cleanup(){
-        postsRepository.deleteAll();
+        projectRepository.deleteAll();
     }
 
     @Test
@@ -33,19 +33,19 @@ public class PostsRepositoryTest {
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
-        postsRepository.save(Project.builder()
+        projectRepository.save(Project.builder()
                 .title(title)
                 .content(content)
                 .author("dear.jojelly@gmail.com")
                 .build());
 
         //when
-        List<Project> postsList = postsRepository.findAll();
+        List<Project> projectList = projectRepository.findAll();
 
         //then
-        Project posts = postsList.get(0);
-        assertThat(posts.getTitle()).isEqualTo(title);
-        assertThat(posts.getContent()).isEqualTo(content);
+        Project project = projectList.get(0);
+        assertThat(project.getTitle()).isEqualTo(title);
+        assertThat(project.getContent()).isEqualTo(content);
 
     }
 
@@ -54,23 +54,23 @@ public class PostsRepositoryTest {
 
         //given
         LocalDateTime now = LocalDateTime.of(2020,5,4,0,0,0);
-        postsRepository.save(Project.builder()
+        projectRepository.save(Project.builder()
         .title("title")
         .content("content")
         .author("author")
         .build());
 
         //when
-        List<Project> postsList = postsRepository.findAll();
+        List<Project> projectList = projectRepository.findAll();
 
         //then
-        Project posts = postsList.get(0);
+        Project project = projectList.get(0);
 
-        System.out.println(">>>>>>>>>>>>>>>>>>> createDate = " + posts.getCreatedDate()+ "," +
-                "modifiedDate=" + posts.getModifiedDate());
+        System.out.println(">>>>>>>>>>>>>>>>>>> createDate = " + project.getCreatedDate()+ "," +
+                "modifiedDate=" + project.getModifiedDate());
 
-        assertThat(posts.getCreatedDate()).isAfter(now);
-        assertThat(posts.getModifiedDate()).toString();
+        assertThat(project.getCreatedDate()).isAfter(now);
+        assertThat(project.getModifiedDate()).toString();
         //LocalDateTime을 String으로 바꾸면서 수정해버림..
     }
 
