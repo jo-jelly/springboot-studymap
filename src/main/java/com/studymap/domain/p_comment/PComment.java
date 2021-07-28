@@ -19,7 +19,7 @@ public class PComment extends BaseTimeEntity {
     private Long id;
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String comment;
+    private String content;
 
     private String writer;
 
@@ -29,8 +29,8 @@ public class PComment extends BaseTimeEntity {
 
 
     @Builder
-    public PComment(String comment, String writer, Integer postsId, Integer userId) {
-        this.comment = comment;
+    public PComment(String content, String writer, Integer postsId, Integer userId) {
+        this.content = content;
         this.writer = writer;
         this.postsId = postsId;
         this.userId = userId;
