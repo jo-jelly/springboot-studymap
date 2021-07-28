@@ -74,6 +74,7 @@ public class StudyGroupService {
         return new StudyGroupDto.StudyGroupViewResponseDto(entity);
     }
 
+
     //페이징
     @Transactional
     public Page<StudyGroup> getStudyGroupList(Pageable pageable) {
