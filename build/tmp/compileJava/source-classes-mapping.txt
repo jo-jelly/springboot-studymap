@@ -60,9 +60,8 @@ com/studymap/web/dto/PostsResponseDto.java
  com.studymap.web.dto.PostsResponseDto
 com/studymap/service/posts/PostsService.java
  com.studymap.service.posts.PostsService
-com/studymap/domain/p_comment/PComment.java
- com.studymap.domain.p_comment.PComment
- com.studymap.domain.p_comment.PComment$PCommentBuilder
+com/studymap/service/studyGroup/StudyGroupService.java
+ com.studymap.service.studyGroup.StudyGroupService
 com/studymap/domain/user/Role.java
  com.studymap.domain.user.Role
 com/studymap/config/auth/dto/SessionUser.java
@@ -92,5 +91,6 @@ com/studymap/web/studyGroupController.java
 com/studymap/domain/studyGroup/StudyGroup.java
  com.studymap.domain.studyGroup.StudyGroup
  com.studymap.domain.studyGroup.StudyGroup$StudyGroupBuilder
-com/studymap/service/studyGroup/StudyGroupService.java
- com.studymap.service.studyGroup.StudyGroupService
+com/studymap/domain/p_comment/PComment.java
+ com.studymap.domain.p_comment.PComment
+ com.studymap.domain.p_comment.PComment$PCommentBuilder
