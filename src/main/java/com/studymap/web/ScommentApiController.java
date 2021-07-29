@@ -1,7 +1,7 @@
 package com.studymap.web;
 
 import com.studymap.service.comment.ScommentService;
-import com.studymap.web.dto.SCommentDTO;
+import com.studymap.web.dto.ScommentDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +14,7 @@ public class ScommentApiController {
     private final ScommentService sCommentService;
 
     @PostMapping("/api/v1/comment")
-    public Long save(@RequestBody SCommentDTO.SCommentSaveRequestDto requestDto) {
+    public Long save(@RequestBody ScommentDTO.ScommentSaveRequestDto requestDto) {
         System.out.println("requserDTOisss:"+requestDto);
         System.out.println("requserDTOcontent:"+requestDto.getContent());
 

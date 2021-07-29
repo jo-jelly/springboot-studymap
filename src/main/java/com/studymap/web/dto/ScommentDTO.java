@@ -5,18 +5,18 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-public class SCommentDTO {
+public class ScommentDTO {
 
     @Getter
     @NoArgsConstructor
-    public static class SCommentSaveRequestDto {
+    public static class ScommentSaveRequestDto {
         private String content;
         private Integer studyGroupId;
         private Integer userId;
         private String writer;
 
         @Builder
-        public SCommentSaveRequestDto(String content, Integer studyGroupId, Integer userId, String writer){
+        public ScommentSaveRequestDto(String content, Integer studyGroupId, Integer userId, String writer){
             this.content = content;
             this.studyGroupId = studyGroupId;
             this.userId = userId;
@@ -35,14 +35,14 @@ public class SCommentDTO {
     }
 
     @Getter
-    public static class SCommentListResponseDto {
+    public static class ScommentListResponseDto {
         private Long id;
         private String content;
         private Integer studyGroupId;
         private Integer userId;
         private String writer;
 
-        public SCommentListResponseDto(Scomment entitny){
+        public ScommentListResponseDto(Scomment entitny){
             this.id = entitny.getId();
             this.content = entitny.getContent();
             this.studyGroupId = entitny.getStudyGroupId();
