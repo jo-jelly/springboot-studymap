@@ -1,12 +1,9 @@
 package com.studymap.web.dto;
 
-import com.studymap.domain.s_comment.SComment;
-import com.studymap.domain.studyGroup.StudyGroup;
+import com.studymap.domain.s_comment.Scomment;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 public class SCommentDTO {
 
@@ -26,8 +23,8 @@ public class SCommentDTO {
             this.writer = writer;
         }
 
-        public SComment toEntity(){
-            return SComment.builder()
+        public Scomment toEntity(){
+            return Scomment.builder()
                     .content(content)
                     .studyGroupId(studyGroupId)
                     .userId(userId)
@@ -45,7 +42,7 @@ public class SCommentDTO {
         private Integer userId;
         private String writer;
 
-        public SCommentListResponseDto(SComment entitny){
+        public SCommentListResponseDto(Scomment entitny){
             this.id = entitny.getId();
             this.content = entitny.getContent();
             this.studyGroupId = entitny.getStudyGroupId();

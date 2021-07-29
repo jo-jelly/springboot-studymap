@@ -3,7 +3,7 @@ package com.studymap.web;
 
 import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
-import com.studymap.service.comment.SCommentService;
+import com.studymap.service.comment.ScommentService;
 import com.studymap.service.studyGroup.StudyGroupService;
 import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class studyGroupController {
 
     private final StudyGroupService studyGroupService;
-    private final SCommentService sCommentService;
+    private final ScommentService sCommentService;
 
 
 // @PageableDefault 어노테이션을 쓰면 정렬은 물론 페이징 처리, 페이지 사이즈까지 한 줄로 구현 가능
