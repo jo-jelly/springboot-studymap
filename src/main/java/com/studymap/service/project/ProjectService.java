@@ -3,8 +3,11 @@ package com.studymap.service.project;
 
 import com.studymap.domain.project.Project;
 import com.studymap.domain.project.ProjectRepository;
+import com.studymap.domain.studyGroup.StudyGroup;
 import com.studymap.web.dto.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,6 +41,7 @@ public class ProjectService {
         return id;
     }
 
+    //하나의 아이디를 찾아야할때
     @Transactional(readOnly = true)
     public ProjectResponseDto findById(Long id) {
         Project entity = projectRepository.findById(id)
@@ -46,6 +50,7 @@ public class ProjectService {
         return new ProjectResponseDto(entity);
     }
 
+    //리스트
     @Transactional(readOnly = true) //readOnly = true는 트랜젝션 범위는 유지하되 조회기능만 남겨 조회속도가 개선된다.
     public List<ProjectListResponseDto> findAllDesc() {
         return projectRepository.findAllDesc().stream().map(ProjectListResponseDto::new).collect(Collectors.toList());
@@ -66,8 +71,23 @@ public class ProjectService {
                 .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
         //Integer형태로 받는다 조회수
         Integer views = projectRepository.findByIdView(id);
-        System.out.println(views);
+        System.out.println("이거"+views);
         return new ProjectViewResponseDto(entity);
     }
 
+
+    //페이징
+    @Transactional
+    public Page<Project> getProjectList(Pageable pageable) {
+        return projectRepository.findAll(pageable);
+    }
+
+    //페이징 넥스트 버튼 비활성화
+    @Transactional
+    public Boolean getListCheck(Pageable pageable) {
+        Page<Project> saved = getProjectList(pageable);
+        Boolean check = saved.hasNext();
+
+        return check;
+    }
 }

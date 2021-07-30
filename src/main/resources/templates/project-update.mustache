@@ -6,12 +6,20 @@
     <div class="col-md-4">
         <form>
             <div class="form-group">
-                <label for="title">글 번호</label>
-                <input type="text" class="form-control" id="id" value="{{project.id}}" readonly>
-            </div>
-            <div class="form-group">
+
+                <div class="form-group">
+                    <label for="title">글 번호</label>
+                    <input type="text" class="form-control" id="id" value="{{project.id}}" readonly>
+                </div>
                 <label for="title">제목</label>
                 <input type="text" class="form-control" id="title" value="{{project.title}}">
+            </div>
+            <div class="form-group">
+                <p>지역: {{project.area}}</p>
+                <p>스터디 타입: {{project.studyType}}</p>
+                <p>모집인원: {{project.member}}</p>
+                <p>상태: "{{project.state}}"</p>
+
             </div>
             <div class="form-group">
                 <label for="author"> 작성자 </label>
@@ -23,8 +31,8 @@
             </div>
         </form>
         <a href="/" role="button" class="btn btn-secondary">취소</a>
-        <button type="button" class="btn btn-primary" id="btn-update">수정 완료</button>
-        <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+        <button type="button" class="btn btn-primary" id="btn-project_update">수정 완료</button>
+        <button type="button" class="btn btn-danger" id="btn-project_delete">삭제</button>
     </div>
 </div>
 

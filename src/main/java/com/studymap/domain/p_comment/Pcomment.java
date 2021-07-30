@@ -23,16 +23,16 @@ public class Pcomment extends BaseTimeEntity {
 
     private String writer;
 
-    private Integer postsId;
+    private Integer projectId;
 
     private Integer userId;
 
 
     @Builder
-    public Pcomment(String content, String writer, Integer postsId, Integer userId) {
+    public Pcomment(String content, String writer, Integer projectId, Integer userId) {
         this.content = content;
         this.writer = writer;
-        this.postsId = postsId;
+        this.projectId = projectId;
         this.userId = userId;
 
     }

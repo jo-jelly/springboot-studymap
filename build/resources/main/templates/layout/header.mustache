@@ -36,10 +36,12 @@
 
     div#main_aside{
     display: table-cell;
+    width:300px;
     }
 
     div#main_row{
     display: table-cell;
+    width: 690px;
     }
 
     div#main_row th{
@@ -405,7 +407,7 @@
 
     <div id="login">
         <ul>
-            <li><a href="/posts/save" role="button" >글 등록</a></li>
+            <li><a href="/project/save" role="button" >글 등록</a></li>
             {{#userName}} <!--유저명이 들어왔을 경우에 사용 mustache는 if()문을 사용할수 없다.-->
                 <li id="login_blue">Logged in as: "{{userName}}"</li>
                 <li><a href="/logout"  role="button">Logout</a></li>
@@ -426,9 +428,9 @@
             <li class="current_paage_item">
                 <a href="/studyGroup" accesskey="1" title="">스터디그룹</a></li>
             <li class="current_paage_item">
-                <a href="../" accesskey="1" title="">프로젝트</a></li>
+                <a href="/project" accesskey="1" title="">프로젝트</a></li>
             <li class="current_paage_item">
-                <a href="../main/main" accesskey="1" title="">포럼</a></li>
+                <a href="/forum" accesskey="1" title="">포럼</a></li>
         </ul>
     </div>
 </div>

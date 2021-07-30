@@ -1,4 +1,4 @@
-package com.studymap.domain.project;
+package com.studymap.domain.forum;
 
 
 import com.studymap.domain.BaseTimeEntity;
@@ -11,13 +11,12 @@ import javax.persistence.*;
 @Getter //getter메소드를 자동생성
 @NoArgsConstructor //기본생성자 자동생성
 @Entity //테이블에 링크될 클래스를 명
-public class Project extends BaseTimeEntity {
+public class Forum extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long userId;
     //@colume = 선언하지 않아도 이 클래스는 모두 컬럼이 되지만 변경하고자하는 옵션이 있을경우 사용한다.
     @Column(length = 500, nullable = false)
     private String title;
@@ -29,26 +28,14 @@ public class Project extends BaseTimeEntity {
 
     private Integer views;
 
-    private String area;
-
-    private Integer member;
-
-    private String state;
-
-    private String studyType;
-
 
     @Builder
-    public Project(String title, String content, String author,String area, Integer views, Integer member, String state, long userId, String studyType) {
+    public Forum(String title, String content, String author, int views) {
         this.title = title;
         this.content = content;
         this.author = author;
-        this.area = area;
         this.views = views;
-        this.member = member;
-        this.state = state;
-        this.userId = userId;
-        this.studyType = studyType;
+
     }
 
     public void update(String title, String content){

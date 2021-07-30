@@ -1,26 +1,71 @@
 {{>layout/header}}
 
-<h1>post-save게시글 등록</h1>
-<div class="col-md=12">
-    <div class="col-md-4">
-        <form action="">
-            <div class="form-group">
-                <label for="title">제목</label>
-                    <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
-            </div>
-            <div  class="form-group">
-                <label for="author">작성자</label>
-                    <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요">
-            </div>
-            <div  class="form-group">
-                <label for="content">내용</label>
-                <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
-            </div>
-        </form>
-        <a href="/" role="button" class="btn btn-secondary">취소</a>
-        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+<div id="insert_body">
+    <h1>project-save 게시글 등록</h1>
+    <div class="col-md=12">
+        <br>
+        <div class="col-md-4">
+            <form action="">
+                <div class="form-group">
+                    <label for="member">모집인원
+                    </label>
+                    <select id="member">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="area">지역
+                    </label>
+                    <select name="area" id="area">
+                        <option value="전체">전체</option>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="부산">부산</option>
+                        <option value="광주">광주</option>
+                        <option value="대전">대전</option>
+                        <option value="대구">대구</option>
+                    </select>
+                </div>
 
+                <div class="form-group">
+                    <lable for="studyType">스터디 형태</lable>
+                    <input type="radio"  name="studyType" value="온라인" checked="checked">온라인
+                    <input type="radio"  name="studyType" value="오프라인" >오프라인
+                </div>
+
+                <div class="form-group">
+                    <label for="title">제목</label>
+                    <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
+                </div>
+
+                <div  class="form-group">
+                    <label for="author">작성자</label>
+                    <input type="text" class="form-control" id="author" value="{{userName}}" placeholder="{{userName}}" readonly>
+                </div>
+
+                <div  class="form-group">
+                    <label for="content">내용</label>
+                    <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
+                </div>
+
+                <input type="hidden" id="state" value="모집중">
+
+                <div><input type="hidden" id="userId" value="{{userId}}"></div>
+                <div><input type="hidden" id="views" value="1"></div>
+
+
+                <p>{{userId}}</p>
+                <!--            로그인 회원의 ID저장.(수정시 작성자만 지울 수 있게 사용)-->
+            </form>
+            <a href="/" role="button" class="btn btn-secondary">취소</a>
+            <button type="button" class="btn btn-primary" id="btn-project_save">등록</button>
+
+        </div>
     </div>
 </div>
-
 {{>layout/footer}}
