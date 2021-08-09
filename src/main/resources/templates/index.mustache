@@ -23,7 +23,13 @@
  <div>
      <div id="main_aside">
      <aside>
-         <h1>포럼게시판</h1>
+
+         <div style="padding: 20px 20px 0px;">
+             <div>
+                 <span style="font-size: 18px; font-weight: 600;">프로젝트</span>
+             </div>
+         </div>
+
          {{#forum}}
              <div class="card border-secondary mb-12" id="card_list" style="max-width: 55rem;"> <!-- 회색 테두리-->
                  <div class="card-header" id="card-header">
@@ -47,7 +53,14 @@
      </div>
 
      <div id="main_row">
-         <h1>프로젝트 모집</h1>
+         <div style="padding: 20px 20px 0px;">
+             <div>
+                 <span style="font-size: 18px; font-weight: 600;">프로젝트</span>
+             </div>
+             <div>
+                 <span style="font-size: 12px; color: rgb(153, 153, 153);">프로젝트 모집, 참여 공간입니다. 관심있는 프로젝트에 지원하거나 팀원을 모집해보세요.</span>
+             </div>
+         </div>
          {{#project}}
              <div class="card border-primary mb-12" id="card_list" style="max-width: 55rem;"> <!-- 파란색 테두리-->
                  <div class="card-header" id="card-header">
@@ -69,7 +82,16 @@
 
          <br>
     <!--스터디 그룹 목록 출력 영역-->
-         <h1>스터디그룹 모집</h1>
+         <div id="main_row">
+
+             <div style="padding: 20px 20px 0px;">
+            <div>
+             <span style="font-size: 18px; font-weight: 600;">스터디</span>
+        </div>
+       <div>
+          <span style="font-size: 12px; color: rgb(153, 153, 153);">스터디 모집, 참여 공간입니다. 관심있는 스터디에 지원하거나 팀원을 모집해보세요.</span>
+          </div>
+         </div>
          {{#studyGroup}}
              <div class="card border-primary mb-12" id="card_list" style="max-width: 55rem;"> <!-- 파란색 테두리-->
                  <div class="card-header" id="card-header">
