@@ -47,6 +47,7 @@ public class PostsApiControllerTest {
     private WebApplicationContext context;
 
     private MockMvc mvc; //MockMvc를 사용하도록해줌
+    private Object Long;
 
     @AfterEach // junit 5
     public void tearDown() throws Exception {
@@ -67,10 +68,27 @@ public class PostsApiControllerTest {
         //given
         String title = "title";
         String content = "content";
+        String area = "area";
+        String author = "author";
+        Integer member = 3;
+        String state = "state";
+        int userId = 1;
+        String studyType ="studyType";
+        Integer views = 2;
+
         ProjectSaveRequestDto requestDto = ProjectSaveRequestDto.builder()
                 .title(title)
                 .content(content)
                 .author("author")
+                .area(area)
+                .title(title)
+                .content(content)
+                .author(author)
+                .member(member)
+                .state(state)
+                .userId((long) userId)
+                .studyType(studyType)
+                .views(views)
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/project";
