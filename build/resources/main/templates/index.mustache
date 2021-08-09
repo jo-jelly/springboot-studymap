@@ -24,11 +24,11 @@
      <div id="main_aside">
      <aside>
 
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-             <div class="container-fluid">
-                 <a class="navbar-brand" href="/forum">포럼 게시판</a>
+         <div style="padding: 20px 20px 0px;">
+             <div>
+                 <span style="font-size: 18px; font-weight: 600;">포럼</span>
              </div>
-         </nav>
+         </div>
 
          {{#forum}}
              <div class="card border-secondary mb-12" id="card_list" style="max-width: 55rem;"> <!-- 회색 테두리-->
@@ -36,7 +36,7 @@
 
                      <a href="/forum/update/{{id}}">{{author}}</a>
                  </div>
-                 <div class="card-body">
+                 <div class="card-body" style="padding: 20px 20px 0px;">
                      <h4 class="card-title">
                          <a href="/forum/view/{{id}}">{{title}}</a>
                      </h4>
@@ -66,9 +66,9 @@
                  <div class="card-header" id="card-header">
                      <a href="/studyGroup/update/{{id}}">{{author}} &nbsp;&nbsp;{{modifiedDate}} </a>
                  </div>
-                 <div class="card-body">
+                 <div class="card-body" style="padding: 20px 20px 0px;">
                      <h4 class="card-title">
-                         <a href="/studyGroup/view/{{id}}">{{title}}</a>
+                         <a href="/project/view/{{id}}">{{title}}</a>
                      </h4>
                      <p role="img" aria-label="eye" class="anticon anticon-eye">
                          <svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
@@ -100,7 +100,7 @@
 
                      <a href="/studyGroup/update/{{id}}">{{author}} &nbsp;&nbsp;{{modifiedDate}} </a>
                  </div>
-                 <div class="card-body">
+                 <div class="card-body" style="padding: 20px 20px 0px;">
                      <h4 class="card-title">
                          <a href="/studyGroup/view/{{id}}">{{title}}</a>
                      </h4>
