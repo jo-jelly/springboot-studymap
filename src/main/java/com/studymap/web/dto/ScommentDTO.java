@@ -41,6 +41,7 @@ public class ScommentDTO {
         private Integer studyGroupId;
         private Integer userId;
         private String writer;
+        private String modifiedDate;
 
         public ScommentListResponseDto(Scomment entitny){
             this.id = entitny.getId();
@@ -48,6 +49,7 @@ public class ScommentDTO {
             this.studyGroupId = entitny.getStudyGroupId();
             this.userId = entitny.getUserId();
             this.writer = entitny.getWriter();
+            this.modifiedDate = entitny.getModifiedDate();
         }
     }
 
