@@ -41,6 +41,7 @@ public class PcommentDTO {
         private Integer projectId;
         private Integer userId;
         private String writer;
+        private String modifiedDate;
 
         public PcommentListResponseDto(Pcomment entitny){
             this.id = entitny.getId();
@@ -48,6 +49,7 @@ public class PcommentDTO {
             this.projectId = entitny.getProjectId();
             this.userId = entitny.getUserId();
             this.writer = entitny.getWriter();
+            this.modifiedDate = entitny.getModifiedDate();
         }
     }
 

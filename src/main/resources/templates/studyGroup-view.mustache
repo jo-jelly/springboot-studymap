@@ -30,12 +30,27 @@
         </div>
     </div>
     <br>
+    <hr>
+
+    {{#scomment}}<!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
+        <div class="card">
+            <div class="card-body">
+                <!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
+                <div id="comment_time">
+                    <span>{{writer}}</span>
+                    <a>{{modifiedDate}}</a>
+                </div>
+                <hr>
+                {{content}}
+            </div>
+        </div>
+        <br>
+    {{/scomment}}
 
     <div class="card">
         <form action="">
             <div class="mb-3 row" id="content_text" >
-            div
-                <label for="content" class="col-sm-2 col-form-label" >  댓글입력</label>
+                <label for="content" id="content_textName" > 댓글입력</label>
                 <div class="col-sm-8" rows="3">
                     <textarea type="text"  rows="3" class="form-control" id="content" placeholder="내용을 입력하세요"> </textarea>
                     <input type="hidden" class="form-control" id="id"  value="{{studyGroupId}}" placeholder="{{studyGroupId}}">
@@ -43,22 +58,14 @@
                     <input type="hidden" class="form-control" id="userId"  value="{{userId}}" placeholder="{{userId}}">
                     <input type="hidden" class="form-control" id="writer"  value="{{writer}}" placeholder="{{writer}}">
                 </div>
+                <div style="padding-top: 20px; ">
                 <button type="button" class="btn btn-primary" id="btn-comment" rows="1">등록</button>
+                </div>
             </div>
         </form>
     </div>
     <br>
-
-    {{#scomment}}<!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
-    <div class="card">
-        <div class="card-body">
-<!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
-        <h6 class="card-subtitle mb-2 text-muted">{{writer}}</h6>
-        <textarea class="form-control" id="comment_text">{{content}}</textarea>
-        </div>
-    </div>
-        <br>
-    {{/scomment}}
+    <br>
 
 </div>
 {{>layout/footer}}

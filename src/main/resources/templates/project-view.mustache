@@ -1,7 +1,8 @@
 {{>layout/header}}
+
 <div id="view_body">
 
-    <div class="card mb-3">
+    <div class="card">
         <div class="card-header"><h4>{{projectView.author}}</h4>
             <span role="img" aria-label="eye" class="anticon anticon-eye">
             <svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
@@ -31,33 +32,43 @@
     </div>
     <br>
 
-    <div class="card">
-        <form action="">
-            <div class="mb-3 row" id="content_text" >
-                <label for="content" class="col-sm-2 col-form-label" > 댓글입력</label>
-                <div class="col-sm-8" rows="3">
-                    <textarea type="text"  rows="3" class="form-control" id="content" placeholder="내용을 입력하세요"> </textarea>
-                    <input type="hidden" class="form-control" id="id"  value="{{projectId}}" placeholder="{{projectId}}">
-                    <input type="hidden" class="form-control" id="studyGroupId"  value="{{projectId}}" placeholder="{{projectId}}">
-                    <input type="hidden" class="form-control" id="userId"  value="{{userId}}" placeholder="{{userId}}">
-                    <input type="hidden" class="form-control" id="writer"  value="{{writer}}" placeholder="{{writer}}">
-                </div>
-                <button type="button" class="btn btn-primary" id="btn-pcomment" rows="1">등록</button>
-            </div>
-        </form>
-    </div>
-    <br>
+    <hr>
 
     {{#pcomment}}<!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
         <div class="card">
             <div class="card-body">
                 <!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
-                <h6 class="card-subtitle mb-2 text-muted">{{writer}}</h6>
-                <textarea class="form-control" id="comment_text">{{content}}</textarea>
+                <div id="comment_time">
+                <span>{{writer}}</span>
+                <a>{{modifiedDate}}</a>
+                </div>
+                <hr>
+                {{content}}
             </div>
         </div>
         <br>
     {{/pcomment}}
+
+
+    <div class="card">
+        <form action="">
+            <div class="mb-3 row" id="content_text" >
+                <label for="content" id="content_textName" > 댓글입력</label>
+                <div class="col-sm-8" rows="3">
+                    <textarea type="text"  rows="3" class="form-control" id="content" placeholder="내용을 입력하세요"> </textarea>
+                    <input type="hidden" class="form-control" id="id"  value="{{projectId}}" placeholder="{{projectId}}">
+                    <input type="hidden" class="form-control" id="projectId"  value="{{projectId}}" placeholder="{{projectId}}">
+                    <input type="hidden" class="form-control" id="userId"  value="{{userId}}" placeholder="{{userId}}">
+                    <input type="hidden" class="form-control" id="writer"  value="{{writer}}" placeholder="{{writer}}">
+                </div>
+                <div style="padding-top: 20px; ">
+                <button type="button" class="btn btn-primary" id="btn-pcomment" rows="1" style="height: 50px;">등록</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
 
 </div>
 {{>layout/footer}}

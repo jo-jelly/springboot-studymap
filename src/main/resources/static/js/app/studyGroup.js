@@ -155,7 +155,7 @@ var main = {
         var data = {
             writer: $('#writer').val(),
             userId: $('#userId').val(),
-            studyGroupId: $('#projectId').val(),
+            projectId: $('#projectId').val(),
             content: $('#content').val()
         };
         var id = $('#id').val();
