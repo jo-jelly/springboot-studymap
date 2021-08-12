@@ -37,6 +37,9 @@ var main = {
         $('#btn-forum_delete').on('click', function () {
                     _this.forum_delete();
                 });
+        $('#btn-fcomment').on('click', function(){
+           _this.fcomment();
+                });
 
     },
 
@@ -83,6 +86,27 @@ var main = {
         }).done(function(){
             alert('글이 등록되었습니다.');
             window.location.href = '/studyGroup/view/'+id;
+        }).fail(function (error) {
+            alert(JSON.stringify(error));
+        });
+    },
+    fcomment : function () {
+        var data = {
+            writer: $('#writer').val(),
+            userId: $('#userId').val(),
+            forumId: $('#forumId').val(),
+            content: $('#content').val()
+        };
+        var id = $('#id').val();
+        $.ajax({
+            type:  'POST',
+            url: '/api/v1/fcomment',
+            dataType: 'json',
+            contentType:'application/json; charset=utf-8',
+            data: JSON.stringify(data)
+        }).done(function(){
+            alert('글이 등록되었습니다.');
+            window.location.href = '/forum/view/'+id;
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
@@ -266,7 +290,7 @@ var main = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
-    }
+    },
 
 };
 main.init();

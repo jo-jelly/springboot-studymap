@@ -19,8 +19,8 @@ com/studymap/domain/project/ProjectRepository.java
  com.studymap.domain.project.ProjectRepository
 com/studymap/web/ProjectApiController.java
  com.studymap.web.ProjectApiController
-com/studymap/web/StudyGroupController.java
- com.studymap.web.StudyGroupController
+com/studymap/service/comment/PcommentService.java
+ com.studymap.service.comment.PcommentService
 com/studymap/service/forum/ForumService.java
  com.studymap.service.forum.ForumService
 com/studymap/web/ForumApiController.java
@@ -30,10 +30,13 @@ com/studymap/domain/forum/ForumRepository.java
 com/studymap/domain/studyGroup/StudyGroup.java
  com.studymap.domain.studyGroup.StudyGroup
  com.studymap.domain.studyGroup.StudyGroup$StudyGroupBuilder
-com/studymap/web/ForumController.java
- com.studymap.web.ForumController
-com/studymap/web/ScommentApiController.java
- com.studymap.web.ScommentApiController
+com/studymap/web/dto/PcommentDTO.java
+ com.studymap.web.dto.PcommentDTO
+ com.studymap.web.dto.PcommentDTO$PcommentListResponseDto
+ com.studymap.web.dto.PcommentDTO$PcommentSaveRequestDto
+ com.studymap.web.dto.PcommentDTO$PcommentSaveRequestDto$PcommentSaveRequestDtoBuilder
+com/studymap/web/ProfileController.java
+ com.studymap.web.ProfileController
 com/studymap/service/studyGroup/StudyGroupService.java
  com.studymap.service.studyGroup.StudyGroupService
 com/studymap/web/IndexController.java
@@ -84,15 +87,12 @@ com/studymap/web/dto/StudyGroupDto.java
  com.studymap.web.dto.StudyGroupDto$StudyGroupUpdateRequestDto
  com.studymap.web.dto.StudyGroupDto$StudyGroupUpdateRequestDto$StudyGroupUpdateRequestDtoBuilder
  com.studymap.web.dto.StudyGroupDto$StudyGroupViewResponseDto
-com/studymap/web/dto/ScommentDTO.java
- com.studymap.web.dto.ScommentDTO
- com.studymap.web.dto.ScommentDTO$ScommentListResponseDto
- com.studymap.web.dto.ScommentDTO$ScommentSaveRequestDto
- com.studymap.web.dto.ScommentDTO$ScommentSaveRequestDto$ScommentSaveRequestDtoBuilder
+com/studymap/web/PcommentApiController.java
+ com.studymap.web.PcommentApiController
 com/studymap/domain/user/Role.java
  com.studymap.domain.user.Role
-com/studymap/service/comment/ScommentService.java
- com.studymap.service.comment.ScommentService
+com/studymap/web/ProjectController.java
+ com.studymap.web.ProjectController
 com/studymap/domain/s_comment/Scomment.java
  com.studymap.domain.s_comment.Scomment
  com.studymap.domain.s_comment.Scomment$ScommentBuilder
@@ -112,16 +112,30 @@ com/studymap/config/auth/dto/SessionUser.java
  com.studymap.config.auth.dto.SessionUser
 com/studymap/service/project/ProjectService.java
  com.studymap.service.project.ProjectService
-com/studymap/web/ProfileController.java
- com.studymap.web.ProfileController
-com/studymap/web/ProjectController.java
- com.studymap.web.ProjectController
-com/studymap/web/dto/PcommentDTO.java
- com.studymap.web.dto.PcommentDTO
- com.studymap.web.dto.PcommentDTO$PcommentListResponseDto
- com.studymap.web.dto.PcommentDTO$PcommentSaveRequestDto
- com.studymap.web.dto.PcommentDTO$PcommentSaveRequestDto$PcommentSaveRequestDtoBuilder
-com/studymap/web/PcommentApiController.java
- com.studymap.web.PcommentApiController
-com/studymap/service/comment/PcommentService.java
- com.studymap.service.comment.PcommentService
+com/studymap/web/StudyGroupController.java
+ com.studymap.web.StudyGroupController
+com/studymap/web/dto/ScommentDTO.java
+ com.studymap.web.dto.ScommentDTO
+ com.studymap.web.dto.ScommentDTO$ScommentListResponseDto
+ com.studymap.web.dto.ScommentDTO$ScommentSaveRequestDto
+ com.studymap.web.dto.ScommentDTO$ScommentSaveRequestDto$ScommentSaveRequestDtoBuilder
+com/studymap/web/FcommentApiController.java
+ com.studymap.web.FcommentApiController
+com/studymap/service/comment/FcommentService.java
+ com.studymap.service.comment.FcommentService
+com/studymap/web/dto/FcommentDTO.java
+ com.studymap.web.dto.FcommentDTO
+ com.studymap.web.dto.FcommentDTO$FcommentListResponseDto
+ com.studymap.web.dto.FcommentDTO$FcommentSaveRequestDto
+ com.studymap.web.dto.FcommentDTO$FcommentSaveRequestDto$FcommentSaveRequestDtoBuilder
+com/studymap/domain/f_comment/FcommentRepository.java
+ com.studymap.domain.f_comment.FcommentRepository
+com/studymap/service/comment/ScommentService.java
+ com.studymap.service.comment.ScommentService
+com/studymap/web/ScommentApiController.java
+ com.studymap.web.ScommentApiController
+com/studymap/domain/f_comment/Fcomment.java
+ com.studymap.domain.f_comment.Fcomment
+ com.studymap.domain.f_comment.Fcomment$FcommentBuilder
+com/studymap/web/ForumController.java
+ com.studymap.web.ForumController

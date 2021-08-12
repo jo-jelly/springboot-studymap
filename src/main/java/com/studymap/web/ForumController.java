@@ -3,6 +3,7 @@ package com.studymap.web;
 
 import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
+import com.studymap.service.comment.FcommentService;
 import com.studymap.service.comment.ScommentService;
 import com.studymap.service.forum.ForumService;
 import com.studymap.service.studyGroup.StudyGroupService;
@@ -23,7 +24,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class ForumController {
 
     private final ForumService forumService;
-    private final ScommentService sCommentService;
+    private final FcommentService fCommentService;
 
 
 // @PageableDefault 어노테이션을 쓰면 정렬은 물론 페이징 처리, 페이지 사이즈까지 한 줄로 구현 가능
@@ -66,12 +67,12 @@ public class ForumController {
         model.addAttribute("forum", dto);
         System.out.println("thisis dto :"+ dto);
 
-//        //여기부터 댓글을 위해 추가
-//        model.addAttribute("userId", user.getId());
-//        model.addAttribute("writer", user.getName());
-//        model.addAttribute("studyGroupId", id);
-//        model.addAttribute("scomment", sCommentService.getViewListComment(id));
-//        System.out.println("thisis coco :"+ sCommentService.getViewListComment(id));
+        //여기부터 댓글을 위해 추가
+        model.addAttribute("userId", user.getId());
+        model.addAttribute("writer", user.getName());
+        model.addAttribute("forumId", id);
+        model.addAttribute("fcomment", fCommentService.getViewListComment(id));
+        System.out.println("thisis coco :"+ fCommentService.getViewListComment(id));
 
         return "forum-view";
     }

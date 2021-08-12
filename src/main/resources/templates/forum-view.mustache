@@ -25,5 +25,44 @@
     <br>
 
 
+    <hr>
+
+    {{#fcomment}}<!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
+        <div class="card">
+            <div class="card-body">
+                <!--머스타치 반복문 사용시 scomment.id가 아닌 그 안에서 목록으로 보기 때문에 그냥 {id}}로 입력-->
+                <div id="comment_time">
+                    <span>{{writer}}</span>
+                    <a>{{modifiedDate}}</a>
+                </div>
+                <hr>
+                {{content}}
+            </div>
+        </div>
+        <br>
+    {{/fcomment}}
+
+
+    <div class="card">
+        <form action="">
+            <div class="mb-3 row" id="content_text" >
+                <label for="content" id="content_textName" > 댓글입력</label>
+                <div class="col-sm-8" rows="3">
+                    <textarea type="text"  rows="3" class="form-control" id="content" placeholder="내용을 입력하세요"> </textarea>
+                    <input type="hidden" class="form-control" id="id"  value="{{forumId}}" placeholder="{{forumId}}">
+                    <input type="hidden" class="form-control" id="forumId"  value="{{forumId}}" placeholder="{{forumId}}">
+                    <input type="hidden" class="form-control" id="userId"  value="{{userId}}" placeholder="{{userId}}">
+                    <input type="hidden" class="form-control" id="writer"  value="{{writer}}" placeholder="{{writer}}">
+                </div>
+                <div style="padding-top: 20px; ">
+                    <button type="button" class="btn btn-primary" id="btn-fcomment" rows="1" style="height: 50px;">등록</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+
+
 </div>
 {{>layout/footer}}
