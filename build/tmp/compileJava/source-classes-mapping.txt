@@ -39,8 +39,8 @@ com/studymap/web/ProfileController.java
  com.studymap.web.ProfileController
 com/studymap/service/studyGroup/StudyGroupService.java
  com.studymap.service.studyGroup.StudyGroupService
-com/studymap/web/IndexController.java
- com.studymap.web.IndexController
+com/studymap/web/ForumController.java
+ com.studymap.web.ForumController
 com/studymap/config/auth/CustomOAuth2UserService.java
  com.studymap.config.auth.CustomOAuth2UserService
 com/studymap/domain/forum/Forum.java
@@ -137,5 +137,5 @@ com/studymap/web/ScommentApiController.java
 com/studymap/domain/f_comment/Fcomment.java
  com.studymap.domain.f_comment.Fcomment
  com.studymap.domain.f_comment.Fcomment$FcommentBuilder
-com/studymap/web/ForumController.java
- com.studymap.web.ForumController
+com/studymap/web/IndexController.java
+ com.studymap.web.IndexController
