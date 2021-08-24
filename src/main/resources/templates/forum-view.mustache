@@ -10,6 +10,9 @@
             </svg>
         </span>
             <span class="post-views">{{forum.views}}</span>
+            {{#same_writer}}
+                <a id="sameWriter" href="/forum/update/{{forum.id}}">수정하기 </a>
+            {{/same_writer}}
         </div>
 
         <div class="card-body">

@@ -53,6 +53,9 @@
     background: #f0f2f5;
     }
 
+    .badge{
+        color: white;
+    }
 
 /*********************************************************************************/
 /* study page                                                                          */
@@ -139,6 +142,11 @@
 
     div#comment_time span{
     font-size: small;
+    }
+
+    a#sameWriter {
+      	position: absolute;
+		right: 3%;
     }
 
 /*********************************************************************************/
@@ -463,7 +471,7 @@
         <ul>
             <li><a href="/project/save" role="button" >글 등록</a></li>
             {{#userName}} <!--유저명이 들어왔을 경우에 사용 mustache는 if()문을 사용할수 없다.-->
-                <li id="login_blue">Logged in as: "{{userName}}"</li>
+                <li id="login_blue">반갑습니다 "{{userName}}"님</li>
                 <li><a href="/logout"  role="button">Logout</a></li>
             {{/userName}}
             {{^userName}} <!-- 유저명이 없을경우-->

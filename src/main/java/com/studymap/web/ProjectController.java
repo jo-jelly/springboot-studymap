@@ -50,21 +50,27 @@ public class ProjectController {
         return "project-save";}
 
     @GetMapping("/project/update/{id}")
-    public String studyGroupUpdate(@PathVariable Long id, Model model) {
+    public String studyGroupUpdate(@PathVariable Long id, Model model, @LoginUser SessionUser user) {
         ProjectResponseDto dto = projectService.findById(id);
+        model.addAttribute("userName", user.getName());
         model.addAttribute("project", dto);
 
         return "project-update";
     }
 
     @GetMapping("/project/view/{id}")
-
     public String projectView(@PathVariable Long id, Model model, @LoginUser SessionUser user,
                                  @PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
         ProjectViewResponseDto dto = projectService.findByIdView(id);
         model.addAttribute("projectView", dto);
-        System.out.println("thisis dto :"+ dto);
+            System.out.println("number1"+user.getId());
+            System.out.println("number2"+dto.getUserId());
 
+            //작성자만 수정 가능하도록mustache에 적용하기 위해 사용 ==이 아닌 equals를 사용하고 임의의 값(1)을 넣어줌
+        if (user.getId().equals(dto.getUserId())){
+            model.addAttribute("same_writer",1);
+            System.out.println("sameWiter");
+        }
         //여기부터 댓글을 위해 추가
         model.addAttribute("userId", user.getId());
         model.addAttribute("writer", user.getName());

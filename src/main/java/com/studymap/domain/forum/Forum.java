@@ -17,6 +17,8 @@ public class Forum extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Long userId;
+
     //@colume = 선언하지 않아도 이 클래스는 모두 컬럼이 되지만 변경하고자하는 옵션이 있을경우 사용한다.
     @Column(length = 500, nullable = false)
     private String title;
@@ -30,11 +32,12 @@ public class Forum extends BaseTimeEntity {
 
 
     @Builder
-    public Forum(String title, String content, String author, int views) {
+    public Forum(String title, String content, String author, int views,Long userId) {
         this.title = title;
         this.content = content;
         this.author = author;
         this.views = views;
+        this.userId = userId;
 
     }
 

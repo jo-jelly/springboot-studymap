@@ -17,14 +17,15 @@ com/studymap/config/auth/dto/OAuthAttributes.java
  com.studymap.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
 com/studymap/domain/project/ProjectRepository.java
  com.studymap.domain.project.ProjectRepository
-com/studymap/web/ProjectApiController.java
- com.studymap.web.ProjectApiController
+com/studymap/domain/f_comment/Fcomment.java
+ com.studymap.domain.f_comment.Fcomment
+ com.studymap.domain.f_comment.Fcomment$FcommentBuilder
 com/studymap/service/comment/PcommentService.java
  com.studymap.service.comment.PcommentService
-com/studymap/service/forum/ForumService.java
- com.studymap.service.forum.ForumService
-com/studymap/web/ForumApiController.java
- com.studymap.web.ForumApiController
+com/studymap/web/ProjectApiController.java
+ com.studymap.web.ProjectApiController
+com/studymap/service/project/ProjectService.java
+ com.studymap.service.project.ProjectService
 com/studymap/domain/forum/ForumRepository.java
  com.studymap.domain.forum.ForumRepository
 com/studymap/domain/studyGroup/StudyGroup.java
@@ -39,13 +40,12 @@ com/studymap/web/ProfileController.java
  com.studymap.web.ProfileController
 com/studymap/service/studyGroup/StudyGroupService.java
  com.studymap.service.studyGroup.StudyGroupService
-com/studymap/web/ForumController.java
- com.studymap.web.ForumController
+com/studymap/service/comment/FcommentService.java
+ com.studymap.service.comment.FcommentService
 com/studymap/config/auth/CustomOAuth2UserService.java
  com.studymap.config.auth.CustomOAuth2UserService
-com/studymap/domain/forum/Forum.java
- com.studymap.domain.forum.Forum
- com.studymap.domain.forum.Forum$ForumBuilder
+com/studymap/domain/f_comment/FcommentRepository.java
+ com.studymap.domain.f_comment.FcommentRepository
 com/studymap/config/WebConfig.java
  com.studymap.config.WebConfig
 com/studymap/web/HelloController.java
@@ -63,15 +63,11 @@ com/studymap/domain/p_comment/PcommentRepository.java
 com/studymap/domain/p_comment/Pcomment.java
  com.studymap.domain.p_comment.Pcomment
  com.studymap.domain.p_comment.Pcomment$PcommentBuilder
-com/studymap/web/dto/ForumDto.java
- com.studymap.web.dto.ForumDto
- com.studymap.web.dto.ForumDto$ForumListResponseDto
- com.studymap.web.dto.ForumDto$ForumResponseDto
- com.studymap.web.dto.ForumDto$ForumSaveRequestDto
- com.studymap.web.dto.ForumDto$ForumSaveRequestDto$ForumSaveRequestDtoBuilder
- com.studymap.web.dto.ForumDto$ForumUpdateRequestDto
- com.studymap.web.dto.ForumDto$ForumUpdateRequestDto$ForumUpdateRequestDtoBuilder
- com.studymap.web.dto.ForumDto$ForumViewResponseDto
+com/studymap/web/dto/FcommentDTO.java
+ com.studymap.web.dto.FcommentDTO
+ com.studymap.web.dto.FcommentDTO$FcommentListResponseDto
+ com.studymap.web.dto.FcommentDTO$FcommentSaveRequestDto
+ com.studymap.web.dto.FcommentDTO$FcommentSaveRequestDto$FcommentSaveRequestDtoBuilder
 com/studymap/config/auth/SecurityConfig.java
  com.studymap.config.auth.SecurityConfig
 com/studymap/domain/studyGroup/StudyGroupRepository.java
@@ -91,8 +87,8 @@ com/studymap/web/PcommentApiController.java
  com.studymap.web.PcommentApiController
 com/studymap/domain/user/Role.java
  com.studymap.domain.user.Role
-com/studymap/web/ProjectController.java
- com.studymap.web.ProjectController
+com/studymap/web/ScommentApiController.java
+ com.studymap.web.ScommentApiController
 com/studymap/domain/s_comment/Scomment.java
  com.studymap.domain.s_comment.Scomment
  com.studymap.domain.s_comment.Scomment$ScommentBuilder
@@ -110,10 +106,11 @@ com/studymap/web/dto/ProjectResponseDto.java
  com.studymap.web.dto.ProjectResponseDto
 com/studymap/config/auth/dto/SessionUser.java
  com.studymap.config.auth.dto.SessionUser
-com/studymap/service/project/ProjectService.java
- com.studymap.service.project.ProjectService
-com/studymap/web/StudyGroupController.java
- com.studymap.web.StudyGroupController
+com/studymap/service/comment/ScommentService.java
+ com.studymap.service.comment.ScommentService
+com/studymap/domain/forum/Forum.java
+ com.studymap.domain.forum.Forum
+ com.studymap.domain.forum.Forum$ForumBuilder
 com/studymap/web/dto/ScommentDTO.java
  com.studymap.web.dto.ScommentDTO
  com.studymap.web.dto.ScommentDTO$ScommentListResponseDto
@@ -121,21 +118,24 @@ com/studymap/web/dto/ScommentDTO.java
  com.studymap.web.dto.ScommentDTO$ScommentSaveRequestDto$ScommentSaveRequestDtoBuilder
 com/studymap/web/FcommentApiController.java
  com.studymap.web.FcommentApiController
-com/studymap/service/comment/FcommentService.java
- com.studymap.service.comment.FcommentService
-com/studymap/web/dto/FcommentDTO.java
- com.studymap.web.dto.FcommentDTO
- com.studymap.web.dto.FcommentDTO$FcommentListResponseDto
- com.studymap.web.dto.FcommentDTO$FcommentSaveRequestDto
- com.studymap.web.dto.FcommentDTO$FcommentSaveRequestDto$FcommentSaveRequestDtoBuilder
-com/studymap/domain/f_comment/FcommentRepository.java
- com.studymap.domain.f_comment.FcommentRepository
-com/studymap/service/comment/ScommentService.java
- com.studymap.service.comment.ScommentService
-com/studymap/web/ScommentApiController.java
- com.studymap.web.ScommentApiController
-com/studymap/domain/f_comment/Fcomment.java
- com.studymap.domain.f_comment.Fcomment
- com.studymap.domain.f_comment.Fcomment$FcommentBuilder
+com/studymap/web/dto/ForumDto.java
+ com.studymap.web.dto.ForumDto
+ com.studymap.web.dto.ForumDto$ForumListResponseDto
+ com.studymap.web.dto.ForumDto$ForumResponseDto
+ com.studymap.web.dto.ForumDto$ForumSaveRequestDto
+ com.studymap.web.dto.ForumDto$ForumSaveRequestDto$ForumSaveRequestDtoBuilder
+ com.studymap.web.dto.ForumDto$ForumUpdateRequestDto
+ com.studymap.web.dto.ForumDto$ForumUpdateRequestDto$ForumUpdateRequestDtoBuilder
+ com.studymap.web.dto.ForumDto$ForumViewResponseDto
+com/studymap/service/forum/ForumService.java
+ com.studymap.service.forum.ForumService
+com/studymap/web/ForumApiController.java
+ com.studymap.web.ForumApiController
 com/studymap/web/IndexController.java
  com.studymap.web.IndexController
+com/studymap/web/ProjectController.java
+ com.studymap.web.ProjectController
+com/studymap/web/StudyGroupController.java
+ com.studymap.web.StudyGroupController
+com/studymap/web/ForumController.java
+ com.studymap.web.ForumController

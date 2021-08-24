@@ -71,7 +71,7 @@ public class ProjectService {
                 .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
         //Integer형태로 받는다 조회수
         Integer views = projectRepository.findByIdView(id);
-        System.out.println("이거"+views);
+        System.out.println("views:"+views);
         return new ProjectViewResponseDto(entity);
     }
 

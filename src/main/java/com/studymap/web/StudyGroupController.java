@@ -50,10 +50,10 @@ public class StudyGroupController {
         return "studyGroup-save";}
 
     @GetMapping("/studyGroup/update/{id}")
-    public String studyGroupUpdate(@PathVariable Long id, Model model) {
+    public String studyGroupUpdate(@PathVariable Long id, Model model, @LoginUser SessionUser user) {
         StudyGroupDto.StudyGroupResponseDto dto = studyGroupService.findById(id);
         model.addAttribute("studyGroup", dto);
-
+        model.addAttribute("userName", user.getName());
         return "studyGroup-update";
     }
 
@@ -64,6 +64,12 @@ public class StudyGroupController {
         StudyGroupDto.StudyGroupViewResponseDto dto = studyGroupService.findByIdView(id);
         model.addAttribute("studyGroupView", dto);
         System.out.println("thisis dto :"+ dto);
+
+        //작성자만 수정 가능하도록mustache에 적용하기 위해 사용 ==이 아닌 equals를 사용하고 임의의 값(1)을 넣어줌
+        if (user.getId().equals(dto.getUserId())) {
+            model.addAttribute("same_writer", 1);
+            System.out.println("sameWriter");
+        }
 
         //여기부터 댓글을 위해 추가
         model.addAttribute("userId", user.getId());

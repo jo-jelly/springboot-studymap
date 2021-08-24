@@ -10,6 +10,9 @@
             </svg>
         </span>
             <span class="post-views">{{studyGroupView.views}}</span>
+            {{#same_writer}}
+                <a id="sameWriter" href="/studyGroup/update/{{studyGroupView.id}}">수정하기 </a>
+            {{/same_writer}}
         </div>
 
         <div class="card-body">

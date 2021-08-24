@@ -16,14 +16,16 @@ public class ForumDto {
         private String content;
         private String author;
         private Integer views;
+        private Long userId;
 
         @Builder
-        public ForumSaveRequestDto(String title, String content, String author, Integer views){
+        public ForumSaveRequestDto(String title, String content, String author, Integer views, Long userId){
 
             this.title = title;
             this.content = content;
             this.author = author;
             this.views = views;
+            this.userId = userId;
         }
 
         public Forum toEntity() {
@@ -32,6 +34,7 @@ public class ForumDto {
                     .content(content)
                     .author(author)
                     .views(views)
+                    .userId(userId)
                     .build();
         }
     }
@@ -88,6 +91,7 @@ public class ForumDto {
         private String content;
         private String modifiedDate;
         private Integer views;
+        private Long userId;
 
 
 
@@ -98,6 +102,7 @@ public class ForumDto {
             this.author = entity.getAuthor();
             this.views = entity.getViews();
             this.modifiedDate = entity.getModifiedDate();
+            this.userId = entity.getUserId();
         }
     }
 }
