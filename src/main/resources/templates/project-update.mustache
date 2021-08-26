@@ -4,37 +4,41 @@
 <h1>게시글 수정</h1>
 
 <div class="col-md-12">
-    <div>
+    <div class="card" id="update_form">
         <form>
             <div class="form-group">
 
                 <div class="form-group">
-                    <label for="title">글 번호</label>
-                    <input type="text" class="form-control" id="id" value="{{project.id}}" readonly>
+                    <label for="author"> 작성자 </label>
+                    <input type="text" class="form-control" id="author" value="{{project.author}}" readonly>
                 </div>
                 <label for="title">제목</label>
                 <input type="text" class="form-control" id="title" value="{{project.title}}">
             </div>
             <div class="form-group">
-                <p>지역: {{project.area}}</p>
-                <p>스터디 타입: {{project.studyType}}</p>
-                <p>모집인원: {{project.member}}</p>
-                <p>상태: "{{project.state}}"</p>
-
-            </div>
-            <div class="form-group">
-                <label for="author"> 작성자 </label>
-                <input type="text" class="form-control" id="author" value="{{project.author}}" readonly>
-            </div>
-            <div class="form-group">
                 <label for="content"> 내용 </label>
                 <textarea class="form-control" id="content">{{project.content}}</textarea>
             </div>
+
+            <div class="form-group">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">지역: <span class="btn btn-outline-info btn-sm">{{project.area}}</span></li>
+                    <li class="list-group-item">모집인원: <span class="btn btn-outline-danger btn-sm">{{project.member}}</span></li>
+                    <li class="list-group-item">스터디 타입: <span class="btn btn-outline-success btn-sm" >{{project.studyType}}</span></li>
+                    <li class="list-group-item">상태: <span class="btn btn-outline-warning btn-sm">{{project.state}}</span></li>
+                </ul>
+            </div>
+
         </form>
-        <a href="/" role="button" class="btn btn-secondary">취소</a>
-        <button type="button" class="btn btn-primary" id="btn-project_update">수정 완료</button>
-        <button type="button" class="btn btn-danger" id="btn-project_delete">삭제</button>
+        <div>
+        <a href="/" role="button" class="btn btn-secondary" style="width:70px;">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-project_update" style="width:100px;">수정 완료</button>
+        <button type="button" class="btn btn-danger" id="btn-project_delete" style="width:70px;">삭제</button>
+        </div>
+        <br>
     </div>
 </div>
+    <br>
+    <br>
 </div>
 {{>layout/footer}}

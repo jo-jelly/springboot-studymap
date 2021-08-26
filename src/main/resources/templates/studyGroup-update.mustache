@@ -3,37 +3,38 @@
 <h1>게시글 수정</h1>
 
 <div class="col-md-12">
-    <div class="col-md-4">
+    <div class="card" id="update_form">
         <form>
             <div class="form-group">
 
                 <div class="form-group">
-                    <label for="title">글 번호</label>
-                    <input type="text" class="form-control" id="id" value="{{studyGroup.id}}" readonly>
+                    <label for="author"> 작성자 </label>
+                    <input type="text" class="form-control" id="author" value="{{studyGroup.author}}" readonly>
                 </div>
                 <label for="title">제목</label>
                 <input type="text" class="form-control" id="title" value="{{studyGroup.title}}">
             </div>
             <div class="form-group">
-                <p>지역: {{studyGroup.area}}</p>
-                <p>스터디 타입: {{studyGroup.area}}</p>
-                <p>모집인원: {{studyGroup.area}}</p>
-                <p>상태: "{{studyGroup.area}}"</p>
-
-            </div>
-            <div class="form-group">
-                <label for="author"> 작성자 </label>
-                <input type="text" class="form-control" id="author" value="{{studyGroup.author}}" readonly>
-            </div>
-            <div class="form-group">
                 <label for="content"> 내용 </label>
                 <textarea class="form-control" id="content">{{studyGroup.content}}</textarea>
             </div>
+            <div class="form-group">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">지역: <span class="btn btn-outline-info btn-sm">{{studyGroup.area}}</span></li>
+                    <li class="list-group-item">모집인원: <span class="btn btn-outline-danger btn-sm">{{studyGroup.member}}</span></li>
+                    <li class="list-group-item">스터디 타입: <span class="btn btn-outline-success btn-sm" >{{studyGroup.studyType}}</span></li>
+                    <li class="list-group-item">상태: <span class="btn btn-outline-warning btn-sm">{{studyGroup.state}}</span></li>
+                </ul>
+            </div>
+
         </form>
         <a href="/" role="button" class="btn btn-secondary">취소</a>
         <button type="button" class="btn btn-primary" id="btn-study_update">수정 완료</button>
         <button type="button" class="btn btn-danger" id="btn-study_delete">삭제</button>
     </div>
+    <br>
 </div>
+    <br>
+    <br>
 </div>
 {{>layout/footer}}

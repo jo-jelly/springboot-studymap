@@ -67,6 +67,9 @@ public class ForumController {
         ForumDto.ForumViewResponseDto dto = forumService.findByIdView(id);
         model.addAttribute("forum", dto);
         System.out.println("thisis dto :"+ dto);
+        System.out.println("number1"+user.getId());
+        System.out.println("number2"+dto.getUserId());
+
 
         //작성자만 수정 가능하도록mustache에 적용하기 위해 사용 ==이 아닌 equals를 사용하고 임의의 값(1)을 넣어줌
         if (user.getId().equals(dto.getUserId())) {
