@@ -1,0 +1,52 @@
+{{>layout/header}}
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+<div id="study_body">
+    <br>
+    <form action="/project/search" method="GET">
+        <div class="input-group mb-3" style="max-width: 33rem; margin-left: 360px;">
+            <input type="text" class="form-keyword" placeholder="내용검색" id="keyword" name="keyword">&nbsp;
+            <button class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+            <a href="/project/save" role="button" class="btn btn-primary">글 등록</a>
+        </div>
+    </form> &nbsp;
+
+
+    {{#projectList}}
+        <div class="card border-primary mb-12" id="card_list" style="max-width: 55rem;"> <!-- 파란색 테두리-->
+            <div class="card-header" id="card-header">
+                <span  class="badge bg-primary">{{area}}</span>
+                <span  class="badge bg-warning">{{state}}</span>
+                <span  class="badge bg-success">{{studyType}}</span>
+
+                <a href="/project/update/{{id}}">{{author}} &nbsp;&nbsp;{{modifiedDate}} </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="/project/view/{{id}}">{{title}}</a>
+                </h4>
+                <p role="img" aria-label="eye" class="anticon anticon-eye">
+                    <svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                        <path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z">
+                        </path>
+                    </svg>
+                    {{views}}</p>
+            </div>
+        </div>
+    {{/projectList}}
+
+    <!--    다음페이지 활성 비활성 check값으로 다음값이 없느면 next 비활성(disabled)된다-->
+    <ul class="pagination justify-content-center" id="paging_button">
+        <li class="page-item"><a class="page-link" href="?page={{previous}}">Previous</a></li>
+        {{#check}}
+            <li class="page-item"><a class="page-link" href="?page={{next}}">Next</a></li>
+        {{/check}}
+        {{^check}}
+            <li class="page-item disabled"><a class="page-link" href="?page={{next}}">Next</a></li>
+        {{/check}}
+    </ul>
+
+</div>
+{{>layout/footer}}

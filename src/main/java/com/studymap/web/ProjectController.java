@@ -3,6 +3,7 @@ package com.studymap.web;
 
 import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
+import com.studymap.domain.project.Project;
 import com.studymap.service.comment.PcommentService;
 import com.studymap.service.project.ProjectService;
 import com.studymap.web.dto.ProjectResponseDto;
@@ -15,6 +16,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 
 @RequiredArgsConstructor
@@ -80,4 +84,23 @@ public class ProjectController {
 
         return "project-view";
     }
+
+    @GetMapping("/project/search")
+    public String search( @LoginUser SessionUser user, String keyword, Model model,@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
+        System.out.println("kwIs:"+keyword);
+     List<Project> searchList = projectService.searchProjects(keyword, pageable);
+     model.addAttribute("projectList", searchList);
+     model.addAttribute("previous", pageable.previousOrFirst().getPageNumber()); //이전 페이지
+     model.addAttribute("next", pageable.next().getPageNumber());                //이후 페이지
+     model.addAttribute("check", projectService.getListCheck(pageable));      //다음 페이지 있나 확인
+
+        /* SessionUser user = (SessionUser) httpSession.getAttribute("user");*/
+
+     if (user != null) {
+         model.addAttribute("userName", user.getName());
+     }
+     return "project-search";
+    }
+
+
 }

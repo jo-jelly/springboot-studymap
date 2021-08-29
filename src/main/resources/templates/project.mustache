@@ -1,14 +1,18 @@
 {{>layout/header}}
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
 <div id="study_body">
     <br>
-
-    <div class="input-group mb-3" style="max-width: 33rem; margin-left: 360px;">
-        <input type="text" class="form-control" placeholder="내용검색" id="content_search">
-        &nbsp;
-        <button class="btn btn-primary" type="button" id="button-addon2">검색</button>
-        &nbsp;
+    <form action="/project/search" method="GET">
+        <div class="input-group mb-3" style="max-width: 33rem; margin-left: 360px;">
+            <input type="text" placeholder="내용검색" name="keyword">&nbsp;
+            <button class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+            <a href="/project/save" role="button" class="btn btn-primary">글 등록</a>
+        </div>
+    </form> &nbsp; &nbsp;
         <a href="/project/save" role="button" class="btn btn-primary">글 등록</a>
-    </div>
 
 
     {{#projectList}}

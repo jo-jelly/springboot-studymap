@@ -1,5 +1,6 @@
 package com.studymap.domain.project;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -17,4 +18,7 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
     @Transactional
     @Query("UPDATE Project SET views = views + 1 WHERE id = ?1 ")
      Integer findByIdView(long id);
+
+    //JpaRepository에서는 By 뒷 부분은 SQL의 where 조건 절에 해당된다. 따라서, Containing을 붙여주면 Like 검색이 된다.
+    List<Project> findByTitleContaining(String title, Pageable pageable);
 }

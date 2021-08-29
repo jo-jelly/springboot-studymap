@@ -40,6 +40,9 @@ var main = {
         $('#btn-fcomment').on('click', function(){
            _this.fcomment();
                 });
+        $('#keyword_search').on('click', function () {
+            _this.keyword_search();
+        });
 
     },
 
@@ -292,6 +295,19 @@ var main = {
             alert(JSON.stringify(error));
         });
     },
+    keyword_search : function () {
+        var keyword = $('#keyword').val();
 
+        $.ajax({
+            type: 'GET',
+            url: '/project/search/'+keyword,
+            dataType: 'json',
+            contentType:'application/json; charset=utf-8'
+        }).done(function() {
+            window.location.href = '/project';
+        }).fail(function (error) {
+            alert(JSON.stringify(error));
+        });
+    }
 };
 main.init();

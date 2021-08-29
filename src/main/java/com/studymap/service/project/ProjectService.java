@@ -3,7 +3,6 @@ package com.studymap.service.project;
 
 import com.studymap.domain.project.Project;
 import com.studymap.domain.project.ProjectRepository;
-import com.studymap.domain.studyGroup.StudyGroup;
 import com.studymap.web.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -90,4 +89,12 @@ public class ProjectService {
 
         return check;
     }
+
+    @Transactional
+    public List<Project> searchProjects(String keyWord, Pageable pageable) {
+        List<Project> projectListResponseDtoList = projectRepository.findByTitleContaining(keyWord, pageable);
+        return projectListResponseDtoList;
+    }
+
+
 }

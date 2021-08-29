@@ -1,11 +1,16 @@
 package com.studymap.web;
 
+import com.studymap.domain.project.Project;
 import com.studymap.service.project.ProjectService;
+import com.studymap.web.dto.ProjectListResponseDto;
 import com.studymap.web.dto.ProjectResponseDto;
 import com.studymap.web.dto.ProjectSaveRequestDto;
 import com.studymap.web.dto.ProjectUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
