@@ -1,5 +1,8 @@
 package com.studymap.domain.studyGroup;
 
+import com.studymap.domain.project.Project;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -18,4 +21,6 @@ public interface StudyGroupRepository extends JpaRepository<StudyGroup, Long> {
     @Transactional
     @Query("UPDATE StudyGroup SET views = views + 1 WHERE id = ?1 ")
     Integer findByIdView(long id);
+
+    Page<StudyGroup> findByTitleContaining(String title, Pageable pageable);
 }

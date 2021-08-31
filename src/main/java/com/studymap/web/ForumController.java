@@ -3,6 +3,8 @@ package com.studymap.web;
 
 import com.studymap.config.auth.LoginUser;
 import com.studymap.config.auth.dto.SessionUser;
+import com.studymap.domain.forum.Forum;
+import com.studymap.domain.project.Project;
 import com.studymap.service.comment.FcommentService;
 import com.studymap.service.comment.ScommentService;
 import com.studymap.service.forum.ForumService;
@@ -10,6 +12,7 @@ import com.studymap.service.studyGroup.StudyGroupService;
 import com.studymap.web.dto.ForumDto;
 import com.studymap.web.dto.StudyGroupDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -86,4 +89,22 @@ public class ForumController {
 
         return "forum-view";
     }
+
+    @GetMapping("/forum/search")
+    public String search( @LoginUser SessionUser user, String keyword, Model model,@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
+        System.out.println("kwIs:"+keyword);
+        Page<Forum> searchList = forumService.searchForums(keyword, pageable);
+        model.addAttribute("projectList", searchList);
+        model.addAttribute("previous", pageable.previousOrFirst().getPageNumber()); //이전 페이지
+        model.addAttribute("next", pageable.next().getPageNumber());                //이후 페이지
+        model.addAttribute("check", forumService.getListCheck(pageable));      //다음 페이지 있나 확인
+        model.addAttribute("keyword", keyword);
+        /* SessionUser user = (SessionUser) httpSession.getAttribute("user");*/
+
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
+        }
+        return "project-search";
+    }
+
 }

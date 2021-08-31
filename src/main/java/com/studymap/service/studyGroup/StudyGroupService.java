@@ -1,6 +1,7 @@
 package com.studymap.service.studyGroup;
 
 
+import com.studymap.domain.project.Project;
 import com.studymap.domain.studyGroup.StudyGroup;
 import com.studymap.domain.studyGroup.StudyGroupRepository;
 
@@ -89,4 +90,12 @@ public class StudyGroupService {
 
         return check;
     }
+
+    //검색
+    @Transactional
+    public Page<StudyGroup> searchStudyGroups(String keyword, Pageable pageable) {
+        Page<StudyGroup> studyGroupListResponseDtoList = studyGroupRepository.findByTitleContaining(keyword, pageable);
+        return studyGroupListResponseDtoList;
+    }
+
 }

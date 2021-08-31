@@ -3,6 +3,7 @@ package com.studymap.service.forum;
 
 import com.studymap.domain.forum.Forum;
 import com.studymap.domain.forum.ForumRepository;
+import com.studymap.domain.project.Project;
 import com.studymap.web.dto.ForumDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -87,5 +88,12 @@ public class ForumService {
         Boolean check = saved.hasNext();
 
         return check;
+    }
+
+    //검색
+    @Transactional
+    public Page<Forum> searchForums(String keyword, Pageable pageable) {
+        Page<Forum> forumListResponseDtoList = forumRepository.findByTitleContaining(keyword, pageable);
+        return forumListResponseDtoList;
     }
 }

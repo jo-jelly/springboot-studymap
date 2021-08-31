@@ -1,5 +1,8 @@
 package com.studymap.domain.forum;
 
+import com.studymap.domain.project.Project;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -17,4 +20,6 @@ public interface ForumRepository extends JpaRepository<Forum, Long> {
     @Transactional
     @Query("UPDATE Forum SET views = views + 1 WHERE id = ?1 ")
      Integer findByIdView(long id);
+
+    Page<Forum> findByTitleContaining(String title, Pageable pageable);
 }
