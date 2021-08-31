@@ -13,8 +13,10 @@
              <div>
                  <span style="font-size: 18px; font-weight: 600;">포럼</span>
              </div>
+             <div>
+                 <span style="font-size: 12px; color: rgb(153, 153, 153);">자유롭게 질문해보세요.</span>
+             </div>
          </div>
-         <br>
          {{#forum}}
              <div class="card border-secondary mb-12" id="card_list" style="max-width: 55rem;"> <!-- 회색 테두리-->
                  <div class="card-header" id="card-header">
@@ -83,9 +85,9 @@
          {{#studyGroup}}
              <div class="card border-primary mb-12" id="card_list" style="max-width: 55rem;"> <!-- 파란색 테두리-->
                  <div class="card-header" id="card-header">
-                     <span  class="btn btn-primary btn-sm">{{area}}</span>
+                     <span  class="badge bg-primary">{{area}}</span>
                      <span  class="badge bg-warning">{{state}}</span>
-
+                     <span  class="badge bg-success">{{studyType}}</span>
                      <a href="/studyGroup/update/{{id}}">{{author}} &nbsp;&nbsp;{{modifiedDate}} </a>
                  </div>
                  <div class="card-body" style="padding: 20px 20px 0px;">
