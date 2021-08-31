@@ -9,6 +9,7 @@ import com.studymap.service.project.ProjectService;
 import com.studymap.web.dto.ProjectResponseDto;
 import com.studymap.web.dto.ProjectViewResponseDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -88,12 +89,12 @@ public class ProjectController {
     @GetMapping("/project/search")
     public String search( @LoginUser SessionUser user, String keyword, Model model,@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
         System.out.println("kwIs:"+keyword);
-     List<Project> searchList = projectService.searchProjects(keyword, pageable);
+     Page<Project> searchList = projectService.searchProjects(keyword, pageable);
      model.addAttribute("projectList", searchList);
      model.addAttribute("previous", pageable.previousOrFirst().getPageNumber()); //이전 페이지
      model.addAttribute("next", pageable.next().getPageNumber());                //이후 페이지
      model.addAttribute("check", projectService.getListCheck(pageable));      //다음 페이지 있나 확인
-
+     model.addAttribute("keyword", keyword);
         /* SessionUser user = (SessionUser) httpSession.getAttribute("user");*/
 
      if (user != null) {

@@ -39,12 +39,12 @@
 
     <!--    다음페이지 활성 비활성 check값으로 다음값이 없느면 next 비활성(disabled)된다-->
     <ul class="pagination justify-content-center" id="paging_button">
-        <li class="page-item"><a class="page-link" href="?page={{previous}}">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{previous}}&keyword={{keyword}}">Previous</a></li>
         {{#check}}
-            <li class="page-item"><a class="page-link" href="?page={{next}}">Next</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{next}}&keyword={{keyword}}">Next</a></li>
         {{/check}}
         {{^check}}
-            <li class="page-item disabled"><a class="page-link" href="?page={{next}}">Next</a></li>
+            <li class="page-item disabled"><a class="page-link" href="?page={{next}}&keyword={{keyword}}">Next</a></li>
         {{/check}}
     </ul>
 

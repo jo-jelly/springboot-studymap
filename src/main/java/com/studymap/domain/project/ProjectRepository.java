@@ -1,5 +1,6 @@
 package com.studymap.domain.project;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -20,5 +21,9 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
      Integer findByIdView(long id);
 
     //JpaRepository에서는 By 뒷 부분은 SQL의 where 조건 절에 해당된다. 따라서, Containing을 붙여주면 Like 검색이 된다.
-    List<Project> findByTitleContaining(String title, Pageable pageable);
+    Page<Project> findByTitleContaining(String title, Pageable pageable);
+
+
+//        @Query("SELECT p FROM Project p WHERE p.title LIKE %:keyword%")
+//        List<Project> findTitleContaining(String keyword, Pageable pageable);
 }

@@ -90,9 +90,10 @@ public class ProjectService {
         return check;
     }
 
+    //검색
     @Transactional
-    public List<Project> searchProjects(String keyWord, Pageable pageable) {
-        List<Project> projectListResponseDtoList = projectRepository.findByTitleContaining(keyWord, pageable);
+    public Page<Project> searchProjects(String keyword, Pageable pageable) {
+        Page<Project> projectListResponseDtoList = projectRepository.findByTitleContaining(keyword, pageable);
         return projectListResponseDtoList;
     }
 
