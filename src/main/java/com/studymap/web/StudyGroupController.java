@@ -29,7 +29,7 @@ public class StudyGroupController {
 
 // @PageableDefault 어노테이션을 쓰면 정렬은 물론 페이징 처리, 페이지 사이즈까지 한 줄로 구현 가능
     @GetMapping("/studyGroup")
-    public String index(Model model, @LoginUser SessionUser user, @PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
+    public String index(Model model, @LoginUser SessionUser user, @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
         //httpSession.getAttribute("user")에서 기존에 가져오던 세션 정보값을 @LoginUeser만 사용하면 세션 정보를 가져올수 있도록 변경
         model.addAttribute("studyGroup", studyGroupService.findAllDesc());
         model.addAttribute("studyGroupList", studyGroupService.getStudyGroupList(pageable));
@@ -85,7 +85,7 @@ public class StudyGroupController {
     }
 
     @GetMapping("/studyGroup/search")
-    public String search( @LoginUser SessionUser user, String keyword, Model model,@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
+    public String search( @LoginUser SessionUser user, String keyword, Model model,@PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
         System.out.println("kwIs:"+keyword);
         Page<StudyGroup> searchList = studyGroupService.searchStudyGroups(keyword, pageable);
         model.addAttribute("projectList", searchList);

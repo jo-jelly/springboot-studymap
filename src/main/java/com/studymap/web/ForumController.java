@@ -32,7 +32,7 @@ public class ForumController {
 
 // @PageableDefault 어노테이션을 쓰면 정렬은 물론 페이징 처리, 페이지 사이즈까지 한 줄로 구현 가능
     @GetMapping("/forum")
-    public String index(Model model, @LoginUser SessionUser user, @PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
+    public String index(Model model, @LoginUser SessionUser user, @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable) {
         //httpSession.getAttribute("user")에서 기존에 가져오던 세션 정보값을 @LoginUeser만 사용하면 세션 정보를 가져올수 있도록 변경
         model.addAttribute("forumList", forumService.getForumList(pageable));
         model.addAttribute("previous", pageable.previousOrFirst().getPageNumber()); //이전 페이지
@@ -91,7 +91,7 @@ public class ForumController {
     }
 
     @GetMapping("/forum/search")
-    public String search( @LoginUser SessionUser user, String keyword, Model model,@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
+    public String search( @LoginUser SessionUser user, String keyword, Model model,@PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
         System.out.println("kwIs:"+keyword);
         Page<Forum> searchList = forumService.searchForums(keyword, pageable);
         model.addAttribute("projectList", searchList);
