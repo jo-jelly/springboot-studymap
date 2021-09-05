@@ -23,6 +23,7 @@
                 <label for="content"> 내용 </label>
                 <textarea class="form-control" id="content">{{forum.content}}</textarea>
             </div>
+            <input type="hidden" id="id" value="{{forum.id}}">
         </form>
         <a href="/forum" role="button" class="btn btn-secondary">취소</a>
         <button type="button" class="btn btn-primary" id="btn-forum_update">수정 완료</button>
