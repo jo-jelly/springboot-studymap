@@ -39,4 +39,19 @@ StudyMap(http://ec2-52-79-164-120.ap-northeast-2.compute.amazonaws.com/)은 혼�
 
 # 4. 사용 스택
 # 5. DATABASE ERD
+![09월-06일 05시 55분 001](https://user-images.githubusercontent.com/74187226/132141212-826f539a-4c0c-4ef0-a250-b4f1d0effa23.png)
+
 # Cloud Computing
+✔ AWS-EC2 (Ubuntu)
+
+하드웨어에 선투자할 필요가 없어 더 빠르게 애플리케이션을 개발하고 배포할 수 있어 EC2를 사용했습니다.
+
+처음 배포를 해보았기 때문에 풍부한 문서, 온라인 커뮤니티를 통해 충분히 학습할 수 있는 Ubuntu를 사용했습니다.
+
+✔ AWS-S3
+
+높은 내구성과 높은 가용성을 저렴한 가격으로 제공하는 인터넷 스토리지 서비스인 AWS-S3를 사용했습니다.
+
+✔ AWS-IAM
+
+IAM을 사용하여 S3를 사용하도록 인증(로그인) 및 권한 부여(권한 있음)된 대상을 제어하여 보안을 강화하였습니다.
