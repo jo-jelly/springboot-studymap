@@ -28,10 +28,10 @@ com/studymap/domain/BaseTimeEntity.java
  com.studymap.domain.BaseTimeEntity
 com/studymap/service/comment/FcommentService.java
  com.studymap.service.comment.FcommentService
-com/studymap/web/ProjectController.java
- com.studymap.web.ProjectController
-com/studymap/web/ProjectApiController.java
- com.studymap.web.ProjectApiController
+com/studymap/service/studyGroup/StudyGroupService.java
+ com.studymap.service.studyGroup.StudyGroupService
+com/studymap/web/ForumController.java
+ com.studymap.web.ForumController
 com/studymap/domain/project/ProjectRepository.java
  com.studymap.domain.project.ProjectRepository
 com/studymap/web/ProfileController.java
@@ -121,8 +121,8 @@ com/studymap/web/dto/ProjectSaveRequestDto.java
  com.studymap.web.dto.ProjectSaveRequestDto$ProjectSaveRequestDtoBuilder
 com/studymap/web/dto/ProjectResponseDto.java
  com.studymap.web.dto.ProjectResponseDto
-com/studymap/web/StudyGroupController.java
- com.studymap.web.StudyGroupController
+com/studymap/domain/studyGroup/StudyGroupRepository.java
+ com.studymap.domain.studyGroup.StudyGroupRepository
 com/studymap/web/StudyGroupApiController.java
  com.studymap.web.StudyGroupApiController
 com/studymap/service/forum/ForumService.java
@@ -133,9 +133,9 @@ com/studymap/web/IndexController.java
  com.studymap.web.IndexController
 com/studymap/domain/forum/ForumRepository.java
  com.studymap.domain.forum.ForumRepository
-com/studymap/web/ForumController.java
- com.studymap.web.ForumController
-com/studymap/domain/studyGroup/StudyGroupRepository.java
- com.studymap.domain.studyGroup.StudyGroupRepository
-com/studymap/service/studyGroup/StudyGroupService.java
- com.studymap.service.studyGroup.StudyGroupService
+com/studymap/web/ProjectApiController.java
+ com.studymap.web.ProjectApiController
+com/studymap/web/StudyGroupController.java
+ com.studymap.web.StudyGroupController
+com/studymap/web/ProjectController.java
+ com.studymap.web.ProjectController

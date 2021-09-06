@@ -44,7 +44,7 @@ public class ProjectController {
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
-        return "project";
+        return "project/project";
     }
 
     @GetMapping("/project/save")
@@ -52,7 +52,7 @@ public class ProjectController {
         model.addAttribute("userId", user.getId());
         model.addAttribute("userName", user.getName());
 
-        return "project-save";}
+        return "project/project-save";}
 
     @GetMapping("/project/update/{id}")
     public String studyGroupUpdate(@PathVariable Long id, Model model, @LoginUser SessionUser user) {
@@ -60,7 +60,7 @@ public class ProjectController {
         model.addAttribute("userName", user.getName());
         model.addAttribute("project", dto);
 
-        return "project-update";
+        return "project/project-update";
     }
 
     @GetMapping("/project/view/{id}")
@@ -83,7 +83,7 @@ public class ProjectController {
         model.addAttribute("pcomment", pCommentService.getViewListComment(id));
         System.out.println("thisis coco :"+ pCommentService.getViewListComment(id));
 
-        return "project-view";
+        return "project/project-view";
     }
 
     @GetMapping("/project/search")
@@ -100,7 +100,7 @@ public class ProjectController {
      if (user != null) {
          model.addAttribute("userName", user.getName());
      }
-     return "project-search";
+     return "project/project-search";
     }
 
 

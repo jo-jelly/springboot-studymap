@@ -42,7 +42,7 @@ public class StudyGroupController {
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
-        return "studyGroup";
+        return "studyGroup/studyGroup";
     }
 
     @GetMapping("/studyGroup/save")
@@ -50,14 +50,14 @@ public class StudyGroupController {
         model.addAttribute("userId", user.getId());
         model.addAttribute("userName", user.getName());
 
-        return "studyGroup-save";}
+        return "studyGroup/studyGroup-save";}
 
     @GetMapping("/studyGroup/update/{id}")
     public String studyGroupUpdate(@PathVariable Long id, Model model, @LoginUser SessionUser user) {
         StudyGroupDto.StudyGroupResponseDto dto = studyGroupService.findById(id);
         model.addAttribute("studyGroup", dto);
         model.addAttribute("userName", user.getName());
-        return "studyGroup-update";
+        return "studyGroup/studyGroup-update";
     }
 
     @GetMapping("/studyGroup/view/{id}")
@@ -81,7 +81,7 @@ public class StudyGroupController {
         model.addAttribute("scomment", sCommentService.getViewListComment(id));
         System.out.println("thisis coco :"+ sCommentService.getViewListComment(id));
 
-        return "studyGroup-view";
+        return "studyGroup/studyGroup-view";
     }
 
     @GetMapping("/studyGroup/search")
@@ -98,6 +98,6 @@ public class StudyGroupController {
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
-        return "studyGroup-search";
+        return "studyGroup/studyGroup-search";
     }
 }
