@@ -11,11 +11,56 @@ StudyMap(http://ec2-52-79-164-120.ap-northeast-2.compute.amazonaws.com/)은 혼�
 
 # 3. Main features
 ## 3.1 Authentication
+<img src="https://user-images.githubusercontent.com/74187226/132132583-58391dc7-ce43-49d9-bee0-49036ebbb410.png" width="350" height="500"> <img src="https://user-images.githubusercontent.com/74187226/132131812-9ef2bf23-53c6-4620-9393-5221ebffa957.png" width="350" height="500">
 
+소셜 회원가입도 지원하여 사용자의 편의성을 증대하였습니다. 
 ## 3.2CRUD
-### 3.2.1 Create & Read
-### 3.2.2 Update & Delete
-##3.3 View & Comment
+### 3.2.1 Create
+![createGIF](https://user-images.githubusercontent.com/74187226/132140282-799c0d65-d381-4913-83aa-a2b802a6110e.gif)
+
+### 3.2.2 Read
+![ReadGIF](https://user-images.githubusercontent.com/74187226/132140181-992ff5d6-033e-4197-8419-2a53f47d814e.gif)
+
+### 3.2.3 Update
+![uodateGIF](https://user-images.githubusercontent.com/74187226/132139612-b7c1f821-f461-4702-8da7-c324e4616bc1.gif)
+
+### 3.2.4 Delete
+![deleteGIF](https://user-images.githubusercontent.com/74187226/132139624-c190a005-a367-467d-b4a6-0c58d638ecda.gif)
+
+## 3.4 paging
+![pagingGIF](https://user-images.githubusercontent.com/74187226/132140186-a76ad650-d1d9-47fb-b6ef-d9e6885dc656.gif)
+
+## 3.5 Comment
+![comment](https://user-images.githubusercontent.com/74187226/132140192-5a7574fa-79c5-4859-8ca9-b7a57c81ac05.gif)
+
+## 3.6 View
+![viewGIF](https://user-images.githubusercontent.com/74187226/132140203-49d7ec4e-5c50-44fd-9dd6-5e5409924185.gif)
+
+
 # 4. 사용 스택
+## 4.1 Spring Date JPA 인터페이스
+ 생산성이 뛰어나고 유지보수가 용이하며, SQL을 직접적으로 작성하지 않고 객체를 사용하여 동작는 장점에 선택하였습니다.
+
+
+## 4.2 서버 템플릿 엔진
+ 심플한 문법과 로직코드가 없어 뷰 역할에 충실하게 사용할 수 있으며, 인텔리제이에서 플러그인을 무료로 사용할 수 있어서 선택했습니다. 
+ 
+ 
 # 5. DATABASE ERD
+![09월-06일 05시 55분 001](https://user-images.githubusercontent.com/74187226/132141212-826f539a-4c0c-4ef0-a250-b4f1d0effa23.png)
+
+
 # Cloud Computing
+✔ AWS-EC2 (Ubuntu)
+
+하드웨어에 선투자할 필요가 없어 더 빠르게 애플리케이션을 개발하고 배포할 수 있어 EC2를 사용했습니다.
+
+처음 배포를 해보았기 때문에 풍부한 문서, 온라인 커뮤니티를 통해 충분히 학습할 수 있는 Ubuntu를 사용했습니다.
+
+✔ AWS-S3
+
+높은 내구성과 높은 가용성을 저렴한 가격으로 제공하는 인터넷 스토리지 서비스인 AWS-S3를 사용했습니다.
+
+✔ AWS-IAM
+
+IAM을 사용하여 S3를 사용하도록 인증(로그인) 및 권한 부여(권한 있음)된 대상을 제어하여 보안을 강화하였습니다.
