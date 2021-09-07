@@ -48,7 +48,7 @@ StudyMap(http://ec2-52-79-164-120.ap-northeast-2.compute.amazonaws.com/)은 혼�
 <br>
 <br>
 ## 3.1 Authentication
-<img src="https://user-images.githubusercontent.com/74187226/132132583-58391dc7-ce43-49d9-bee0-49036ebbb410.png" width="350" height="500"> <img src="https://user-images.githubusercontent.com/74187226/132131812-9ef2bf23-53c6-4620-9393-5221ebffa957.png" width="350" height="500">
+<img src="https://user-images.githubusercontent.com/74187226/132132583-58391dc7-ce43-49d9-bee0-49036ebbb410.png" width="350" height="500" > <img src="https://user-images.githubusercontent.com/74187226/132283802-4d76ecf8-9759-4770-9e74-8de1a2871a71.png" width="350" height="500">
 
 소셜 회원가입도 지원하여 사용자의 편의성을 증대하였습니다. 
 ## 3.2CRUD
