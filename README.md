@@ -2,7 +2,7 @@
 # 1. Project Summary
 ![09월-05일 02시 28분 001](https://user-images.githubusercontent.com/74187226/132103805-7044ef9b-4254-419e-b688-52ab8cedef28.png)
 
-StudyMap ([www.StudyMap.com](http://ec2-52-79-164-120.ap-northeast-2.compute.amazonaws.com/))은 혼자서 만든 토이 프로젝트로 프로젝트 또는 스터디원 구인 및 포럼 커뮤니티 기능을 제공하는 서비스 플랫폼입니다. 사용자는 스터디 및 프로젝트 모집, 질문 포럼 커뮤니티 기능을 활용하여 다른 사용자와 소통을 할 수 있습니다.
+StudyMap (http://ec2-52-79-164-120.ap-northeast-2.compute.amazonaws.com/) 은 혼자서 만든 토이 프로젝트로 프로젝트 또는 스터디원 구인 및 포럼 커뮤니티 기능을 제공하는 서비스 플랫폼입니다. 사용자는 스터디 및 프로젝트 모집, 질문 포럼 커뮤니티 기능을 활용하여 다른 사용자와 소통을 할 수 있습니다.
 
 
 ## 1.2. Project target
