@@ -135,7 +135,7 @@ com/studymap/domain/forum/ForumRepository.java
  com.studymap.domain.forum.ForumRepository
 com/studymap/web/ProjectApiController.java
  com.studymap.web.ProjectApiController
-com/studymap/web/StudyGroupController.java
- com.studymap.web.StudyGroupController
 com/studymap/web/ProjectController.java
  com.studymap.web.ProjectController
+com/studymap/web/StudyGroupController.java
+ com.studymap.web.StudyGroupController
