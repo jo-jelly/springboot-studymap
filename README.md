@@ -54,17 +54,14 @@ StudyMap(http://ec2-52-79-164-120.ap-northeast-2.compute.amazonaws.com/)은 혼�
 
 소셜 회원가입도 지원하여 사용자의 편의성을 증대하였습니다. 
 ## 3.2CRUD
-### 3.2.1 Create
-![createGIF](https://user-images.githubusercontent.com/74187226/132140282-799c0d65-d381-4913-83aa-a2b802a6110e.gif)
+### 3.2.1 Create & Read
+![C RGIF](https://user-images.githubusercontent.com/74187226/132286261-fe0c3c99-7141-43ec-afb8-99c7dd2f155e.gif)
 
-### 3.2.2 Read
-![ReadGIF](https://user-images.githubusercontent.com/74187226/132140181-992ff5d6-033e-4197-8419-2a53f47d814e.gif)
+<br>
 
-### 3.2.3 Update
-![uodateGIF](https://user-images.githubusercontent.com/74187226/132139612-b7c1f821-f461-4702-8da7-c324e4616bc1.gif)
+### 3.2.3 Update & Delete
+![U DGIF](https://user-images.githubusercontent.com/74187226/132286315-d2e02985-01f4-486d-a78b-b0d9749025e3.gif)
 
-### 3.2.4 Delete
-![deleteGIF](https://user-images.githubusercontent.com/74187226/132139624-c190a005-a367-467d-b4a6-0c58d638ecda.gif)
 
 ## 3.4 paging
 ![pagingGIF](https://user-images.githubusercontent.com/74187226/132140186-a76ad650-d1d9-47fb-b6ef-d9e6885dc656.gif)
