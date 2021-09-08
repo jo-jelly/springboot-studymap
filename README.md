@@ -52,22 +52,25 @@ StudyMap (http://ec2-52-79-164-120.ap-northeast-2.compute.amazonaws.com/) 은 �
 
 <img src="https://user-images.githubusercontent.com/74187226/132283802-4d76ecf8-9759-4770-9e74-8de1a2871a71.png" width="350" height="450">  <img src="https://user-images.githubusercontent.com/74187226/132132583-58391dc7-ce43-49d9-bee0-49036ebbb410.png" width="350" height="450" >
 
-소셜 회원가입도 지원하여 사용자의 편의성을 증대하였습니다. 
-## 3.2CRUD
-### 3.2.1 Create & Read
-![C RGIF](https://user-images.githubusercontent.com/74187226/132286261-fe0c3c99-7141-43ec-afb8-99c7dd2f155e.gif)
+<br>
+<br>
 
+## 3.2 CRUD
+### 3.2.1 Create & Read
+<img src="https://user-images.githubusercontent.com/74187226/132286261-fe0c3c99-7141-43ec-afb8-99c7dd2f155e.gif" width="800" height="500">
 <br>
 
 ### 3.2.3 Update & Delete
-![U DGIF](https://user-images.githubusercontent.com/74187226/132286315-d2e02985-01f4-486d-a78b-b0d9749025e3.gif)
-
+<img src="https://user-images.githubusercontent.com/74187226/132286315-d2e02985-01f4-486d-a78b-b0d9749025e3.gif" width="800" height="500">
+<br>
 
 ## 3.4 paging
-![pagingGIF](https://user-images.githubusercontent.com/74187226/132140186-a76ad650-d1d9-47fb-b6ef-d9e6885dc656.gif)
+<img src="https://user-images.githubusercontent.com/74187226/132140186-a76ad650-d1d9-47fb-b6ef-d9e6885dc656.gif" width="800" height="500">
+<br>
 
 ## 3.5 Comment & View
-![V CGIF](https://user-images.githubusercontent.com/74187226/132557533-8276e2c3-b2fd-4f71-b021-5e185d6c7a52.gif)
+<img src="https://user-images.githubusercontent.com/74187226/132557533-8276e2c3-b2fd-4f71-b021-5e185d6c7a52.gif" width="800" height="500">
+<br>
 
 # 4. Back-End
 
@@ -319,6 +322,6 @@ public class IndexController {
 <br>
 
  ### 2. 소감
-   초기 프로젝트를 시작할 때에는 이런 결과물이나 낼 수 있을까 하는 의구심이 있었습니다. 그러나 시간은 좀 걸렸더라도 완성했기에 뿌듯합니다. 그러나 또 한편으로는 처음 사용해본 JPA 기술에 대한 이해가 깊지 못한 채 제작하였기 때문에 부족한 부분이 많이 발견되었습니다. 이러한 현상이 발생된 이유는 개인적인 욕심 때문인 것 같습니다. 초기 구상해놓은 프로젝트의 모습에서 무언가 더 욕심을 내어 많은 기능을 포함하고자 할 때 마다, 새로운 기술을 마주쳤고 그 때 마다 검색은 끝이 없었습니다. 하지만, 결국 비슷하게나마 흉내라도 낼 때 마다 저는 뿌듯했습니다.
+ 초기 프로젝트를 시작할 때에는 이런 결과물이나 낼 수 있을까 하는 의구심이 있었습니다. 그러나 시간은 좀 걸렸더라도 완성했기에 뿌듯합니다. 그러나 또 한편으로는 처음 사용해본 JPA 기술에 대한 이해가 깊지 못한 채 제작하였기 때문에 부족한 부분이 많이 발견되었습니다. 이러한 현상이 발생된 이유는 개인적인 욕심 때문인 것 같습니다. 초기 구상해놓은 프로젝트의 모습에서 무언가 더 욕심을 내어 많은 기능을 포함하고자 할 때 마다, 새로운 기술을 마주쳤고 그 때 마다 검색은 끝이 없었습니다. 하지만, 결국 비슷하게나마 흉내라도 낼 때 마다 저는 뿌듯했습니다.
 
-   이번 프로젝트는 저에게는 많은 경험이 되었고, 저의 부족한 부분과 제가 할 수 있는 부분을 구별할 수 있는 능력을 가지게 해주었다고 생각합니다. 그렇기에 부족한 부분을 연마하고 알고 있는 부분은 더욱 자세히 알아보고자 합니다.  위의 언급한 사항들을 제외하고도 부족한 부분을 지적 해주신다면 달게 받도록 하겠습니다. 저의 경험이 되는 것이기 때문입니다ㅎㅎ.부족한 부분이 많은 프로젝트인 것 같지만, 이러한 경험을 통해 쌓은 경험치는 사라지지 않기 때문에 부끄러우면서도 자랑스럽다고 자부합니다. 이상 글을 마치겠습니다.
+ 이번 프로젝트는 저에게는 많은 경험이 되었고, 저의 부족한 부분과 제가 할 수 있는 부분을 구별할 수 있는 능력을 가지게 해주었다고 생각합니다. 그렇기에 부족한 부분을 연마하고 알고 있는 부분은 더욱 자세히 알아보고자 합니다.  위의 언급한 사항들을 제외하고도 부족한 부분을 지적 해주신다면 달게 받도록 하겠습니다. 저의 경험이 되는 것이기 때문입니다ㅎㅎ.부족한 부분이 많은 프로젝트인 것 같지만, 이러한 경험을 통해 쌓은 경험치는 사라지지 않기 때문에 부끄러우면서도 자랑스럽다고 자부합니다. 이상 글을 마치겠습니다.
