@@ -39,11 +39,4 @@ public class IndexController {
         }
         return "index";
     }
-
-
-    @GetMapping("/login2")
-    public String login(){
-
-        return "login";
-    }
-    }
+}

@@ -102,6 +102,4 @@ public class ProjectController {
      }
      return "project/project-search";
     }
-
-
 }

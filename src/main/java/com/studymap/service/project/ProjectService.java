@@ -96,6 +96,4 @@ public class ProjectService {
         Page<Project> projectListResponseDtoList = projectRepository.findByTitleContaining(keyword, pageable);
         return projectListResponseDtoList;
     }
-
-
 }
