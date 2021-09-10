@@ -13,10 +13,10 @@ StudyMap (http://ec2-52-79-164-120.ap-northeast-2.compute.amazonaws.com/) 은 �
 # 2 개발 환경
 -  운영 체제: window10
 -  IDE: intelli J 2021.2.1
--  Back-end: Spring Framework 2.4.1.RELEASE, MySQL 5.5.68 
+-  Back-end: Spring Framework 2.4.1.RELEASE
 -  Front-end: mustache
 -  Server: AWS EC2 , IAM
--  Data Base: AWS RDS, H2 Console
+-  Data Base: MySQL 5.5.68, AWS RDS, H2
 -  Web browser: Chrome
 -  CI Tool : Travis CI
   
